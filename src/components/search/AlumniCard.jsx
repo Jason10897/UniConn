@@ -6,7 +6,7 @@ import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import React from "react";
 
-export default function AlumniCard(){
+export default function AlumniCard({onClick}){
     return (
         <Card sx={{ width: '23%',margin: '10px' }}>
           <CardMedia
@@ -14,6 +14,7 @@ export default function AlumniCard(){
             height="200"
             image="https://cdn4.iconfinder.com/data/icons/for-your-interface-part-3/128/User-512.png"
             alt="User icon"
+            onClick={onClick}
           />
           <CardContent sx={{display: 'flex', padding: '3px !important'}}>
             <div style={{display:'flex', flexDirection: 'column', flex: 1, alignItems:'left'}}>
