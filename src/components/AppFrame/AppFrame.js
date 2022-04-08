@@ -3,11 +3,15 @@ import Button from '@mui/material/Button';
 import Container from '@mui/material/Container';
 import CssBaseline from '@mui/material/CssBaseline';
 import GlobalStyles from '@mui/material/GlobalStyles';
-import Link from '@mui/material/Link';
+//import Link from '@mui/material/Link';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import * as React from 'react';
 import Copyright from './Copyright';
+import ConnectMenu from './ConnectMenu';
+import EventsMenu from './EventsMenu';
+import {Link} from '@reach/router'
+
 
 
 export default function AppFrame(props) {
@@ -23,25 +27,14 @@ export default function AppFrame(props) {
       >
         <Toolbar sx={{ flexWrap: 'wrap' }}>
           <Typography variant="h6" color="inherit" noWrap sx={{ flex: 0.5 }} style={{textAlign: 'left'}}>
+            <Link to='/'>
             UniConn
+            </Link>
+            
           </Typography>
           <nav style={{flex: 4, display: 'flex', justifyContent: 'left'}}> 
-            <Link
-              variant="button"
-              color="text.primary"
-              href="#"
-              sx={{ my: 1, mx: 1.5 }}
-            >
-              Connect
-            </Link>
-            <Link
-              variant="button"
-              color="text.primary"
-              href="#"
-              sx={{ my: 1, mx: 1.5 }}
-            >
-              Events
-            </Link>
+            <ConnectMenu/>
+            <EventsMenu/>
           </nav>
           <Button href="#" variant="outlined" sx={{ my: 1, mx: 1.5 }}>
             Login
@@ -49,7 +42,7 @@ export default function AppFrame(props) {
         </Toolbar>
       </AppBar>
       {/* Hero unit */}
-      <Container disableGutters maxWidth="sm" component="main" sx={{ pt: 8, pb: 6 }}>
+      <Container disableGutters maxWidth="lg" component="main" sx={{ pt: 8, pb: 6 }}>
         {props.children}
       </Container>
       {/* End hero unit */}
