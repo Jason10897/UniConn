@@ -6,6 +6,7 @@ import React from "react";
 import Chip from '@mui/material/Chip';
 import { width } from '@mui/system';
 import CardGrid from './CardGrid';
+import Filters from './filters/Filters';
 
 const Search = styled('div')(({ theme }) => ({
     position: 'relative',
@@ -72,7 +73,10 @@ export default function Alumnisearch(){
               <Chip label="Student" variant="outlined"/>
           </ChipContainer>
           <Divider/>
-          <CardGrid/>
+          <Box display='flex' flexDirection='row'>
+              <Filters style={{flex: 1}}/>
+              <CardGrid style={{flex: 4}}/>  
+          </Box>
         </Box>
     )
 }
