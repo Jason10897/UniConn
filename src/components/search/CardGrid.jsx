@@ -5,7 +5,7 @@ import AlumniCard from "./AlumniCard";
 import MiniDetails from "./MiniDetails";
 
 
-export default function CardGrid(){
+export default function CardGrid({ style }){
     
     const [isDrawerOpen, setDrawerOpen] = useState(false);
     const [drawerDetails, setDrawerDetails] = useState({})
@@ -25,7 +25,7 @@ export default function CardGrid(){
 
 
     return(
-        <Box display="flex" flexWrap="wrap" style={{width:'100%'}}>
+        <Box display="flex" flexWrap="wrap" style={{width:'100%', ...style}}>
             {cards.map(card => card)}
             <Drawer
             anchor='right'

@@ -1,4 +1,4 @@
-import { Button, Typography } from "@mui/material";
+import { Box, Button, Typography } from "@mui/material";
 import { navigate } from "@reach/router";
 import React from "react";
 
@@ -10,7 +10,7 @@ export default function MiniDetails(){
     }
 
     return (
-        <div>
+        <Box sx={{marginTop: '75px',  minWidth: '20em', padding: '15px'}}>
             <Typography variant="h6">
                 Details
             </Typography>
@@ -27,8 +27,11 @@ export default function MiniDetails(){
                 Last Activity: 2 days ago
             </Typography>
 
-            <Button>Connect</Button>
-            <Button onClick={viewFullProfile}>View full Profile</Button>
-        </div>
+            <Box display='flex' flexDirection='column' sx={{padding: '20px'}}>
+                <Button variant="contained" sx={{margin:'5px'}}>Connect</Button>
+                <Button variant="contained" sx={{margin:'5px'}} onClick={viewFullProfile}>View full Profile</Button>
+            </Box>
+            
+        </Box>
     )
 }

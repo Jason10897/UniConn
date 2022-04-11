@@ -20,10 +20,10 @@ export default function AppFrame(props) {
       <GlobalStyles styles={{ ul: { margin: 0, padding: 0, listStyle: 'none' } }} />
       <CssBaseline />
       <AppBar
-        position="static"
+        position="fixed"
         color="default"
         elevation={0}
-        sx={{ borderBottom: (theme) => `1px solid ${theme.palette.divider}` }}
+        sx={{ borderBottom: (theme) => `1px solid ${theme.palette.divider}`, zIndex: (theme) => theme.zIndex.drawer + 1  }}
       >
         <Toolbar sx={{ flexWrap: 'wrap' }}>
           <Typography variant="h6" color="inherit" noWrap sx={{ flex: 0.5 }} style={{textAlign: 'left'}}>
@@ -42,14 +42,14 @@ export default function AppFrame(props) {
         </Toolbar>
       </AppBar>
       {/* Hero unit */}
-      <Container disableGutters maxWidth="lg" component="main" sx={{ pt: 8, pb: 6 }}>
+      <Container disableGutters maxWidth="xl" component="main" sx={{ pt: 8, pb: 6 }}>
         {props.children}
       </Container>
       {/* End hero unit */}
 
       {/* Footer */}
       <Container
-        maxWidth="md"
+        maxWidth="lg"
         component="footer"
         sx={{
           borderTop: (theme) => `1px solid ${theme.palette.divider}`,
