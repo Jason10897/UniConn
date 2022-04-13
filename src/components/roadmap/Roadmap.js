@@ -6,6 +6,7 @@ import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
+import PlanStructure from './PlanStructure';
 
 function createData(
   name,
@@ -41,15 +42,8 @@ export default function BasicTable() {
           </TableRow>
         </TableHead>
         <TableBody>
-          {rows.map((row) => (
-            <TableRow
-              key={row.name}
-            >
-              <TableCell align="center">{row.calories}</TableCell>
-              <TableCell align="center">{row.fat}</TableCell>
-              <TableCell align="center">{row.carbs}</TableCell>
-            </TableRow>
-          ))}
+            <PlanStructure>
+            </PlanStructure>
         </TableBody>
       </Table>
     </TableContainer>
