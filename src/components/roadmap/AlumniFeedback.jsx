@@ -15,7 +15,7 @@ const SendButton = styled(Button)(({ theme }) => ({
 export default function AlumniFeedback () {
     return (
             <Box sx={{ width: "100%", bgcolor: "background.paper" }}>
-                <List sx={{ maxHeight: 200, overflow: "auto"}}>
+                <List sx={{ minHeight: 200, maxHeight: 200, overflow: "auto"}}>
                 {alumni.map(item => 
                     {return <Card key={item.id}variant="outlined" sx={{ marginBottom: "5px"}}>
                             <CardContent sx={{ display: "flex", flexDirection: "row" }}>
