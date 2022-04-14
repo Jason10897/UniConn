@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Box, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper } from '@mui/material';
+import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper } from '@mui/material';
 import PlanStructure from './PlanStructure';
 
 export default function BasicTable() {
@@ -14,8 +14,9 @@ export default function BasicTable() {
             </TableRow>
           </TableHead>
           <TableBody>
-              <PlanStructure>
-              </PlanStructure>
+              <PlanStructure/>
+              <PlanStructure/>
+              <PlanStructure/>
           </TableBody>
         </Table>
       </TableContainer>

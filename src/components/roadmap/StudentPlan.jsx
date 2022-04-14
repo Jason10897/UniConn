@@ -19,9 +19,7 @@ const SendButton = styled(Button)(({ theme }) => ({
   }));
 
 const plan = [{id: 1, text: "Step 1"}, {id: 2, text: "Step 2"}, {id: 3, text: "Step 3"},
-{id: 1, text: "Step 1"}, {id: 2, text: "Step 2"}, {id: 3, text: "Step 3"},
-{id: 1, text: "Step 1"}, {id: 2, text: "Step 2"}, {id: 3, text: "Step 3"}
-]
+                {id: 4, text: "Step 4"}, {id: 5, text: "Step 5"}, {id: 6, text: "Step 6"}, {id: 7, text: "Step 7"}];
 
 export default function StudentPlan () {
     return (
@@ -35,7 +33,7 @@ export default function StudentPlan () {
                                 <ListItemText primary={item.text}></ListItemText>
                             </ListItem>})}
                 </List>
-                <TextField id="outlined-basic" label="Next Step" variant="outlined" sx ={{width: "1", marginTop: "10px"}}
+                <TextField id="outlined-basic" label="Next Step" variant="outlined" sx ={{width: "1", marginTop: "8px"}}
                 InputProps={{endAdornment:  <SendButton size="small" variant="contained" 
                                                 endIcon={<SendIcon sx = {{marginLeft: "-10px"}}/>}>
                                             </SendButton>}}/>

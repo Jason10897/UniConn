@@ -8,7 +8,7 @@ export default function PlanStructure () {
     return (
         <React.Fragment>
             <TableRow>
-                <TableCell sx={{maxWidth:250, verticalAlign: "top", alignItems: "stretch"}}>
+                <TableCell sx={{maxWidth:300, verticalAlign: "top"}}>
                     <StudentPlan>
                     </StudentPlan>
                 </TableCell>
