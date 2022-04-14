@@ -4,7 +4,7 @@ import HomePage from './components/AppFrame/HomePage'
 import UserProfile from "./components/profile/UserProfile"
 import RoadMap from "./components/roadmap/Roadmap"
 import Alumnisearch from "./components/search/AlumniSearch"
-
+import Chatbox from "./components/chatbox/Chatbox"
 
 
 export default function MyRouter(){
@@ -14,6 +14,7 @@ export default function MyRouter(){
         <Alumnisearch path="/search" />
         <UserProfile path="/profile" />
         <RoadMap path="/roadmap"/>
+        <Chatbox path="/chatbox"/>
       </Router>
     )
 }
