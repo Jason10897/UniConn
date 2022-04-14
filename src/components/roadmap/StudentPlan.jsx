@@ -22,7 +22,7 @@ const plan = [{id: 1, text: "Step 1"}, {id: 2, text: "Step 2"}, {id: 3, text: "S
 
 export default function StudentPlan () {
     return (
-        <Box sx={{ width: "100%", maxWidth: 360, bgcolor: "background.paper" }}>
+        <Box sx={{ width: "100%", maxWidth: 360, bgcolor: "background.paper"}}>
                 <List>
                 {plan.map(item => 
                     {return <ListItem disablePadding key={item.id}>
