@@ -1,6 +1,5 @@
 import React from "react";
-import TableRow from '@mui/material/TableRow';
-import TableCell from '@mui/material/TableCell';
+import { TableRow, TableCell } from '@mui/material';
 import StudentPlan from "./StudentPlan";
 import AlumniFeedback from "./AlumniFeedback";
 import Status from "./Status";

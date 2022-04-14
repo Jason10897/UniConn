@@ -1,12 +1,6 @@
 import React from "react";
-import Box from "@mui/material/Box";
-import List from "@mui/material/List";
-import ListItem from "@mui/material/ListItem";
-import ListItemIcon from "@mui/material/ListItemIcon";
-import ListItemText from "@mui/material/ListItemText";
+import { Box, List, ListItem, ListItemIcon, ListItemText, TextField, Button } from "@mui/material";
 import CircleIcon from "@mui/icons-material/Circle";
-import TextField from '@mui/material/TextField';
-import Button from '@mui/material/Button';
 import SendIcon from '@mui/icons-material/Send';
 import { styled } from "@mui/material/styles";
 
