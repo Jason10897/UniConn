@@ -25,6 +25,7 @@ export default function StudentPlan () {
     return (
         <Box sx={{ width: "100%", bgcolor: "background.paper"}}>
                 <List sx={{ maxHeight: 200, overflow: "auto"}}>
+                <h3>Goal</h3>
                 {plan.map(item => 
                     {return <ListItem disablePadding key={item.id}>
                                 <StyledListPad>
@@ -33,7 +34,7 @@ export default function StudentPlan () {
                                 <ListItemText primary={item.text}></ListItemText>
                             </ListItem>})}
                 </List>
-                <TextField id="outlined-basic" label="Next Step" variant="outlined" sx ={{width: "1", marginTop: "8px"}}
+                <TextField id="outlined-basic" label="Next Step" variant="outlined" sx ={{marginTop: "6px", width: "1"}}
                 InputProps={{endAdornment:  <SendButton size="small" variant="contained" 
                                                 endIcon={<SendIcon sx = {{marginLeft: "-10px"}}/>}>
                                             </SendButton>}}/>
