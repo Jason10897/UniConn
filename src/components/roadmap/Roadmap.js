@@ -8,9 +8,9 @@ export default function BasicTable() {
         <Table sx={{ minWidth: 650 }} aria-label="simple table" border="1px">
           <TableHead>
             <TableRow>
-              <TableCell align="center">Student Plan</TableCell>
-              <TableCell align="center">Alumni Feedback</TableCell>
-              <TableCell align="center">Status</TableCell>
+              <TableCell align="center" sx={{fontWeight: "bold"}}>Student Plan</TableCell>
+              <TableCell align="center" sx={{fontWeight: "bold"}}>Alumni Feedback</TableCell>
+              <TableCell align="center" sx={{fontWeight: "bold"}}>Status</TableCell>
             </TableRow>
           </TableHead>
           <TableBody>

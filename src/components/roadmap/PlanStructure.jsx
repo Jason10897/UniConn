@@ -8,11 +8,11 @@ export default function PlanStructure () {
     return (
         <React.Fragment>
             <TableRow>
-                <TableCell>
+                <TableCell sx={{maxWidth:250, verticalAlign: "top", alignItems: "stretch"}}>
                     <StudentPlan>
                     </StudentPlan>
                 </TableCell>
-                <TableCell>
+                <TableCell sx={{maxWidth:300}}>
                     <AlumniFeedback>
                     </AlumniFeedback>
                 </TableCell>

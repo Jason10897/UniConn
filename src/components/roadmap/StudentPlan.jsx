@@ -18,12 +18,15 @@ const SendButton = styled(Button)(({ theme }) => ({
     maxWidth: "40px",
   }));
 
-const plan = [{id: 1, text: "Step 1"}, {id: 2, text: "Step 2"}, {id: 3, text: "Step 3"}];
+const plan = [{id: 1, text: "Step 1"}, {id: 2, text: "Step 2"}, {id: 3, text: "Step 3"},
+{id: 1, text: "Step 1"}, {id: 2, text: "Step 2"}, {id: 3, text: "Step 3"},
+{id: 1, text: "Step 1"}, {id: 2, text: "Step 2"}, {id: 3, text: "Step 3"}
+]
 
 export default function StudentPlan () {
     return (
-        <Box sx={{ width: "100%", maxWidth: 360, bgcolor: "background.paper"}}>
-                <List>
+        <Box sx={{ width: "100%", bgcolor: "background.paper"}}>
+                <List sx={{ maxHeight: 200, overflow: "auto"}}>
                 {plan.map(item => 
                     {return <ListItem disablePadding key={item.id}>
                                 <StyledListPad>
@@ -32,10 +35,10 @@ export default function StudentPlan () {
                                 <ListItemText primary={item.text}></ListItemText>
                             </ListItem>})}
                 </List>
-                <TextField id="outlined-basic" label="Next Step" variant="outlined" 
+                <TextField id="outlined-basic" label="Next Step" variant="outlined" sx ={{width: "1", marginTop: "10px"}}
                 InputProps={{endAdornment:  <SendButton size="small" variant="contained" 
                                                 endIcon={<SendIcon sx = {{marginLeft: "-10px"}}/>}>
                                             </SendButton>}}/>
-            </Box>
+        </Box>
     );
 }
