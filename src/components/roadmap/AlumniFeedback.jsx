@@ -3,7 +3,7 @@ import { Box, List, Avatar, Card, CardContent, Typography, TextField, Button } f
 import SendIcon from '@mui/icons-material/Send';
 import { styled } from "@mui/material/styles";
 
-const alumni = [{id: 1, name: 'John Doe', feedback: "Feedback 1"},
+const alumni = [{id: 1, name: 'John Doe', feedback: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."},
                 {id: 2, name: 'Claudia Alves', feedback: "Feedback 2"},
                 {id: 3, name: 'Jane Rodriguez', feedback: "Feedback 3"}]
 
@@ -20,9 +20,9 @@ export default function AlumniFeedback () {
                     {return <Card variant="outlined" sx={{ marginBottom: "5px"}}>
                             <CardContent sx={{ display: "flex", flexDirection: "row" }}>
                             <Avatar></Avatar>
-                            <Box sx={{ marginLeft: "15px" }}>
-                                <Typography sx={{ fontWeight: "bold" }}>adjective</Typography>
-                                <Typography variant="body2">well meaning and kindly</Typography>
+                            <Box sx={{ marginLeft: "15px"}}>
+                                <Typography sx={{ fontWeight: "bold" }}>{item.name}</Typography>
+                                <Typography sx={{ maxWidth: 1}}variant="body2">{item.feedback}</Typography>
                             </Box>
                             </CardContent>
                             </Card>})}
