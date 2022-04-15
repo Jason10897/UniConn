@@ -7,6 +7,7 @@ import ChatIcon from "@mui/icons-material/Chat";
 import { Button } from "@mui/material";
 import { Stack } from "@mui/material";
 import { Divider } from '@mui/material';
+import Details from "./Details";
 
 const styleProfileIcon = {
   width: "96vw",
@@ -18,14 +19,17 @@ export default function UserProfile() {
   return (
     <>
       <AccountCircleIcon style={styleProfileIcon} /> {/* Profile Icon */}
+      
       <Typography variant="h4" gutterBottom component="div" sx={{
           marginBottom:-1,
       }}>
         Name
       </Typography>
+      
       <Typography variant="subtitle1" gutterBottom component="div">
         Bachelors in Computer Science
       </Typography>
+      
       {/* Buttons */}
       <Stack
         spacing={2}
@@ -43,12 +47,14 @@ export default function UserProfile() {
         </Button>
 
         <ChatIcon />
+
       </Stack>
-      <div>
+
       <Divider sx={{
           marginTop:2
       }} />
-      </div>
+      
+      <Details/>
     </>
   );
 }
