@@ -11,13 +11,16 @@ import { Divider } from '@mui/material';
 const styleProfileIcon = {
   width: "96vw",
   height: "20vh",
+  marginBottom:-12,
 };
 
 export default function UserProfile() {
   return (
     <>
       <AccountCircleIcon style={styleProfileIcon} /> {/* Profile Icon */}
-      <Typography variant="h4" gutterBottom component="div">
+      <Typography variant="h4" gutterBottom component="div" sx={{
+          marginBottom:-1,
+      }}>
         Name
       </Typography>
       <Typography variant="subtitle1" gutterBottom component="div">
@@ -43,7 +46,7 @@ export default function UserProfile() {
       </Stack>
       <div>
       <Divider sx={{
-          
+          marginTop:2
       }} />
       </div>
     </>
