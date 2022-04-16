@@ -53,9 +53,14 @@ export default function UserProfile() {
       <Divider
         sx={{
           marginTop: 2,
+          marginBottom:1
         }}
       />
       <Details title="About" />
+      <Details title="Work Experience" />
+      <Details title="Education" />
+      <Details title="Projects" />
+      
     </>
   );
 }
