@@ -19,7 +19,9 @@ const styleProfileIcon = {
 export default function UserProfile() {
   return (
     <Box sx={{margin: 3}}>
-      <AccountCircleIcon style={styleProfileIcon} /> {/* Profile Icon */}
+      <Box display="flex" justifyContent="center" alignItems="center">
+        <Avatar sx={{height: "150px", width: "150px"}}></Avatar> {/* <AccountCircleIcon style={styleProfileIcon} /> */}
+      </Box>
       <Typography
         variant="h4"
         gutterBottom
