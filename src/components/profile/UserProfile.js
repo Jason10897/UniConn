@@ -8,6 +8,7 @@ import { Avatar, Button } from "@mui/material";
 import { Stack } from "@mui/material";
 import { Divider } from "@mui/material";
 import Details from "./Details";
+import RoadMapLink from "./RoadMapLink"
 
 const styleProfileIcon = {
   width: "96vw",
@@ -60,7 +61,7 @@ export default function UserProfile() {
       <Details title="Work Experience" />
       <Details title="Education" />
       <Details title="Projects" />
-      
+      <RoadMapLink/>
     </>
   );
 }
