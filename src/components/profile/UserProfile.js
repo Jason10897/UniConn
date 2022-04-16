@@ -4,7 +4,7 @@ import { alpha, styled } from "@mui/material/styles";
 import PersonIcon from "@mui/icons-material/Person";
 import Typography from "@mui/material/Typography";
 import ChatIcon from "@mui/icons-material/Chat";
-import { Avatar, Button } from "@mui/material";
+import { Avatar, Button, Box } from "@mui/material";
 import { Stack } from "@mui/material";
 import { Divider } from "@mui/material";
 import Details from "./Details";
@@ -18,7 +18,7 @@ const styleProfileIcon = {
 
 export default function UserProfile() {
   return (
-    <>
+    <Box sx={{margin: 3}}>
       <AccountCircleIcon style={styleProfileIcon} /> {/* Profile Icon */}
       <Typography
         variant="h4"
@@ -62,6 +62,6 @@ export default function UserProfile() {
       <Details title="Education" />
       <Details title="Projects" />
       <RoadMapLink/>
-    </>
+    </Box>
   );
 }

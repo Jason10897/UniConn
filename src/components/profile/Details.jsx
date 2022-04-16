@@ -9,7 +9,7 @@ export default function Details(params) {
                 {params.title}
             </Typography>
             
-            <Typography variant="body1" gutterBottom component="div" sx={{ textAlign: 'left' }}>
+            <Typography variant="body1" gutterBottom component="div" sx={{ textAlign: 'left', marginBottom: 3 }}>
                 {titleDetails(params.title)}
             </Typography>
 
