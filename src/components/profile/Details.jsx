@@ -10,11 +10,30 @@ export default function Details(params) {
       </Typography>
 
       <Typography variant="body1" gutterBottom component="div" sx={{textAlign:'left'}}>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam at officiis debitis asperiores aliquam cum voluptates maiores repellat ipsam impedit dolorem et est tempore molestiae animi incidunt rerum, laudantium, magni maxime! Voluptatum iste dolorem voluptate magni, eius nesciunt eum cum?
+        {titleDetails(params.title)}
       </Typography>
       
     </>
   )
 }
-
+function titleDetails(title){
+    switch(title){
+        case 'About':
+            return "About info"
+            break;
+            case 'Work Experience':
+            return "Work Ex info"
+            break;
+            case 'Education':
+            return "Education info"
+            break;
+            case 'Projects':
+            return "Projects info"
+            break;
+            case 'Roadmap':
+            return "Roadmap info"
+            break;
+    
+    }
+}
 
