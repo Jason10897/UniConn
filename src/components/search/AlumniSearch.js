@@ -4,11 +4,10 @@ import InputBase from '@mui/material/InputBase';
 import { alpha, styled } from '@mui/material/styles';
 import React from "react";
 import Chip from '@mui/material/Chip';
-import { width } from '@mui/system';
 import CardGrid from './CardGrid';
 import Filters from './filters/Filters';
 
-const Search = styled('div')(({ theme }) => ({
+export const Search = styled('div')(({ theme }) => ({
     position: 'relative',
     display: 'flex',
     borderRadius: theme.shape.borderRadius,
@@ -24,7 +23,7 @@ const Search = styled('div')(({ theme }) => ({
     },
   }));
 
-  const SearchIconWrapper = styled('div')(({ theme }) => ({
+export  const SearchIconWrapper = styled('div')(({ theme }) => ({
     padding: theme.spacing(2),
     height: '100%',
     pointerEvents: 'none',
@@ -33,7 +32,7 @@ const Search = styled('div')(({ theme }) => ({
     justifyContent: 'center',
   }));
 
-  const StyledInputBase = styled(InputBase)(({ theme }) => ({
+export  const StyledInputBase = styled(InputBase)(({ theme }) => ({
     color: 'inherit',
     width: '100%',
     '& .MuiInputBase-input': {
@@ -48,7 +47,7 @@ const Search = styled('div')(({ theme }) => ({
     },
   }));
 
-  const ChipContainer = styled('div')(({theme}) => ({
+export const ChipContainer = styled('div')(({theme}) => ({
       display: 'flex',
       width: '80%',
       alignItems: 'center',

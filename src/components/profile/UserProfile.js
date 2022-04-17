@@ -1,14 +1,10 @@
-import React from "react";
-import AccountCircleIcon from "@mui/icons-material/AccountCircle";
-import { alpha, styled } from "@mui/material/styles";
-import PersonIcon from "@mui/icons-material/Person";
-import Typography from "@mui/material/Typography";
 import ChatIcon from "@mui/icons-material/Chat";
-import { Avatar, Button, Box } from "@mui/material";
-import { Stack } from "@mui/material";
-import { Divider } from "@mui/material";
+import { Avatar, Box, Button, Divider, Stack } from "@mui/material";
+import Typography from "@mui/material/Typography";
+import React from "react";
+import RecommendButton from "../reccommend/RecommendButton";
 import Details from "./Details";
-import RoadMapLink from "./RoadMapLink"
+import RoadMapLink from "./RoadMapLink";
 
 const styleProfileIcon = {
   width: "96vw",
@@ -47,9 +43,7 @@ export default function UserProfile() {
       >
         <Button variant="contained">Connect</Button>
 
-        <Button variant="contained" color="success">
-          Recommend
-        </Button>
+        <RecommendButton/>
 
         <ChatIcon />
       </Stack>

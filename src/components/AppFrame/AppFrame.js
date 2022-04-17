@@ -42,7 +42,7 @@ export default function AppFrame(props) {
         </Toolbar>
       </AppBar>
       {/* Hero unit */}
-      <Container disableGutters maxWidth="xl" component="main" sx={{ pt: 8, pb: 6, marginTop: 1 }}>
+      <Container disableGutters maxWidth="lg" component="main" sx={{ pt: 8, pb: 6, marginTop: 1 }}>
         {props.children}
       </Container>
       {/* End hero unit */}

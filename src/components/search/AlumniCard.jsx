@@ -4,11 +4,13 @@ import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
+import AddBoxIcon from '@mui/icons-material/AddBox';
 import React from "react";
+import { Tooltip } from '@mui/material';
 
 export default function AlumniCard({onClick}){
     return (
-        <Card sx={{ width: '23%',margin: '10px' }}>
+        <Card sx={{ width: '22%',margin: '10px' }}>
           <CardMedia
             component="img"
             height="200"
@@ -26,7 +28,9 @@ export default function AlumniCard({onClick}){
                 </Typography>
             </div>
             <CardActions>
-            <Button size="small">Connect</Button>
+            <Tooltip title="Connect">
+            <AddBoxIcon/>
+            </Tooltip>
             </CardActions>
           </CardContent>
         </Card>
