@@ -1,11 +1,12 @@
 import { Drawer } from "@mui/material";
 import { Box } from "@mui/system";
 import React, { useState } from "react";
+import { AlumniUsers } from "../data/userData";
 import AlumniCard from "./AlumniCard";
 import MiniDetails from "./MiniDetails";
 
 
-export default function CardGrid({ style }){
+export default function CardGrid({ style, isSelectable, drawerenabled=true }){
     
     const [isDrawerOpen, setDrawerOpen] = useState(false);
     const [drawerDetails, setDrawerDetails] = useState({})
@@ -20,7 +21,7 @@ export default function CardGrid({ style }){
         setDrawerOpen(true)
     }
 
-    const cards = Array(20).fill(<AlumniCard onClick={onCardImageClick}/>)
+    const cards = AlumniUsers.map((data) => <AlumniCard data={data} isSelectable={isSelectable} onClick={(drawerenabled)?onCardImageClick:null}/>)
 
     return(
         <Box display="flex" flexWrap="wrap" style={{width:'100%', ...style}}>
@@ -30,7 +31,7 @@ export default function CardGrid({ style }){
             open={isDrawerOpen}
             onClose={toggleDrawer}
           >
-            {<MiniDetails/>}
+            {<MiniDetails data={drawerDetails}/>}
           </Drawer>
         </Box>
     )

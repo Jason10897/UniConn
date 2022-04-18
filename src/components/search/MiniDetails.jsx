@@ -2,7 +2,7 @@ import { Box, Button, Typography } from "@mui/material";
 import { navigate } from "@reach/router";
 import React from "react";
 
-export default function MiniDetails(){
+export default function MiniDetails({data}){
 
 
     const viewFullProfile = () =>{
@@ -15,20 +15,20 @@ export default function MiniDetails(){
                 Details
             </Typography>
             <Typography variant="body2">
-                Name: User Name
+                Name: {`${data?.firstName} ${data?.lastName}`}
             </Typography>
             <Typography variant="body2">
-                Status: Student
+                Status: {data?.type}
             </Typography>
             <Typography variant="body2">
-                Branch: Computer Science
+                Branch: {data?.domain}
             </Typography>
             <Typography variant="body2">
                 Last Activity: 2 days ago
             </Typography>
 
             <Box display='flex' flexDirection='column' sx={{padding: '20px'}}>
-                <Button variant="contained" sx={{margin:'5px'}}>Connect</Button>
+                <Button variant="contained" sx={{margin:'5px'}} disabled={data?.isConnected}>{data?.isConnected?'Connected':'Connect'}</Button>
                 <Button variant="contained" sx={{margin:'5px'}} onClick={viewFullProfile}>View full Profile</Button>
             </Box>
             

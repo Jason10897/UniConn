@@ -1,4 +1,5 @@
 import SearchIcon from '@mui/icons-material/Search';
+import { Alert, Snackbar } from '@mui/material';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Dialog from '@mui/material/Dialog';
@@ -11,6 +12,8 @@ import CardGrid from '../search/CardGrid';
 
 export default function RecommendButton() {
   const [open, setOpen] = React.useState(false);
+
+  const [snackbarOpen, setSnackbarOpen] = React.useState(false);
   
   const handleClickOpen = () => {
     setOpen(true);
@@ -19,6 +22,15 @@ export default function RecommendButton() {
   const handleClose = () => {
     setOpen(false);
   };
+
+  const handleRecommend = () => {
+    setSnackbarOpen(true)
+    setOpen(false)
+  }
+
+  const handleSnackClose = () => {
+    setSnackbarOpen(false)
+  }
 
 
   return (
@@ -53,14 +65,21 @@ export default function RecommendButton() {
               <SearchIcon />
             </SearchIconWrapper>
           </Search>
-          <CardGrid/>
+          <CardGrid isSelectable={true} drawerenabled={false}/>
           </Box>
         </DialogContent>
         <DialogActions>
           <Button onClick={handleClose}>Close</Button>
-          <Button onClick={handleClose}>Recommend</Button>
+          <Button onClick={handleRecommend}>Recommend</Button>
         </DialogActions>
       </Dialog>
+      
+        <Snackbar open={snackbarOpen} anchorOrigin={{ vertical:"bottom", horizontal: "center"}}
+         autoHideDuration={6000} onClose={handleSnackClose}>
+        <Alert onClose={handleSnackClose} variant="filled" severity="success" sx={{ width: '100%' }}>
+            Recommendation sent successfully!
+        </Alert>
+        </Snackbar>
     </React.Fragment>
   );
 }
