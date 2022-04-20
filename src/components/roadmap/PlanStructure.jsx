@@ -110,7 +110,7 @@ export default function PlanStructure() {
             add={addFeedback}
           ></AlumniFeedback>
         </TableCell>
-        <TableCell sx={{ textAlign: "center" }}>
+        <TableCell sx={{ minWidth: 220, maxWidth: 300, textAlign: "center" }}>
           <Status
             open={open}
             anchorEl={anchorEl}
