@@ -31,6 +31,12 @@ export default function PlanStructure() {
 
   const [feedbackField, handleFeedback] = useState("");
 
+  const [anchorEl, setAnchorEl] = useState(null);
+
+  const open = Boolean(anchorEl);
+
+  const [status, setStatus] = useState(false);
+
   const editStepText = (event) => {
     stepText = event.target.value;
     handleStep(event.target.value);
@@ -72,6 +78,19 @@ export default function PlanStructure() {
     }
   };
 
+  const handleClick = (event) => {
+    setAnchorEl(event.currentTarget);
+  };
+
+  const handleClose = () => {
+    setAnchorEl(null);
+  };
+
+  const handleSelection = () => {
+    setAnchorEl(null);
+    setStatus(!status);
+  }
+
   return (
     <React.Fragment>
       <TableRow>
@@ -83,7 +102,7 @@ export default function PlanStructure() {
             add={addStep}
           ></StudentPlan>
         </TableCell>
-        <TableCell sx={{ maxWidth: 300 }}>
+        <TableCell sx={{ maxWidth: 300, verticalAlign: "top" }}>
           <AlumniFeedback
             alumni={alumni}
             value={feedbackField}
@@ -91,8 +110,15 @@ export default function PlanStructure() {
             add={addFeedback}
           ></AlumniFeedback>
         </TableCell>
-        <TableCell>
-          <Status></Status>
+        <TableCell sx={{ textAlign: "center" }}>
+          <Status
+            open={open}
+            anchorEl={anchorEl}
+            status={status}
+            click={handleClick}
+            close={handleClose}
+            select={handleSelection}
+          ></Status>
         </TableCell>
       </TableRow>
     </React.Fragment>
