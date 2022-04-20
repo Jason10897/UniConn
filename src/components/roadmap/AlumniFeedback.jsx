@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   Box,
   List,
@@ -12,16 +12,7 @@ import {
 import SendIcon from "@mui/icons-material/Send";
 import { styled } from "@mui/material/styles";
 
-const alumni = [
-  {
-    id: 1,
-    name: "John Doe",
-    feedback:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
-  },
-  { id: 2, name: "Claudia Alves", feedback: "Feedback 2" },
-  { id: 3, name: "Jane Rodriguez", feedback: "Feedback 3" },
-];
+let feedbackText = "";
 
 const SendButton = styled(Button)(({ theme }) => ({
   minWidth: "10px",
@@ -29,7 +20,26 @@ const SendButton = styled(Button)(({ theme }) => ({
   marginRight: -3,
 }));
 
+const editFeedbackText = (event) => {
+  feedbackText = event.target.value;
+};
+
 export default function AlumniFeedback() {
+  const [alumni, setFeedback] = useState([
+    {
+      id: 1,
+      name: "John Doe",
+      feedback:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+    },
+    { id: 2, name: "Claudia Alves", feedback: "Feedback 2" },
+    { id: 3, name: "Jane Rodriguez", feedback: "Feedback 3" },
+  ]);
+
+  const addFeedback = () => {
+    setFeedback([...alumni, {id: alumni.slice(-1)[0].id + 1, name: "Jason Dsouza", feedback: feedbackText}]);
+  };
+
   return (
     <Box sx={{ width: "100%", bgcolor: "background.paper" }}>
       <List sx={{ minHeight: 200, maxHeight: 200, overflow: "auto" }}>
@@ -58,12 +68,14 @@ export default function AlumniFeedback() {
         id="outlined-basic"
         label="Feedback"
         variant="outlined"
+        onChange={editFeedbackText}
         sx={{ marginTop: "5px", width: "1" }}
         InputProps={{
           endAdornment: (
             <SendButton
               size="small"
               variant="contained"
+              onClick={addFeedback}
               endIcon={<SendIcon sx={{ marginLeft: "-10px" }} />}
             ></SendButton>
           ),
