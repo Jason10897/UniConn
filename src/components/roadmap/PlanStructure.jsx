@@ -16,7 +16,7 @@ export default function PlanStructure() {
     { id: 5, text: "Step 5" },
   ]);
 
-  const [stepField, handleStep] = useState('');
+  const [stepField, handleStep] = useState("");
 
   const [alumni, setFeedback] = useState([
     {
@@ -29,7 +29,7 @@ export default function PlanStructure() {
     { id: 3, name: "Jane Rodriguez", feedback: "Feedback 3" },
   ]);
 
-  const [feedbackField, handleFeedback] = useState('');
+  const [feedbackField, handleFeedback] = useState("");
 
   const editStepText = (event) => {
     stepText = event.target.value;
@@ -37,12 +37,15 @@ export default function PlanStructure() {
   };
 
   const clearStep = () => {
-    handleStep('');
+    handleStep("");
   };
 
   const addStep = () => {
-    setStep([...plan, { id: plan.slice(-1)[0].id + 1, text: stepText }]);
-    clearStep();
+    if (stepText !== "") {
+      setStep([...plan, { id: plan.slice(-1)[0].id + 1, text: stepText }]);
+      stepText = "";
+      clearStep();
+    }
   };
 
   const editFeedbackText = (event) => {
@@ -51,19 +54,22 @@ export default function PlanStructure() {
   };
 
   const clearFeedback = () => {
-    handleFeedback('');
+    handleFeedback("");
   };
 
   const addFeedback = () => {
-    setFeedback([
-      ...alumni,
-      {
-        id: alumni.slice(-1)[0].id + 1,
-        name: "Jason Dsouza",
-        feedback: feedbackText,
-      },
-    ]);
-    clearFeedback();
+    if (feedbackText !== "") {
+      setFeedback([
+        ...alumni,
+        {
+          id: alumni.slice(-1)[0].id + 1,
+          name: "Jason Dsouza",
+          feedback: feedbackText,
+        },
+      ]);
+      feedbackText = "";
+      clearFeedback();
+    }
   };
 
   return (
