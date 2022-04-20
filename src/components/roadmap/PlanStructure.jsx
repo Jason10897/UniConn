@@ -4,10 +4,10 @@ import StudentPlan from "./StudentPlan";
 import AlumniFeedback from "./AlumniFeedback";
 import Status from "./Status";
 
-let stepText = "";
-let feedbackText = "";
-
 export default function PlanStructure() {
+  const [stepText, setStepText] = useState('');
+  const [feedbackText, setFeedbackText] = useState('');
+
   const [plan, setStep] = useState([
     { id: 1, text: "Step 1" },
     { id: 2, text: "Step 2" },
@@ -38,7 +38,7 @@ export default function PlanStructure() {
   const [status, setStatus] = useState(false);
 
   const editStepText = (event) => {
-    stepText = event.target.value;
+    setStepText(event.target.value);
     handleStep(event.target.value);
   };
 
@@ -49,13 +49,13 @@ export default function PlanStructure() {
   const addStep = () => {
     if (stepText !== "") {
       setStep([...plan, { id: plan.slice(-1)[0].id + 1, text: stepText }]);
-      stepText = "";
+      setStepText("");
       clearStep();
     }
   };
 
   const editFeedbackText = (event) => {
-    feedbackText = event.target.value;
+    setFeedbackText(event.target.value);;
     handleFeedback(event.target.value);
   };
 
@@ -73,7 +73,7 @@ export default function PlanStructure() {
           feedback: feedbackText,
         },
       ]);
-      feedbackText = "";
+      setFeedbackText("");
       clearFeedback();
     }
   };
