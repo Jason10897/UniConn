@@ -5,6 +5,7 @@ import { Box } from '@mui/material';
 import { Button } from '@mui/material';
 
 
+
 export default function HomePage(){
     return (
         <React.Fragment>
@@ -31,12 +32,13 @@ export default function HomePage(){
         {/* <Typography variant="h5" align="center" color="text.secondary" component="p">
         Add University Events Slider Here
         </Typography> */}
-        
+
+        <Box textAlign={'left'}>
         <Button variant="contained" sx={{
           marginBottom:2,
           backgroundColor:"green",
-          
         }}>Search and Connect with Alumni/Students</Button>
+        </Box>
 
         <EventSlider/>
         </React.Fragment>
