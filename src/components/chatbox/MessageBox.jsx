@@ -1,9 +1,9 @@
-import React from "react";
-import { Paper, TextField } from "@mui/material";
-import { IconButton } from "@mui/material";
-import SendIcon from "@mui/icons-material/Send";
-import AttachFileIcon from "@mui/icons-material/AttachFile";
-import SentimentSatisfiedAltIcon from "@mui/icons-material/SentimentSatisfiedAlt";
+import React from 'react';
+import { Paper, TextField } from '@mui/material';
+import { IconButton } from '@mui/material';
+import SendIcon from '@mui/icons-material/Send';
+import AttachFileIcon from '@mui/icons-material/AttachFile';
+import SentimentSatisfiedAltIcon from '@mui/icons-material/SentimentSatisfiedAlt';
 
 import { Box } from "@mui/system";
 import { AlignHorizontalCenter } from "@mui/icons-material";

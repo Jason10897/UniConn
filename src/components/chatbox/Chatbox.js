@@ -1,7 +1,7 @@
-import { Paper } from "@mui/material";
-import React from "react";
-import MessageBox from "./MessageBox";
-import { Box } from "@mui/system";
+import { Paper } from '@mui/material';
+import React from 'react';
+import MessageBox from './MessageBox';
+import { Box } from '@mui/system';
 
 export default function Chatbox() {
   return (

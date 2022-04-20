@@ -1,6 +1,6 @@
-import { Checkbox, FormControl, FormControlLabel, FormGroup, FormLabel, InputLabel, MenuItem, Select } from '@mui/material'
-import { Box } from '@mui/system'
-import React from 'react'
+import { Checkbox, FormControl, FormControlLabel, FormGroup, FormLabel, InputLabel, MenuItem, Select } from '@mui/material';
+import { Box } from '@mui/system';
+import React from 'react';
 
 export default function Filters({style}){
     const domains = [

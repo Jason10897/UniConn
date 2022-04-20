@@ -1,8 +1,8 @@
+import React from 'react';
 import SearchIcon from '@mui/icons-material/Search';
 import { Box, Divider } from '@mui/material';
 import InputBase from '@mui/material/InputBase';
 import { alpha, styled } from '@mui/material/styles';
-import React from "react";
 import Chip from '@mui/material/Chip';
 import CardGrid from './CardGrid';
 import Filters from './filters/Filters';

@@ -1,8 +1,8 @@
-import React from "react";
+import React from 'react';
 import { TableRow, TableCell } from '@mui/material';
-import StudentPlan from "./StudentPlan";
-import AlumniFeedback from "./AlumniFeedback";
-import Status from "./Status";
+import StudentPlan from './StudentPlan';
+import AlumniFeedback from './AlumniFeedback';
+import Status from './Status';
 
 export default function PlanStructure () {
     return (

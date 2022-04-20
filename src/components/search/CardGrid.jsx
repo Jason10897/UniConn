@@ -1,9 +1,9 @@
-import { Drawer } from "@mui/material";
-import { Box } from "@mui/system";
-import React, { useState } from "react";
-import { AlumniUsers } from "../data/userData";
-import AlumniCard from "./AlumniCard";
-import MiniDetails from "./MiniDetails";
+import { Drawer } from '@mui/material';
+import { Box } from '@mui/system';
+import React, { useState } from 'react';
+import { AlumniUsers } from '../data/userData';
+import AlumniCard from './AlumniCard';
+import MiniDetails from './MiniDetails';
 
 
 export default function CardGrid({ style, isSelectable, drawerenabled=true }){

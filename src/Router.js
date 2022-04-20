@@ -1,10 +1,10 @@
-import { Router } from "@reach/router"
-import React from "react"
-import HomePage from './components/AppFrame/HomePage'
-import UserProfile from "./components/profile/UserProfile"
-import RoadMap from "./components/roadmap/Roadmap"
-import Alumnisearch from "./components/search/AlumniSearch"
-import Chatbox from "./components/chatbox/Chatbox"
+import { Router } from '@reach/router';
+import React from 'react';
+import HomePage from './components/AppFrame/HomePage';
+import UserProfile from './components/profile/UserProfile';
+import RoadMap from './components/roadmap/Roadmap';
+import Alumnisearch from './components/search/AlumniSearch';
+import Chatbox from './components/chatbox/Chatbox';
 
 
 export default function MyRouter(){

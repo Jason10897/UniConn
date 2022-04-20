@@ -1,10 +1,10 @@
-import ChatIcon from "@mui/icons-material/Chat";
-import { Avatar, Box, Button, Divider, Stack } from "@mui/material";
-import Typography from "@mui/material/Typography";
-import React from "react";
-import RecommendButton from "../reccommend/RecommendButton";
-import Details from "./Details";
-import RoadMapLink from "./RoadMapLink";
+import ChatIcon from '@mui/icons-material/Chat';
+import { Avatar, Box, Button, Divider, Stack } from '@mui/material';
+import Typography from '@mui/material/Typography';
+import React from 'react';
+import RecommendButton from '../recommend/RecommendButton';
+import Details from './Details';
+import RoadMapLink from './RoadMapLink';
 
 const styleProfileIcon = {
   width: "96vw",

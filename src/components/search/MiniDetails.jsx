@@ -1,6 +1,6 @@
-import { Box, Button, Typography } from "@mui/material";
-import { navigate } from "@reach/router";
-import React from "react";
+import { Box, Button, Typography } from '@mui/material';
+import { navigate } from '@reach/router';
+import React from 'react';
 
 export default function MiniDetails({data}){
 
