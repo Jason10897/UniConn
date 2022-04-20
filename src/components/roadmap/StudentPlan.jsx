@@ -54,6 +54,7 @@ export default function StudentPlan(props) {
         id="outlined-basic"
         label="Next Step"
         variant="outlined"
+        value={props.value}
         onChange={props.edit}
         sx={{ marginTop: "6px", width: "1" }}
         InputProps={{

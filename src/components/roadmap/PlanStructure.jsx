@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import { TableRow, TableCell } from "@mui/material";
 import StudentPlan from "./StudentPlan";
 import AlumniFeedback from "./AlumniFeedback";
@@ -6,10 +6,6 @@ import Status from "./Status";
 
 let stepText = "";
 let feedbackText = "";
-
-const editStepText = (event) => {
-  stepText = event.target.value;
-};
 
 const editFeedbackText = (event) => {
   feedbackText = event.target.value;
@@ -24,9 +20,7 @@ export default function PlanStructure() {
     { id: 5, text: "Step 5" },
   ]);
 
-  const addStep = () => {
-    setStep([...plan, { id: plan.slice(-1)[0].id + 1, text: stepText }]);
-  };
+  const [stepField, handleStep] = useState('');
 
   const [alumni, setFeedback] = useState([
     {
@@ -38,6 +32,20 @@ export default function PlanStructure() {
     { id: 2, name: "Claudia Alves", feedback: "Feedback 2" },
     { id: 3, name: "Jane Rodriguez", feedback: "Feedback 3" },
   ]);
+
+  const editStepText = (event) => {
+    stepText = event.target.value;
+    handleStep(event.target.value);
+  };
+
+  const clearStep = () => {
+    handleStep('');
+  };
+
+  const addStep = () => {
+    setStep([...plan, { id: plan.slice(-1)[0].id + 1, text: stepText }]);
+    clearStep();
+  };
 
   const addFeedback = () => {
     setFeedback([
@@ -54,10 +62,19 @@ export default function PlanStructure() {
     <React.Fragment>
       <TableRow>
         <TableCell sx={{ maxWidth: 300, verticalAlign: "top" }}>
-          <StudentPlan plan = {plan} edit = {editStepText} add = {addStep}></StudentPlan>
+          <StudentPlan
+            plan={plan}
+            value={stepField}
+            edit={editStepText}
+            add={addStep}
+          ></StudentPlan>
         </TableCell>
         <TableCell sx={{ maxWidth: 300 }}>
-          <AlumniFeedback alumni = {alumni} edit = {editFeedbackText} add = {addFeedback}></AlumniFeedback>
+          <AlumniFeedback
+            alumni={alumni}
+            edit={editFeedbackText}
+            add={addFeedback}
+          ></AlumniFeedback>
         </TableCell>
         <TableCell>
           <Status></Status>
