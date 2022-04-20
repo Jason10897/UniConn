@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import {
   Box,
   List,
@@ -12,6 +12,8 @@ import {
 import CircleIcon from "@mui/icons-material/Circle";
 import SendIcon from "@mui/icons-material/Send";
 import { styled } from "@mui/material/styles";
+
+let stepText = "";
 
 const StyledListPad = styled(ListItemIcon)(({ theme }) => ({
   minWidth: "25px",
@@ -34,17 +36,23 @@ const PromptButton = styled(Button)(({ theme }) => ({
   margin: 5,
 }));
 
-const plan = [
-  { id: 1, text: "Step 1" },
-  { id: 2, text: "Step 2" },
-  { id: 3, text: "Step 3" },
-  { id: 4, text: "Step 4" },
-  { id: 5, text: "Step 5" },
-  { id: 6, text: "Step 6" },
-  { id: 7, text: "Step 7" },
-];
+const editStepText = (event) => {
+  stepText = event.target.value;
+};
 
 export default function StudentPlan() {
+  const [plan, setStep] = useState([
+    { id: 1, text: "Step 1" },
+    { id: 2, text: "Step 2" },
+    { id: 3, text: "Step 3" },
+    { id: 4, text: "Step 4" },
+    { id: 5, text: "Step 5" },
+  ]);
+
+  const addStep = () => {
+    setStep([...plan, {id: plan.slice(-1)[0].id + 1, text: stepText}]);
+  };
+
   return (
     <Box sx={{ width: "100%", bgcolor: "background.paper" }}>
       <List sx={{ minHeight: 200, maxHeight: 200, overflow: "auto" }}>
@@ -64,6 +72,7 @@ export default function StudentPlan() {
         id="outlined-basic"
         label="Next Step"
         variant="outlined"
+        onChange={editStepText}
         sx={{ marginTop: "6px", width: "1" }}
         InputProps={{
           endAdornment: (
@@ -72,7 +81,7 @@ export default function StudentPlan() {
                 <PromptButton
                   size="small"
                   variant="contained"
-                  sx={{ fontSize: "10px", lineHeight: "10px", padding: 1}}
+                  sx={{ fontSize: "10px", lineHeight: "10px", padding: 1 }}
                 >
                   Prompts
                 </PromptButton>
@@ -81,6 +90,7 @@ export default function StudentPlan() {
                 <SendButton
                   size="small"
                   variant="contained"
+                  onClick={addStep}
                   endIcon={<SendIcon sx={{ marginLeft: "-10px" }} />}
                 ></SendButton>
               </InputAdornment>
