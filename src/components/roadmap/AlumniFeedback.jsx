@@ -47,6 +47,7 @@ export default function AlumniFeedback(props) {
         id="outlined-basic"
         label="Feedback"
         variant="outlined"
+        value={props.value}
         onChange={props.edit}
         sx={{ marginTop: "5px", width: "1" }}
         InputProps={{

@@ -7,10 +7,6 @@ import Status from "./Status";
 let stepText = "";
 let feedbackText = "";
 
-const editFeedbackText = (event) => {
-  feedbackText = event.target.value;
-};
-
 export default function PlanStructure() {
   const [plan, setStep] = useState([
     { id: 1, text: "Step 1" },
@@ -33,6 +29,8 @@ export default function PlanStructure() {
     { id: 3, name: "Jane Rodriguez", feedback: "Feedback 3" },
   ]);
 
+  const [feedbackField, handleFeedback] = useState('');
+
   const editStepText = (event) => {
     stepText = event.target.value;
     handleStep(event.target.value);
@@ -47,6 +45,15 @@ export default function PlanStructure() {
     clearStep();
   };
 
+  const editFeedbackText = (event) => {
+    feedbackText = event.target.value;
+    handleFeedback(event.target.value);
+  };
+
+  const clearFeedback = () => {
+    handleFeedback('');
+  };
+
   const addFeedback = () => {
     setFeedback([
       ...alumni,
@@ -56,6 +63,7 @@ export default function PlanStructure() {
         feedback: feedbackText,
       },
     ]);
+    clearFeedback();
   };
 
   return (
@@ -72,6 +80,7 @@ export default function PlanStructure() {
         <TableCell sx={{ maxWidth: 300 }}>
           <AlumniFeedback
             alumni={alumni}
+            value={feedbackField}
             edit={editFeedbackText}
             add={addFeedback}
           ></AlumniFeedback>
