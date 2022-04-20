@@ -1,7 +1,7 @@
 import React from 'react'
 import Carousel from 'react-bootstrap/Carousel'
 
-export default function UpdateFeed() {
+export default function EventSlider() {
     return (
         <>
             <Carousel>
