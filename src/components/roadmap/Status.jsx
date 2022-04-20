@@ -15,7 +15,7 @@ export default function Status(props) {
         aria-haspopup="true"
         aria-expanded={props.open ? "true" : undefined}
         onClick={props.click}
-        sx={props.status ? {color: "green"} : {color: "orange"}}
+        sx={props.status ? {color: "green", fontWeight: "bold"} : {color: "orange", fontWeight: "bold"}}
       >
         {statusText}
       </Button>
