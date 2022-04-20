@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import {
   Box,
   List,
@@ -12,38 +12,17 @@ import {
 import SendIcon from "@mui/icons-material/Send";
 import { styled } from "@mui/material/styles";
 
-let feedbackText = "";
-
 const SendButton = styled(Button)(({ theme }) => ({
   minWidth: "10px",
   maxWidth: "40px",
   marginRight: -3,
 }));
 
-const editFeedbackText = (event) => {
-  feedbackText = event.target.value;
-};
-
-export default function AlumniFeedback() {
-  const [alumni, setFeedback] = useState([
-    {
-      id: 1,
-      name: "John Doe",
-      feedback:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
-    },
-    { id: 2, name: "Claudia Alves", feedback: "Feedback 2" },
-    { id: 3, name: "Jane Rodriguez", feedback: "Feedback 3" },
-  ]);
-
-  const addFeedback = () => {
-    setFeedback([...alumni, {id: alumni.slice(-1)[0].id + 1, name: "Jason Dsouza", feedback: feedbackText}]);
-  };
-
+export default function AlumniFeedback(props) {
   return (
     <Box sx={{ width: "100%", bgcolor: "background.paper" }}>
       <List sx={{ minHeight: 200, maxHeight: 200, overflow: "auto" }}>
-        {alumni.map((item) => {
+        {props.alumni.map((item) => {
           return (
             <Card key={item.id} variant="outlined" sx={{ marginBottom: "5px" }}>
               <CardContent sx={{ display: "flex", flexDirection: "row" }}>
@@ -68,14 +47,14 @@ export default function AlumniFeedback() {
         id="outlined-basic"
         label="Feedback"
         variant="outlined"
-        onChange={editFeedbackText}
+        onChange={props.edit}
         sx={{ marginTop: "5px", width: "1" }}
         InputProps={{
           endAdornment: (
             <SendButton
               size="small"
               variant="contained"
-              onClick={addFeedback}
+              onClick={props.add}
               endIcon={<SendIcon sx={{ marginLeft: "-10px" }} />}
             ></SendButton>
           ),
