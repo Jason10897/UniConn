@@ -1,5 +1,6 @@
 import Typography from '@mui/material/Typography';
 import * as React from 'react';
+import UpdateFeed from './UpdateFeed';
 
 export default function HomePage(){
     return (
@@ -13,9 +14,10 @@ export default function HomePage(){
         >
           UniConn
         </Typography>
-        <Typography variant="h5" align="center" color="text.secondary" component="p">
+        {/* <Typography variant="h5" align="center" color="text.secondary" component="p">
         Add University Events Slider Here
-        </Typography>
+        </Typography> */}
+        <UpdateFeed/>
         </React.Fragment>
     )
 }

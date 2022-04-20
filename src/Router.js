@@ -6,7 +6,6 @@ import RoadMap from './components/roadmap/Roadmap';
 import Alumnisearch from './components/search/AlumniSearch';
 import Chatbox from './components/chatbox/Chatbox';
 
-
 export default function MyRouter(){
     return (
        <Router>
