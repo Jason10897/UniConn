@@ -11,7 +11,7 @@ export default function MyRouter(){
        <Router>
         <HomePage path="/" />
         <Alumnisearch path="/search" />
-        <UserProfile path="/profile" />
+        <UserProfile path="/profile/:id" />
         <RoadMap path="/roadmap"/>
         <Chatbox path="/chatbox"/>
       </Router>
