@@ -1,5 +1,6 @@
 import React from 'react';
 import { Typography } from '@mui/material';
+import { Link } from '@reach/router';
 
 export default function RoadMapLink() {
   return (
@@ -8,7 +9,7 @@ export default function RoadMapLink() {
                 Roadmap
             </Typography>
             <Typography variant="body1" gutterBottom component="div" sx={{ textAlign: 'left' }}>
-            <a href="./roadmap">Click here</a> to view roadmap.
+            <Link to='/roadmap'>Click here</Link> to view roadmap.
         </Typography>
         </>
   )
