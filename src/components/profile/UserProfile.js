@@ -1,7 +1,9 @@
 import ChatIcon from '@mui/icons-material/Chat';
 import { Avatar, Box, Button, Divider, Stack } from '@mui/material';
 import Typography from '@mui/material/Typography';
-import React from 'react';
+import { useParams } from '@reach/router';
+import React, { useState } from 'react';
+import { AlumniUsers, userTypes } from '../data/userData';
 import RecommendButton from '../recommend/RecommendButton';
 import Details from './Details';
 import RoadMapLink from './RoadMapLink';
@@ -13,6 +15,12 @@ const styleProfileIcon = {
 };
 
 export default function UserProfile() {
+
+  const {id} = useParams()
+  const userData = AlumniUsers.find(user => user?.id == id);
+
+  const [state, setState] = useState(userData)
+
   return (
     <Box sx={{margin: 3}}>
       <Box display="flex" justifyContent="center" alignItems="center">
@@ -26,10 +34,14 @@ export default function UserProfile() {
           marginBottom: -1,
         }}
       >
-        Name
+        {`${state?.firstName} ${state?.lastName}`}
       </Typography>
       <Typography variant="subtitle1" gutterBottom component="div">
-        Bachelors in Computer Science
+        {
+          (state?.type === userTypes.ALUMNI)?
+          `${state?.domain}`:`Bachelors in ${state?.domain}`
+
+        }
       </Typography>
       {/* Buttons */}
       <Stack
@@ -41,9 +53,17 @@ export default function UserProfile() {
           justifyContent: "center",
         }}
       >
-        <Button variant="contained">Connect</Button>
 
-        <RecommendButton/>
+        {
+          (state?.isConnected)?<Button variant="contained" disabled>Connected</Button>:<Button variant="contained">Connect</Button>
+        }
+
+        
+
+        {
+          (state?.type === userTypes.STUDENT) && <RecommendButton/>
+
+        }
 
         <ChatIcon />
       </Stack>

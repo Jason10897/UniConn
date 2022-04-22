@@ -6,7 +6,7 @@ export default function MiniDetails({data}){
 
 
     const viewFullProfile = () =>{
-        navigate("/profile")
+        navigate(`/profile/${data?.id}`)
     }
 
     return (
