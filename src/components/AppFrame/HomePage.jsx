@@ -3,11 +3,16 @@ import * as React from 'react';
 import EventSlider from './EventSlider';
 import { Box } from '@mui/material';
 import { Button } from '@mui/material';
+import { navigate } from '@reach/router';
 
 
 
 export default function HomePage(){
-    return (
+  const viewSearchPage = () =>{
+    navigate("/search")
+}
+
+  return (
         <React.Fragment>
         <Typography
           component="h1"
@@ -34,9 +39,9 @@ export default function HomePage(){
         </Typography> */}
 
         <Box textAlign={'left'}>
-        <Button variant="contained" sx={{
+        <Button variant="contained" onClick={viewSearchPage} sx={{
           marginBottom:2,
-          backgroundColor:"green",
+          backgroundColor:"green"
         }}>Search and Connect with Alumni/Students</Button>
         </Box>
 
