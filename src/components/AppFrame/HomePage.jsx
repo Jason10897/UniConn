@@ -9,7 +9,7 @@ import { navigate } from '@reach/router';
 
 export default function HomePage(){
   const viewSearchPage = () =>{
-    navigate("/search")
+    navigate("/search?filter=All")
 }
 
   return (
