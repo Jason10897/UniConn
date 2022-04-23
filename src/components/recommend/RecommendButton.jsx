@@ -6,15 +6,34 @@ import Dialog from '@mui/material/Dialog';
 import DialogActions from '@mui/material/DialogActions';
 import DialogContent from '@mui/material/DialogContent';
 import DialogTitle from '@mui/material/DialogTitle';
-import * as React from 'react';
+import React, { useEffect, useState } from 'react'
+import { AlumniUsers } from '../data/userData';
 import { Search, SearchIconWrapper, StyledInputBase } from '../search/AlumniSearch';
 import CardGrid from '../search/CardGrid';
 
-export default function RecommendButton() {
-  const [open, setOpen] = React.useState(false);
 
-  const [snackbarOpen, setSnackbarOpen] = React.useState(false);
+export default function RecommendButton() {
+  const [open, setOpen] = useState(false);
+
+  const [snackbarOpen, setSnackbarOpen] = useState(false);
+  const [searchText, setSearchText] = useState('')
   
+  const [searchRes, setSearchRes] = useState([])
+
+
+  useEffect(() => {
+    const filtered = AlumniUsers.filter(user=>{
+      const displayName = `${user.firstName} ${user.lastName}`.toLocaleLowerCase()
+
+      return searchText && 
+      (displayName.startsWith(searchText.toLocaleLowerCase()) ||
+       user.lastName.toLocaleLowerCase().startsWith(searchText.toLocaleLowerCase())||
+       user.firstName.toLocaleLowerCase().startsWith(searchText.toLocaleLowerCase()))
+    })
+
+    setSearchRes(filtered)
+  }, [searchText]);
+
   const handleClickOpen = () => {
     setOpen(true);
   };
@@ -32,6 +51,9 @@ export default function RecommendButton() {
     setSnackbarOpen(false)
   }
 
+  const onSearchChanged = (e) => {
+    setSearchText(e?.target?.value||'')
+  }
 
   return (
     <React.Fragment>
@@ -53,19 +75,21 @@ export default function RecommendButton() {
               display: 'flex',
               flexDirection: 'column',
               m: 'auto',
-              width: 'fit-content',
+              width: '100%',
             }}
           >
             <Search>
             <StyledInputBase
               placeholder="Search…"
               inputProps={{ 'aria-label': 'search' }}
+              value={searchText}
+              onChange={onSearchChanged}
             />
             <SearchIconWrapper>
               <SearchIcon />
             </SearchIconWrapper>
           </Search>
-          <CardGrid isSelectable={true} drawerenabled={false}/>
+          <CardGrid isSelectable={true} drawerenabled={false} data={searchRes}/>
           </Box>
         </DialogContent>
         <DialogActions>

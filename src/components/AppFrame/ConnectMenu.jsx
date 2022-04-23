@@ -35,9 +35,9 @@ export default function ConnectMenu() {
           'aria-labelledby': 'basic-button',
         }}
       >
-        <MenuItem onClick={() => navigate("/search?filter=all")}>All</MenuItem>
-        <MenuItem onClick={() => navigate("/search?filter=alumni")}>Alumni</MenuItem>
-        <MenuItem onClick={() => navigate("/search?filter=student")}>Student</MenuItem>
+        <MenuItem onClick={() => navigate("/search?filter=All")}>All</MenuItem>
+        <MenuItem onClick={() => navigate("/search?filter=Alumni")}>Alumni</MenuItem>
+        <MenuItem onClick={() => navigate("/search?filter=Student")}>Student</MenuItem>
       </Menu>
     </div>
   );
