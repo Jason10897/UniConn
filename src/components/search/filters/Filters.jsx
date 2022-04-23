@@ -1,12 +1,33 @@
 import { Checkbox, FormControl, FormControlLabel, FormGroup, FormLabel, InputLabel, MenuItem, Select } from '@mui/material';
 import { Box } from '@mui/system';
 import React from 'react';
+import { Companies, departments, Locations } from '../../data/userData';
 
-export default function Filters({style}){
-    const domains = [
-        'Computer Science', 'Business', 'Engineering',
-        'Medicine', 'Law', 'Others'
-    ]
+export default function Filters({style, dispatch, filterState}){
+    const domains = Object.values(departments)
+    const companies = Object.values(Companies)
+    const locations = Object.values(Locations)
+
+    const onDomainChange = (e) =>{
+        const value = e.target.value;
+
+        if(filterState.domain.indexOf(value) > -1){    
+            const currDomain = filterState.domain;
+            currDomain.splice(currDomain.indexOf(value),1)
+            dispatch({type:'domain',payload:currDomain})
+        }else{
+            dispatch({type:'domain',payload:[...filterState.domain, value]})
+        }
+    }
+
+    const onLocationChange = (e) =>{
+        dispatch({type:'location', payload: e?.target?.value || ''})
+    }
+
+    const onCompanyChange = (e) =>{
+        dispatch({type:'company', payload: e?.target?.value || ''})
+    }
+
     return (
         <Box display='flex' flexDirection='column' style={style}>
             <div>
@@ -16,7 +37,10 @@ export default function Filters({style}){
                     domains.map(domain =>(
                         <FormControlLabel
                             control={
-                            <Checkbox name={domain} />
+                            <Checkbox onChange={onDomainChange} 
+                            value={domain} 
+                            name={domain} 
+                            checked={filterState?.domain.indexOf(domain) > -1} />
                             }
                             label={domain}
                         />
@@ -25,27 +49,29 @@ export default function Filters({style}){
             </FormGroup>
         </div>
             <FormControl fullWidth size='small' style={{padding: '5px'}}>
-                <InputLabel id="demo-simple-select-label">Company</InputLabel>
+                <InputLabel id="comp-simple-select-label">Company</InputLabel>
                 <Select
-                    labelId="demo-simple-select-label"
-                    id="demo-simple-select"
-                    label="Age"
+                    labelId="comp-simple-select-label"
+                    id="comp-simple-select"
+                    label="Company"
+                    value={filterState?.company}
+                    onChange={onCompanyChange}
                 >
-                    <MenuItem value={10}>Google</MenuItem>
-                    <MenuItem value={20}>Microsoft</MenuItem>
-                    <MenuItem value={30}>Amazon</MenuItem>
+                    <MenuItem value={''} selected={'' === filterState?.company}></MenuItem>
+                    {companies.map((company)=><MenuItem value={company}>{company}</MenuItem>)}
                 </Select>
             </FormControl>
                 <FormControl fullWidth size='small' style={{padding: '5px'}}>
-                <InputLabel id="demo-simple-select-label">Location</InputLabel>
+                <InputLabel id="loc-simple-select-label">Location</InputLabel>
                 <Select
-                    labelId="demo-simple-select-label"
-                    id="demo-simple-select"
-                    label="Age"
+                    labelId="loc-simple-select-label"
+                    id="loc-simple-select"
+                    label="Location"
+                    value={filterState?.location}
+                    onChange={onLocationChange}
                 >
-                    <MenuItem value={10}>Chicago</MenuItem>
-                    <MenuItem value={20}>Seattle</MenuItem>
-                    <MenuItem value={30}>Mountain View</MenuItem>
+                    <MenuItem value={''} selected={'' === filterState?.location}></MenuItem>
+                    {locations.map((location)=><MenuItem value={location}>{location}</MenuItem>)}
                 </Select>
             </FormControl>
         </Box>
