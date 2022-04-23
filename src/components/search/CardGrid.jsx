@@ -6,7 +6,7 @@ import AlumniCard from './AlumniCard';
 import MiniDetails from './MiniDetails';
 
 
-export default function CardGrid({ style, isSelectable, drawerenabled=true }){
+export default function CardGrid({ style, isSelectable, drawerenabled=true, data=[] }){
     
     const [isDrawerOpen, setDrawerOpen] = useState(false);
     const [drawerDetails, setDrawerDetails] = useState({})
@@ -21,8 +21,7 @@ export default function CardGrid({ style, isSelectable, drawerenabled=true }){
         setDrawerOpen(true)
     }
 
-    const cards = AlumniUsers.map((data) => <AlumniCard data={data} isSelectable={isSelectable} onClick={(drawerenabled)?onCardImageClick:null}/>)
-
+    const cards = data.map((dt) => <AlumniCard data={dt} isSelectable={isSelectable} onClick={(drawerenabled)?onCardImageClick:null}/>)
     return(
         <Box display="flex" flexWrap="wrap" style={{width:'100%', ...style}}>
             {cards.map(card => card)}

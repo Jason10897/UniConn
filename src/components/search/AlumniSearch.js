@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useReducer, useState } from 'react';
 import SearchIcon from '@mui/icons-material/Search';
 import { Box, Divider } from '@mui/material';
 import InputBase from '@mui/material/InputBase';
@@ -6,6 +6,10 @@ import { alpha, styled } from '@mui/material/styles';
 import Chip from '@mui/material/Chip';
 import CardGrid from './CardGrid';
 import Filters from './filters/Filters';
+import FilterReducer from './reducer/FilterReducer';
+import { AlumniUsers, defaultFilterState, userTypes } from '../data/userData';
+import { useLocation } from '@reach/router';
+import { parse } from 'query-string';
 
 export const Search = styled('div')(({ theme }) => ({
     position: 'relative',
@@ -55,26 +59,65 @@ export const ChipContainer = styled('div')(({theme}) => ({
   }))
 
 export default function Alumnisearch(){
+
+    const [filterState, dispatch] = useReducer(FilterReducer,defaultFilterState)
+
+    const [userData, setUserData] = useState([])
+
+    const location = useLocation()
+    const {filter} = parse(location.search)
+
+    useEffect(() => {
+      dispatch({type:'filter',payload: filter})
+    }, [dispatch, filter]);
+
+    useEffect(()=>{
+      console.log(filterState)
+      const data = AlumniUsers
+      const filtered = data.filter(user =>{
+        return (!filterState.domain.length?true:(filterState.domain.indexOf(user.domain) > -1)) &&
+        (!filterState.company?true:user.company === filterState.company) &&
+        (!filterState.location?true:user.location === filterState.location) &&
+        ((filterState.search == '')?true:`${user.firstName} ${user.lastName}`.toLowerCase().startsWith(filterState.search.toLowerCase())) &&
+        ((filterState.filter == 'All')?true:(filterState.filter == 'Student' && user.type == userTypes.STUDENT) || (filterState.filter == 'Alumni' && user.type == userTypes.ALUMNI))
+      })
+      setUserData(filtered)
+    },[filterState])
+
+    const onSearchTypechange = (value) =>{
+      dispatch({type:'filter', payload: value})
+    }
+
+    const onSearchchange = (e) =>{
+      dispatch({type:'search', payload: e.target.value})
+    }
+
+    const filters = ['All', 'Alumni', 'Student']
+
     return (
         <Box display={"flex"} alignItems="center" flexDirection="column">
             <Search>
             <StyledInputBase
+              sx={{width: '100%'}}
               placeholder="Search…"
               inputProps={{ 'aria-label': 'search' }}
+              onChange={onSearchchange}
+              value={filterState.search}
             />
             <SearchIconWrapper>
               <SearchIcon />
             </SearchIconWrapper>
           </Search>
-          <ChipContainer>
-              <Chip label="All" variant="outlined"/>
-              <Chip label="Alumni" variant="outlined"/>
-              <Chip label="Student" variant="outlined"/>
+          <ChipContainer >
+            {
+              filters.map(filter => <Chip sx={{padding:'0 5px', margin:'5px 10px'}} label={filter} variant={(filterState.filter === filter)?'filled':'outlined'} color='primary' 
+              onClick={(v)=>onSearchTypechange(filter)}/>)
+            }
           </ChipContainer>
           <Divider/>
-          <Box display='flex' flexDirection='row'>
-              <Filters style={{flex: 1}}/>
-              <CardGrid style={{flex: 4}}/>  
+          <Box display='flex' flexDirection='row' sx={{width: '100%'}}>
+              <Filters style={{flex: 1}} dispatch={dispatch} filterState={filterState}/>
+              <CardGrid style={{flex: 4}} data={userData}/>  
           </Box>
         </Box>
     )
