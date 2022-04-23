@@ -237,7 +237,128 @@ export const AlumniUsers = [
         company: Companies.Google,
         location: Locations.NYC,
         isConnected: true
+    },
+    {
+        id: 21,
+        firstName: "Alfred",
+        lastName: "Hutheesing",
+        type: userTypes.STUDENT,
+        domain: departments.LAW,
+        company: Companies.Microsoft,
+        location: Locations.STL,
+        isConnected: false
+    },
+    {
+        id: 22,
+        firstName: "Freedon",
+        lastName: "Annunziato",
+        type: userTypes.STUDENT,
+        domain: departments.BUS,
+        company: Companies.Apple,
+        location: Locations.CHI,
+        isConnected: true
+    },
+    {
+        id: 23,
+        firstName: "Lloyd",
+        lastName: "Kellam",
+        type: userTypes.STUDENT,
+        domain: departments.MED,
+        company: Companies.PayPal,
+        location: Locations.SF,
+        isConnected: false
+    },
+    {
+        id: 24,
+        firstName: "David",
+        lastName: "Thares",
+        type: userTypes.STUDENT,
+        domain: departments.OTH,
+        company: Companies.Amazon,
+        location: Locations.AUS,
+        isConnected: false
+    },
+    {
+        id: 25,
+        firstName: "Jenny",
+        lastName: "Goldsmith",
+        type: userTypes.STUDENT,
+        domain: departments.CSE,
+        company: Companies.Google,
+        location: Locations.SF,
+        isConnected: true
+    },
+    {
+        id: 26,
+        firstName: "Barbara",
+        lastName: "Robichaud",
+        type: userTypes.STUDENT,
+        domain: departments.ENG,
+        company: Companies.Microsoft,
+        location: Locations.STL,
+        isConnected: false
+    },
+    {
+        id: 27,
+        firstName: "Yvonne",
+        lastName: "Williams",
+        type: userTypes.STUDENT,
+        domain: departments.MED,
+        company: Companies.PayPal,
+        location: Locations.AUS,
+        isConnected: true
+    },
+    {
+        id: 28,
+        firstName: "Reynaldo",
+        lastName: "Chatman",
+        type: userTypes.STUDENT,
+        domain: departments.CSE,
+        company: Companies.Google,
+        location: Locations.NYC,
+        isConnected: false
+    },
+    {
+        id: 29,
+        firstName: "Madhav",
+        lastName: "Dusenberry",
+        type: userTypes.STUDENT,
+        domain: departments.OTH,
+        company: Companies.Amazon,
+        location: Locations.STL,
+        isConnected: true
+    },
+    {
+        id: 30,
+        firstName: "Jeffrey",
+        lastName: "Citron",
+        type: userTypes.STUDENT,
+        domain: departments.BUS,
+        company: Companies.Apple,
+        location: Locations.CHI,
+        isConnected: false
+    },
+    {
+        id: 31,
+        firstName: "Eric",
+        lastName: "Da Silva",
+        type: userTypes.STUDENT,
+        domain: departments.ENG,
+        company: Companies.Microsoft,
+        location: Locations.STL,
+        isConnected: false
+    },
+    {
+        id: 32,
+        firstName: "Robert",
+        lastName: "Segall",
+        type: userTypes.STUDENT,
+        domain: departments.LAW,
+        company: Companies.PayPal,
+        location: Locations.AUS,
+        isConnected: true
     }
+    
 
 ]
 
