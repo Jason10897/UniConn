@@ -10,6 +10,7 @@ import React, { useEffect, useState } from 'react'
 import { AlumniUsers } from '../data/userData';
 import { Search, SearchIconWrapper, StyledInputBase } from '../search/AlumniSearch';
 import CardGrid from '../search/CardGrid';
+import { useParams } from '@reach/router';
 
 
 export default function RecommendButton() {
@@ -20,6 +21,10 @@ export default function RecommendButton() {
   
   const [searchRes, setSearchRes] = useState([])
 
+  const {id} = useParams()
+  const userData = AlumniUsers.find(user => user?.id == id);
+
+  const [state, setState] = useState(userData)
 
   useEffect(() => {
     const filtered = AlumniUsers.filter(user=>{
@@ -66,7 +71,7 @@ export default function RecommendButton() {
         open={open}
         onClose={handleClose}
       >
-        <DialogTitle>Find Recommendation for Bob Miller</DialogTitle>
+        <DialogTitle>Find Recommendation for {state.firstName} {state.lastName}</DialogTitle>
         <DialogContent>
           <Box
             noValidate
