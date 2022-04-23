@@ -77,7 +77,13 @@ export default function UserProfile() {
       <Details title="Work Experience" />
       <Details title="Education" />
       <Details title="Projects" />
-      <RoadMapLink/>
+
+      {/* Roadmap to only be displayed for students */}
+      {
+          (state?.type === userTypes.STUDENT)?<RoadMapLink/>:<></>
+      }
+      
+    
     </Box>
   );
 }
