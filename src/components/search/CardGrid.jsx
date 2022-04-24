@@ -23,7 +23,7 @@ export default function CardGrid({ style, isSelectable, drawerenabled=true, data
 
     const cards = data.map((dt) => <AlumniCard data={dt} isSelectable={isSelectable} onClick={(drawerenabled)?onCardImageClick:null}/>)
     return(
-        <Box display="flex" flexWrap="wrap" style={{width:'100%', ...style}}>
+        <Box display="flex" flexWrap="wrap" style={{width:'100%', height:'fit-content', ...style}}>
             {cards.map(card => card)}
             <Drawer
             anchor='right'
