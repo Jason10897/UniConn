@@ -44,7 +44,7 @@ export default function AlumniCard({data, onClick, isSelectable}){
                 {`${data?.firstName} ${data?.lastName}`}
                 </Typography>
                 <Typography variant="subtitle2" color="text.secondary">
-                {data?.domain}
+                {(data?.type === userTypes.STUDENT)?data?.domain:`${data?.company}, ${data?.location}`}
                 </Typography>
             </div>
             <CardActions sx={{padding:'0px'}}>

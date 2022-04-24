@@ -40,7 +40,7 @@ export default function UserProfile() {
       <Typography variant="subtitle1" gutterBottom component="div">
         {
           (state?.type === userTypes.ALUMNI)?
-          `${state?.domain}`:`Bachelors in ${state?.domain}`
+          `${state?.company}, ${state?.location}`:`Bachelors in ${state?.domain}`
 
         }
       </Typography>
