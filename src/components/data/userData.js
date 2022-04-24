@@ -46,7 +46,8 @@ export const AlumniUsers = [
         domain: departments.CSE,
         company: Companies.Google,
         location: Locations.NYC,
-        isConnected: false
+        isConnected: false,
+        profilePh: '/images/profilePhoto5.png'
     },
     {
         id: 2,
@@ -56,7 +57,8 @@ export const AlumniUsers = [
         domain: departments.CSE,
         company: Companies.Google,
         location: Locations.NYC,
-        isConnected: true
+        isConnected: true,
+        profilePh: '/images/profilePhoto2.png'
     },
     {
         id: 3,
@@ -66,7 +68,8 @@ export const AlumniUsers = [
         domain: departments.CSE,
         company: Companies.Google,
         location: Locations.NYC,
-        isConnected: false
+        isConnected: false,
+        profilePh: '/images/profilePhoto5.png'
     },
     {
         id: 4,
@@ -76,7 +79,8 @@ export const AlumniUsers = [
         domain: departments.CSE,
         company: Companies.Google,
         location: Locations.NYC,
-        isConnected: true
+        isConnected: true,
+        profilePh: '/images/profilePhoto3.png'
     },
     {
         id: 5,
@@ -86,7 +90,8 @@ export const AlumniUsers = [
         domain: departments.CSE,
         company: Companies.Google,
         location: Locations.NYC,
-        isConnected: false
+        isConnected: false,
+        profilePh: '/images/profilePhoto4.png'
     },
     {
         id: 6,
@@ -96,7 +101,8 @@ export const AlumniUsers = [
         domain: departments.CSE,
         company: Companies.Google,
         location: Locations.NYC,
-        isConnected: false
+        isConnected: false,
+        profilePh: '/images/profilePhoto1.png'
     },
     {
         id: 7,
@@ -106,7 +112,8 @@ export const AlumniUsers = [
         domain: departments.CSE,
         company: Companies.Google,
         location: Locations.NYC,
-        isConnected: false
+        isConnected: false,
+        profilePh: '/images/profilePhoto2.png'
     },
     {
         id: 8,
@@ -116,17 +123,19 @@ export const AlumniUsers = [
         domain: departments.CSE,
         company: Companies.Google,
         location: Locations.NYC,
-        isConnected: true
+        isConnected: true,
+        profilePh: '/images/profilePhoto5.png'
     },
     {
         id: 9,
-        firstName: "Kiera",
+        firstName: "Keith",
         lastName: "Ashlie",
         type: userTypes.ALUMNI,
         domain: departments.CSE,
         company: Companies.Google,
         location: Locations.NYC,
-        isConnected: false
+        isConnected: false,
+        profilePh: '/images/profilePhoto3.png'
     },
     {
         id: 10,
@@ -136,7 +145,8 @@ export const AlumniUsers = [
         domain: departments.CSE,
         company: Companies.Google,
         location: Locations.NYC,
-        isConnected: false
+        isConnected: false,
+        profilePh: '/images/profilePhoto5.png'
     },
     {
         id: 11,
@@ -146,7 +156,8 @@ export const AlumniUsers = [
         domain: departments.CSE,
         company: Companies.Google,
         location: Locations.NYC,
-        isConnected: true
+        isConnected: true,
+        profilePh: '/images/profilePhoto1.png'
     },
     {
         id: 12,
@@ -156,7 +167,8 @@ export const AlumniUsers = [
         domain: departments.CSE,
         company: Companies.Google,
         location: Locations.NYC,
-        isConnected: false
+        isConnected: false,
+        profilePh: '/images/profilePhoto2.png'
     },
     {
         id: 13,
@@ -166,7 +178,8 @@ export const AlumniUsers = [
         domain: departments.CSE,
         company: Companies.Google,
         location: Locations.NYC,
-        isConnected: false
+        isConnected: false,
+        profilePh: '/images/profilePhoto5.png'
     },
     {
         id: 14,
@@ -176,7 +189,8 @@ export const AlumniUsers = [
         domain: departments.CSE,
         company: Companies.Google,
         location: Locations.NYC,
-        isConnected: false
+        isConnected: false,
+        profilePh: '/images/profilePhoto3.png'
     },
     {
         id: 15,
@@ -186,7 +200,8 @@ export const AlumniUsers = [
         domain: departments.CSE,
         company: Companies.Google,
         location: Locations.NYC,
-        isConnected: false
+        isConnected: false,
+        profilePh: '/images/profilePhoto4.png'
     },
     {
         id: 16,
@@ -196,7 +211,8 @@ export const AlumniUsers = [
         domain: departments.CSE,
         company: Companies.Google,
         location: Locations.NYC,
-        isConnected: false
+        isConnected: false,
+        profilePh: '/images/profilePhoto1.png'
     },
     {
         id: 17,
@@ -206,7 +222,8 @@ export const AlumniUsers = [
         domain: departments.CSE,
         company: Companies.Google,
         location: Locations.NYC,
-        isConnected: false
+        isConnected: false,
+        profilePh: '/images/profilePhoto4.png'
     },
     {
         id: 18,
@@ -216,7 +233,8 @@ export const AlumniUsers = [
         domain: departments.CSE,
         company: Companies.Google,
         location: Locations.NYC,
-        isConnected: false
+        isConnected: false,
+        profilePh: '/images/profilePhoto3.png'
     },
     {
         id: 19,
@@ -226,7 +244,8 @@ export const AlumniUsers = [
         domain: departments.CSE,
         company: Companies.Google,
         location: Locations.NYC,
-        isConnected: false
+        isConnected: false,
+        profilePh: '/images/profilePhoto2.png'
     },
     {
         id: 20,
@@ -236,7 +255,8 @@ export const AlumniUsers = [
         domain: departments.CSE,
         company: Companies.Google,
         location: Locations.NYC,
-        isConnected: true
+        isConnected: true,
+        profilePh: '/images/profilePhoto5.png'
     },
     {
         id: 21,
@@ -246,7 +266,8 @@ export const AlumniUsers = [
         domain: departments.LAW,
         company: Companies.Microsoft,
         location: Locations.STL,
-        isConnected: false
+        isConnected: false,
+        profilePh: '/images/profilePhoto4.png'
     },
     {
         id: 22,
@@ -256,7 +277,8 @@ export const AlumniUsers = [
         domain: departments.BUS,
         company: Companies.Apple,
         location: Locations.CHI,
-        isConnected: true
+        isConnected: true,
+        profilePh: '/images/profilePhoto3.png'
     },
     {
         id: 23,
@@ -266,7 +288,8 @@ export const AlumniUsers = [
         domain: departments.MED,
         company: Companies.PayPal,
         location: Locations.SF,
-        isConnected: false
+        isConnected: false,
+        profilePh: '/images/profilePhoto1.png'
     },
     {
         id: 24,
@@ -276,7 +299,8 @@ export const AlumniUsers = [
         domain: departments.OTH,
         company: Companies.Amazon,
         location: Locations.AUS,
-        isConnected: false
+        isConnected: false,
+        profilePh: '/images/profilePhoto3.png'
     },
     {
         id: 25,
@@ -286,7 +310,8 @@ export const AlumniUsers = [
         domain: departments.CSE,
         company: Companies.Google,
         location: Locations.SF,
-        isConnected: true
+        isConnected: true,
+        profilePh: '/images/profilePhoto5.png'
     },
     {
         id: 26,
@@ -296,7 +321,8 @@ export const AlumniUsers = [
         domain: departments.ENG,
         company: Companies.Microsoft,
         location: Locations.STL,
-        isConnected: false
+        isConnected: false,
+        profilePh: '/images/profilePhoto2.png'
     },
     {
         id: 27,
@@ -306,7 +332,8 @@ export const AlumniUsers = [
         domain: departments.MED,
         company: Companies.PayPal,
         location: Locations.AUS,
-        isConnected: true
+        isConnected: true,
+        profilePh: '/images/profilePhoto4.png'
     },
     {
         id: 28,
@@ -316,7 +343,8 @@ export const AlumniUsers = [
         domain: departments.CSE,
         company: Companies.Google,
         location: Locations.NYC,
-        isConnected: false
+        isConnected: false,
+        profilePh: '/images/profilePhoto3.png'
     },
     {
         id: 29,
@@ -326,7 +354,8 @@ export const AlumniUsers = [
         domain: departments.OTH,
         company: Companies.Amazon,
         location: Locations.STL,
-        isConnected: true
+        isConnected: true,
+        profilePh: '/images/profilePhoto1.png'
     },
     {
         id: 30,
@@ -336,7 +365,8 @@ export const AlumniUsers = [
         domain: departments.BUS,
         company: Companies.Apple,
         location: Locations.CHI,
-        isConnected: false
+        isConnected: false,
+        profilePh: '/images/profilePhoto3.png'
     },
     {
         id: 31,
@@ -346,7 +376,8 @@ export const AlumniUsers = [
         domain: departments.ENG,
         company: Companies.Microsoft,
         location: Locations.STL,
-        isConnected: false
+        isConnected: false,
+        profilePh: '/images/profilePhoto4.png'
     },
     {
         id: 32,
@@ -356,7 +387,8 @@ export const AlumniUsers = [
         domain: departments.LAW,
         company: Companies.PayPal,
         location: Locations.AUS,
-        isConnected: true
+        isConnected: true,
+        profilePh: '/images/profilePhoto1.png'
     }
     
 

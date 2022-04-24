@@ -19,7 +19,7 @@ export default function AlumniCard({data, onClick, isSelectable}){
           <CardMedia
             component="img"
             height="200"
-            image="https://cdn4.iconfinder.com/data/icons/for-your-interface-part-3/128/User-512.png"
+            image={data?.profilePh} 
             alt="User icon"
             onClick={()=>onClick(data)}
           />

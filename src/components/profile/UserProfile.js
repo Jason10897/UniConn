@@ -24,7 +24,7 @@ export default function UserProfile() {
   return (
     <Box sx={{margin: 3}}>
       <Box display="flex" justifyContent="center" alignItems="center">
-        <Avatar sx={{height: "150px", width: "150px"}}></Avatar> {/* <AccountCircleIcon style={styleProfileIcon} /> */}
+        <Avatar sx={{height: "150px", width: "150px"}} src={state?.profilePh}></Avatar> {/* <AccountCircleIcon style={styleProfileIcon} /> */}
       </Box>
       <Typography
         variant="h4"
