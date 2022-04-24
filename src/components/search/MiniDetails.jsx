@@ -1,6 +1,7 @@
 import { Box, Button, Typography } from '@mui/material';
 import { navigate } from '@reach/router';
 import React from 'react';
+import ConnectButton from './ConnectButton';
 
 export default function MiniDetails({data}){
 
@@ -28,7 +29,10 @@ export default function MiniDetails({data}){
             </Typography>
 
             <Box display='flex' flexDirection='column' sx={{padding: '20px'}}>
-                <Button variant="contained" sx={{margin:'5px'}} disabled={data?.isConnected}>{data?.isConnected?'Connected':'Connect'}</Button>
+                {(data?.isConnected)?
+                <Button variant="contained" sx={{margin:'5px'}} disabled>{'Connected'}</Button>
+                :<ConnectButton variant="contained" style={{margin:'5px'}}/>
+                }
                 <Button variant="contained" sx={{margin:'5px'}} onClick={viewFullProfile}>View full Profile</Button>
             </Box>
             

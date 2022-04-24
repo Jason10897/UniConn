@@ -5,6 +5,7 @@ import { useParams } from '@reach/router';
 import React, { useState } from 'react';
 import { AlumniUsers, userTypes } from '../data/userData';
 import RecommendButton from '../recommend/RecommendButton';
+import ConnectButton from '../search/ConnectButton';
 import Details from './Details';
 import RoadMapLink from './RoadMapLink';
 
@@ -55,7 +56,8 @@ export default function UserProfile() {
       >
 
         {
-          (state?.isConnected)?<Button variant="contained" disabled>Connected</Button>:<Button variant="contained">Connect</Button>
+          (state?.isConnected)?<Button variant="contained" disabled>Connected</Button>:
+          <ConnectButton variant="contained"/>
         }
 
         

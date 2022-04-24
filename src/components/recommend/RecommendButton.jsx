@@ -67,7 +67,7 @@ export default function RecommendButton() {
       </Button>
       <Dialog
         fullWidth={true}
-        maxWidth='lg'
+        maxWidth='md'
         open={open}
         onClose={handleClose}
       >

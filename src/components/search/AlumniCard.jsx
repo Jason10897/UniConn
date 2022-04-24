@@ -9,6 +9,7 @@ import React from "react";
 import { Checkbox, Chip, Tooltip } from '@mui/material';
 import ChatIcon from "@mui/icons-material/Chat";
 import { userTypes } from '../data/userData';
+import ConnectButton from './ConnectButton';
 
 
 export default function AlumniCard({data, onClick, isSelectable}){
@@ -53,13 +54,12 @@ export default function AlumniCard({data, onClick, isSelectable}){
                 {
                   (data?.isConnected)?
                   <Button size="small" variant='contained' disabled sx={{margin:0, flex:1, borderRadius: 0}}>Connected</Button>
-                  :<Button size="small" variant='contained' startIcon={<AddBoxIcon />} sx={{margin:0, flex:1, borderRadius: 0}}>Connect</Button>
+                  :
+                  <ConnectButton size="small" variant='contained' startIcon={<AddBoxIcon />} style={{margin:0, flex:1, borderRadius: 0}}/>
                 }
                 <Button size="small" variant='contained' endIcon={<ChatIcon/>} color='secondary' sx={{ margin:0, flex:1, borderRadius: 0}}>Message</Button>
               </div>
-            }
-
-            
+            }           
             </CardActions>
           </CardContent>
         </Card>

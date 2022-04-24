@@ -30,14 +30,16 @@ export default function Filters({style, dispatch, filterState}){
 
     return (
         <Box display='flex' flexDirection='column' style={style}>
-            <div>
-            <FormLabel component="legend">Domain</FormLabel>
+            <div style={{textAlign:'left'}}>
+            <FormLabel component="legend"><b>Domain</b></FormLabel>
             <FormGroup>
                 {
                     domains.map(domain =>(
                         <FormControlLabel
+                            sx={{margin:0}}
                             control={
                             <Checkbox onChange={onDomainChange} 
+                            sx={{padding:'5px'}}
                             value={domain} 
                             name={domain} 
                             checked={filterState?.domain.indexOf(domain) > -1} />
@@ -57,7 +59,7 @@ export default function Filters({style, dispatch, filterState}){
                     value={filterState?.company}
                     onChange={onCompanyChange}
                 >
-                    <MenuItem value={''} selected={'' === filterState?.company}></MenuItem>
+                    <MenuItem sx={{padding:'15px'}}  value={''} selected={'' === filterState?.company}></MenuItem>
                     {companies.map((company)=><MenuItem value={company}>{company}</MenuItem>)}
                 </Select>
             </FormControl>
@@ -70,7 +72,7 @@ export default function Filters({style, dispatch, filterState}){
                     value={filterState?.location}
                     onChange={onLocationChange}
                 >
-                    <MenuItem value={''} selected={'' === filterState?.location}></MenuItem>
+                    <MenuItem sx={{padding:'15px'}}  value={''} selected={'' === filterState?.location}></MenuItem>
                     {locations.map((location)=><MenuItem value={location}>{location}</MenuItem>)}
                 </Select>
             </FormControl>
