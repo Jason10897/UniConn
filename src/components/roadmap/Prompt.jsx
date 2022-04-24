@@ -22,11 +22,11 @@ export const theme = createTheme({
     MuiFormLabel: {
       styleOverrides: {
         asterisk: {
-          color: "red"
-        }
-      }
-    }
-  }
+          color: "red",
+        },
+      },
+    },
+  },
 });
 
 export default function Prompt(props) {
@@ -45,7 +45,7 @@ export default function Prompt(props) {
     <Dialog
       onClose={props.hidePrompts}
       open={props.openPrompts}
-      PaperProps={{ sx: { minWidth: "40%", borderRadius: "15px" } }}
+      PaperProps={{ sx: { minWidth: "37%", borderRadius: "15px" } }}
     >
       <DialogTitle>Tell Your Mentor About</DialogTitle>
       <ThemeProvider theme={theme}>
@@ -105,7 +105,7 @@ export default function Prompt(props) {
                       sx={{
                         width: "170px",
                         height: "45px",
-                        marginRight: "50px"
+                        marginRight: "50px",
                       }}
                       {...params}
                     />
@@ -127,7 +127,7 @@ export default function Prompt(props) {
                       sx={{
                         width: "170px",
                         height: "45px",
-                        marginRight: "50px"
+                        marginRight: "50px",
                       }}
                       {...params}
                     />
@@ -161,17 +161,18 @@ export default function Prompt(props) {
               sx={{
                 display: "flex",
                 minWidth: "100%",
-                justifyContent: "right"
+                justifyContent: "right",
               }}
             >
               <Button
                 variant="filled"
+                onClick={props.hidePrompts}
                 sx={{
                   backgroundColor: "#E5E4E2",
                   borderRadius: "35px",
                   width: "120px",
                   fontSize: "12px",
-                  marginRight: 5
+                  marginRight: 5,
                 }}
               >
                 Cancel
@@ -184,7 +185,10 @@ export default function Prompt(props) {
                   borderRadius: "35px",
                   width: "120px",
                   fontSize: "12px",
-                  marginRight: 5
+                  marginRight: 5,
+                  ":hover": {
+                    color: "black",
+                  },
                 }}
               >
                 Send
