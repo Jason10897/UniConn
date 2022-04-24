@@ -1,5 +1,4 @@
 import * as React from "react";
-import PropTypes from "prop-types";
 import Button from "@mui/material/Button";
 import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
@@ -30,7 +29,7 @@ export const theme = createTheme({
   }
 });
 
-export function Prompt(props) {
+export default function Prompt(props) {
   const [start_value, setStartValue] = React.useState(null);
 
   const [end_value, setEndValue] = React.useState(null);
@@ -42,19 +41,11 @@ export function Prompt(props) {
     setEndValue(null);
   };
 
-  const handleClose = () => {
-    onClose(selectedValue);
-  };
-
-  const handleListItemClick = (value) => {
-    onClose(value);
-  };
-
   return (
     <Dialog
-      onClose={handleClose}
-      open={props.open}
-      PaperProps={{ sx: { maxWidth: "70%", borderRadius: "15px" } }}
+      onClose={props.hidePrompts}
+      open={props.openPrompts}
+      PaperProps={{ sx: { minWidth: "40%", borderRadius: "15px" } }}
     >
       <DialogTitle>Tell Your Mentor About</DialogTitle>
       <ThemeProvider theme={theme}>
@@ -65,7 +56,7 @@ export function Prompt(props) {
               id="standard-required"
               label="Topic"
               variant="standard"
-              sx={{ width: "90%", marginTop: -4 }}
+              sx={{ width: "85%", marginTop: -3 }}
             />
           </ListItem>
           <ListItem>
@@ -75,7 +66,7 @@ export function Prompt(props) {
               label="Organization"
               variant="standard"
               helperText="If none, then enter 'Self'"
-              sx={{ width: "90%" }}
+              sx={{ width: "85%" }}
             />
           </ListItem>
           <ListItem>
@@ -157,7 +148,7 @@ export function Prompt(props) {
               rows={4}
               variant="filled"
               InputProps={{ disableUnderline: true }}
-              sx={{ width: "90%", marginTop: 2 }}
+              sx={{ width: "85%", marginTop: 2 }}
             />
           </ListItem>
           <ListItem>
@@ -193,7 +184,7 @@ export function Prompt(props) {
                   borderRadius: "35px",
                   width: "120px",
                   fontSize: "12px",
-                  marginRight: 1
+                  marginRight: 5
                 }}
               >
                 Send

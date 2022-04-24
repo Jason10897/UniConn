@@ -10,6 +10,7 @@ import {
   InputAdornment,
 } from "@mui/material";
 import CircleIcon from "@mui/icons-material/Circle";
+import Prompt from "./Prompt";
 import SendIcon from "@mui/icons-material/Send";
 import { styled } from "@mui/material/styles";
 
@@ -64,10 +65,15 @@ export default function StudentPlan(props) {
                 <PromptButton
                   size="small"
                   variant="contained"
+                  onClick={props.displayPrompts}
                   sx={{ fontSize: "10px", lineHeight: "10px", padding: 1 }}
                 >
                   Prompts
                 </PromptButton>
+                <Prompt
+                  openPrompts={props.openPrompts}
+                  hidePrompts={props.hidePrompts}
+                ></Prompt>
               </InputAdornment>
               <InputAdornment position="start">
                 <SendButton

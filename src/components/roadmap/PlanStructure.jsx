@@ -29,6 +29,16 @@ export default function PlanStructure() {
     { id: 3, name: "Jane Rodriguez", feedback: "Feedback 3" },
   ]);
 
+  const [openPrompts, handlePrompts] = useState(false);
+
+  const displayPrompts = () => {
+      handlePrompts(true);
+  }
+
+  const hidePrompts = () => {
+      handlePrompts(false);
+  }
+
   const [feedbackField, handleFeedback] = useState("");
 
   const [anchorEl, setAnchorEl] = useState(null);
@@ -100,6 +110,9 @@ export default function PlanStructure() {
             value={stepField}
             edit={editStepText}
             add={addStep}
+            openPrompts={openPrompts}
+            displayPrompts={displayPrompts}
+            hidePrompts={hidePrompts}
           ></StudentPlan>
         </TableCell>
         <TableCell sx={{ maxWidth: 300, verticalAlign: "top" }}>
