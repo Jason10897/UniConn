@@ -19,6 +19,7 @@ export default function EventsMenu() {
         id="basic-button"
         aria-controls={open ? 'basic-menu' : undefined}
         aria-haspopup="true"
+        color='inherit'
         aria-expanded={open ? 'true' : undefined}
         onClick={handleClick}
       >

@@ -3,7 +3,6 @@ import Button from '@mui/material/Button';
 import Container from '@mui/material/Container';
 import CssBaseline from '@mui/material/CssBaseline';
 import GlobalStyles from '@mui/material/GlobalStyles';
-//import Link from '@mui/material/Link';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import * as React from 'react';
@@ -21,24 +20,20 @@ export default function AppFrame(props) {
       <CssBaseline />
       <AppBar
         position="fixed"
-        color="default"
         elevation={0}
         sx={{ borderBottom: (theme) => `1px solid ${theme.palette.divider}`, zIndex: (theme) => theme.zIndex.drawer + 1  }}
       >
         <Toolbar sx={{ flexWrap: 'wrap' }}>
-          <Typography variant="h6" color="inherit" noWrap sx={{ flex: 0.5 }} style={{textAlign: 'left'}}>
-            <Link to='/'>
+          <Typography variant="h6" color='inherit'  noWrap sx={{ flex: 0.5 }} style={{textAlign: 'left'}}>
+            <Link to='/' style={{ textDecoration: 'none', color: 'inherit' }}>
             UniConn
             </Link>
-            
           </Typography>
-          <nav style={{flex: 4, display: 'flex', justifyContent: 'left'}}> 
+          <nav color='inherit' style={{flex: 4, display: 'flex', justifyContent: 'left'}}> 
             <ConnectMenu/>
             <EventsMenu/>
           </nav>
-          <Button href="#" variant="outlined" sx={{ my: 1, mx: 1.5 }}>
-            Login
-          </Button>
+          <Button color="inherit">Logout</Button>
         </Toolbar>
       </AppBar>
       {/* Hero unit */}

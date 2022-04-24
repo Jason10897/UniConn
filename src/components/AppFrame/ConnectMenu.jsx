@@ -22,6 +22,7 @@ export default function ConnectMenu() {
         aria-controls={open ? 'basic-menu' : undefined}
         aria-haspopup="true"
         aria-expanded={open ? 'true' : undefined}
+        color='inherit'
         onClick={handleClick}
       >
         Connect
