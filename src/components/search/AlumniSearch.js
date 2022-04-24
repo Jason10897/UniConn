@@ -20,7 +20,7 @@ export const Search = styled('div')(({ theme }) => ({
       backgroundColor: alpha(theme.palette.common.black, 0.25),
     },
     marginRight: theme.spacing(2),
-    marginLeft: 0,
+    marginLeft: '0 !important',
     width: '100%',
     [theme.breakpoints.up('sm')]: {
       marginLeft: theme.spacing(3),
