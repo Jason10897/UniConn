@@ -179,6 +179,7 @@ export default function Prompt(props) {
               </Button>
               <Button
                 variant="filled"
+                onClick={props.addPrompts}
                 sx={{
                   color: "white",
                   backgroundColor: "#7F00FF",

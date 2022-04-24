@@ -101,6 +101,18 @@ export default function PlanStructure() {
     setStatus(!status);
   }
 
+  const addPrompts = () => {
+    setFeedback([
+        ...alumni,
+        {
+          id: alumni.slice(-1)[0].id + 1,
+          name: "Jason Dsouza",
+          feedback: "Prompt!",
+        },
+      ]);
+      hidePrompts();
+  }
+
   return (
     <React.Fragment>
       <TableRow>
@@ -113,6 +125,7 @@ export default function PlanStructure() {
             openPrompts={openPrompts}
             displayPrompts={displayPrompts}
             hidePrompts={hidePrompts}
+            addPrompts={addPrompts}
           ></StudentPlan>
         </TableCell>
         <TableCell sx={{ maxWidth: 300, verticalAlign: "top" }}>

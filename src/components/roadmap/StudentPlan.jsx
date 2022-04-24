@@ -73,6 +73,7 @@ export default function StudentPlan(props) {
                 <Prompt
                   openPrompts={props.openPrompts}
                   hidePrompts={props.hidePrompts}
+                  addPrompts={props.addPrompts}
                 ></Prompt>
               </InputAdornment>
               <InputAdornment position="start">
