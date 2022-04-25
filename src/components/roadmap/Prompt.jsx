@@ -41,9 +41,14 @@ export default function Prompt(props) {
     setEndValue(null);
   };
 
+  const resetDate = () => {
+      setEnable(true);
+      setEndValue(null);
+  }
+
   return (
     <Dialog
-      onClose={props.hidePrompts}
+      onClose={() => {props.hidePrompts(); resetDate()}}
       open={props.openPrompts}
       PaperProps={{ sx: { minWidth: "37%", borderRadius: "15px" } }}
     >
@@ -56,7 +61,7 @@ export default function Prompt(props) {
               id="standard-required"
               label="Topic"
               variant="standard"
-              sx={{ width: "85%", marginTop: -3 }}
+              sx={{ width: "100%", marginTop: -3 }}
             />
           </ListItem>
           <ListItem>
@@ -66,7 +71,7 @@ export default function Prompt(props) {
               label="Organization"
               variant="standard"
               helperText="If none, then enter 'Self'"
-              sx={{ width: "85%" }}
+              sx={{ width: "100%" }}
             />
           </ListItem>
           <ListItem>
@@ -148,7 +153,7 @@ export default function Prompt(props) {
               rows={4}
               variant="filled"
               InputProps={{ disableUnderline: true }}
-              sx={{ width: "85%", marginTop: 2 }}
+              sx={{ width: "100%", marginTop: 2 }}
             />
           </ListItem>
           <ListItem>
@@ -166,7 +171,7 @@ export default function Prompt(props) {
             >
               <Button
                 variant="filled"
-                onClick={props.hidePrompts}
+                onClick={() => {props.hidePrompts(); resetDate()}}
                 sx={{
                   backgroundColor: "#E5E4E2",
                   borderRadius: "35px",
@@ -179,7 +184,7 @@ export default function Prompt(props) {
               </Button>
               <Button
                 variant="filled"
-                onClick={props.addPrompts}
+                onClick={() => {props.addPrompts(); resetDate()}}
                 sx={{
                   color: "white",
                   backgroundColor: "#7F00FF",
