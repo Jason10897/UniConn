@@ -35,7 +35,7 @@ export default function HomePage(){
         <Button variant="contained" onClick={viewSearchPage} sx={{
           marginBottom:2,
           backgroundColor:"green"
-        }}>Search and Connect with Alumni/Students</Button>
+        }}>Connect with Alumni or Students</Button>
         </Box>
         <EventSlider/>
         </React.Fragment>

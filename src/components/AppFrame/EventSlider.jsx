@@ -1,36 +1,47 @@
-import * as React from 'react';
-import { useTheme } from '@mui/material/styles';
-import Box from '@mui/material/Box';
-import MobileStepper from '@mui/material/MobileStepper';
-import Paper from '@mui/material/Paper';
-import Button from '@mui/material/Button';
-import KeyboardArrowLeft from '@mui/icons-material/KeyboardArrowLeft';
-import KeyboardArrowRight from '@mui/icons-material/KeyboardArrowRight';
-import SwipeableViews from 'react-swipeable-views';
-import { autoPlay } from 'react-swipeable-views-utils';
+import * as React from "react";
+import { useTheme } from "@mui/material/styles";
+import Box from "@mui/material/Box";
+import Link from "@mui/material/Link";
+import MobileStepper from "@mui/material/MobileStepper";
+import Paper from "@mui/material/Paper";
+import Button from "@mui/material/Button";
+import KeyboardArrowLeft from "@mui/icons-material/KeyboardArrowLeft";
+import KeyboardArrowRight from "@mui/icons-material/KeyboardArrowRight";
+import SwipeableViews from "react-swipeable-views";
+import { autoPlay } from "react-swipeable-views-utils";
 
 const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 
 const images = [
   {
-    label: 'San Francisco – Oakland Bay Bridge, United States',
+    label: "Technical Event",
     imgPath:
-      'https://images.unsplash.com/photo-1537944434965-cf4679d1a598?auto=format&fit=crop&w=400&h=250&q=60',
+      "https://skins.webservices.illinois.edu/files/30212/wizard_header.jpg?iIndex=1102T132206",
+    redirect: "https://emails.uofi.uic.edu/newsletter/190706.html",
   },
   {
-    label: 'Bird',
+    label: "UIC Flames",
     imgPath:
-      'https://images.unsplash.com/photo-1538032746644-0212e812a9e7?auto=format&fit=crop&w=400&h=250&q=60',
+      "https://involvement.uic.edu/wp-content/uploads/sites/263/2021/10/UICTailgate-1090x595.png",
+    redirect: "https://uicflames.com/calendar",
   },
   {
-    label: 'Bali, Indonesia',
+    label: "Alumni Events",
     imgPath:
-      'https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=400&h=250&q=80',
+      "https://socialwork.uic.edu/wp-content/uploads/sites/79/2021/02/P2100777_JACSW_Alumni_emailheader-w-caret-1090x364.jpg",
+    redirect: "https://socialwork.uic.edu/alumni-friends/alumni-events/",
   },
   {
-    label: 'Goč, Serbia',
+    label: "Music Concert",
     imgPath:
-      'https://images.unsplash.com/photo-1512341689857-198e7e2f3ca8?auto=format&fit=crop&w=400&h=250&q=60',
+      "https://cdn-az.allevents.in/events5/banners/8b573707ec66d7ab8ade05f844dc6f11cff7090c22371d69e912c4b6264287cf-rimg-w1200-h527-gmir.jpg?v=1649349208",
+    redirect: "https://allevents.in/chicago/uic",
+  },
+  {
+    label: "Virtual Involvement Fair",
+    imgPath:
+      "https://involvement.uic.edu/wp-content/uploads/sites/263/2020/08/P2100171_CSI_Fall-Involvement-Fair-2020-FB-COVER-851x315-01-2-e1598412189526-970x595.jpg",
+    redirect: "https://involvement.uic.edu/programs-events/",
   },
 ];
 
@@ -57,14 +68,13 @@ export default function EventSlider() {
         square
         elevation={0}
         sx={{
-          display: 'flex',
-          alignItems: 'center',
-          bgcolor: 'background.default',
+          display: "flex",
+          alignItems: "center",
+          bgcolor: "background.default",
         }}
-      >
-      </Paper>
+      ></Paper>
       <AutoPlaySwipeableViews
-        axis={theme.direction === 'rtl' ? 'x-reverse' : 'x'}
+        axis={theme.direction === "rtl" ? "x-reverse" : "x"}
         index={activeStep}
         onChangeIndex={handleStepChange}
         enableMouseEvents
@@ -73,17 +83,23 @@ export default function EventSlider() {
         {images.map((step, index) => (
           <div key={step.label}>
             {Math.abs(activeStep - index) <= 2 ? (
-              <Box
-                component="img"
-                sx={{
-                  height:"400px",
-                  display: 'block',
-                  width: '100%',
-                  overflow: 'hidden',
-                }}
-                src={step.imgPath}
-                alt={step.label}
-              />
+              <Link
+                href={step.redirect}
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                <Box
+                  component="img"
+                  sx={{
+                    height: "400px",
+                    display: "block",
+                    width: "100%",
+                    overflow: "hidden",
+                  }}
+                  src={step.imgPath}
+                  alt={step.label}
+                ></Box>
+              </Link>
             ) : null}
           </div>
         ))}
@@ -99,7 +115,7 @@ export default function EventSlider() {
             disabled={activeStep === maxSteps - 1}
           >
             Next
-            {theme.direction === 'rtl' ? (
+            {theme.direction === "rtl" ? (
               <KeyboardArrowLeft />
             ) : (
               <KeyboardArrowRight />
@@ -108,7 +124,7 @@ export default function EventSlider() {
         }
         backButton={
           <Button size="small" onClick={handleBack} disabled={activeStep === 0}>
-            {theme.direction === 'rtl' ? (
+            {theme.direction === "rtl" ? (
               <KeyboardArrowRight />
             ) : (
               <KeyboardArrowLeft />
@@ -120,4 +136,3 @@ export default function EventSlider() {
     </Box>
   );
 }
-

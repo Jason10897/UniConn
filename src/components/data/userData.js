@@ -173,7 +173,7 @@ export const AlumniUsers = [
     {
         id: 13,
         firstName: "Skylar",
-        lastName: "white",
+        lastName: "White",
         type: userTypes.ALUMNI,
         domain: departments.CSE,
         company: Companies.Amazon,
