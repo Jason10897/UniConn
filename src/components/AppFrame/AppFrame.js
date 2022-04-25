@@ -48,11 +48,10 @@ export default function AppFrame(props) {
         component="footer"
         sx={{
           borderTop: (theme) => `1px solid ${theme.palette.divider}`,
-          mt: 8,
-          py: [3, 6],
+          py: [3, 3],
         }}
       >
-        <Copyright sx={{ mt: 5 }} />
+        <Copyright sx={{ mt: 1}} />
       </Container>
       {/* End footer */}
     </React.Fragment>
