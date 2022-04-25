@@ -33,10 +33,6 @@ export default function HomePage(){
         >
           Get the world's most loved alumni engagement platform and build a thriving alumni community online to engage your alumni digitally. 
         </Typography>
-        
-        {/* <Typography variant="h5" align="center" color="text.secondary" component="p">
-        Add University Events Slider Here
-        </Typography> */}
 
         <Box textAlign={'left'}>
         <Button variant="contained" onClick={viewSearchPage} sx={{

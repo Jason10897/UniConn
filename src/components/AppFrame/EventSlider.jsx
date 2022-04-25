@@ -1,56 +1,123 @@
-import React from 'react'
-import Carousel from 'react-bootstrap/Carousel'
+import * as React from 'react';
+import { useTheme } from '@mui/material/styles';
+import Box from '@mui/material/Box';
+import MobileStepper from '@mui/material/MobileStepper';
+import Paper from '@mui/material/Paper';
+import Button from '@mui/material/Button';
+import KeyboardArrowLeft from '@mui/icons-material/KeyboardArrowLeft';
+import KeyboardArrowRight from '@mui/icons-material/KeyboardArrowRight';
+import SwipeableViews from 'react-swipeable-views';
+import { autoPlay } from 'react-swipeable-views-utils';
+
+const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
+
+const images = [
+  {
+    label: 'San Francisco – Oakland Bay Bridge, United States',
+    imgPath:
+      'https://images.unsplash.com/photo-1537944434965-cf4679d1a598?auto=format&fit=crop&w=400&h=250&q=60',
+  },
+  {
+    label: 'Bird',
+    imgPath:
+      'https://images.unsplash.com/photo-1538032746644-0212e812a9e7?auto=format&fit=crop&w=400&h=250&q=60',
+  },
+  {
+    label: 'Bali, Indonesia',
+    imgPath:
+      'https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=400&h=250&q=80',
+  },
+  {
+    label: 'Goč, Serbia',
+    imgPath:
+      'https://images.unsplash.com/photo-1512341689857-198e7e2f3ca8?auto=format&fit=crop&w=400&h=250&q=60',
+  },
+];
 
 export default function EventSlider() {
-    return (
-        <>
-            <Carousel>
-                <Carousel.Item>
+  const theme = useTheme();
+  const [activeStep, setActiveStep] = React.useState(0);
+  const maxSteps = images.length;
 
-                    <img
-                        className="d-block w-100"
-                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYnaX0kjrvb261OLsDsJJRjk7JpXDNJL-rKg&usqp=CAU"
-                        width={100} 
-                        height={500}
-                        alt="First slide first slide"
-                    />
-                    <Carousel.Caption>
-                        <h3>University Event 1</h3>
-                        <br /><br /><br /><br /><br /><br /><br /><br />
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure ipsam temporibus nostrum suscipit, sequi veritatis culpa earum maxime quisquam quas laborum esse veniam, voluptas atque asperiores sit quae architecto reprehenderit quam magni rem aperiam deleniti! Enim aut vitae repellendus id est commodi laboriosam doloremque, a consequatur molestias eos voluptas harum.</p>
-                    </Carousel.Caption>
-                </Carousel.Item>
-                <Carousel.Item>
-                    <img
-                        className="d-block w-100"
-                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYnaX0kjrvb261OLsDsJJRjk7JpXDNJL-rKg&usqp=CAU"
-                        width={100} 
-                        height={500}
-                        alt="Second slide"
-                    />
+  const handleNext = () => {
+    setActiveStep((prevActiveStep) => prevActiveStep + 1);
+  };
 
-                    <Carousel.Caption>
-                    <h3>University Event 2</h3>
-                        <br /><br /><br /><br /><br /><br /><br /><br />
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure ipsam temporibus nostrum suscipit, sequi veritatis culpa earum maxime quisquam quas laborum esse veniam, voluptas atque asperiores sit quae architecto reprehenderit quam magni rem aperiam deleniti! Enim aut vitae repellendus id est commodi laboriosam doloremque, a consequatur molestias eos voluptas harum.</p>
-                    </Carousel.Caption>
-                </Carousel.Item>
-                <Carousel.Item>
-                    <img
-                        className="d-block w-100"
-                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYnaX0kjrvb261OLsDsJJRjk7JpXDNJL-rKg&usqp=CAU"
-                        width={100} 
-                        height={500}
-                        alt="Third slide"
-                    />
+  const handleBack = () => {
+    setActiveStep((prevActiveStep) => prevActiveStep - 1);
+  };
 
-                    <Carousel.Caption>
-                    <h3>University Event 3</h3>
-                        <br /><br /><br /><br /><br /><br /><br /><br />
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure ipsam temporibus nostrum suscipit, sequi veritatis culpa earum maxime quisquam quas laborum esse veniam, voluptas atque asperiores sit quae architecto reprehenderit quam magni rem aperiam deleniti! Enim aut vitae repellendus id est commodi laboriosam doloremque, a consequatur molestias eos voluptas harum.</p>
-                    </Carousel.Caption>
-                </Carousel.Item>
-            </Carousel>
-        </>
-    )
+  const handleStepChange = (step) => {
+    setActiveStep(step);
+  };
+
+  return (
+    <Box sx={{ width: "50%", flexGrow: 1, marginLeft: "25%" }}>
+      <Paper
+        square
+        elevation={0}
+        sx={{
+          display: 'flex',
+          alignItems: 'center',
+          bgcolor: 'background.default',
+        }}
+      >
+      </Paper>
+      <AutoPlaySwipeableViews
+        axis={theme.direction === 'rtl' ? 'x-reverse' : 'x'}
+        index={activeStep}
+        onChangeIndex={handleStepChange}
+        enableMouseEvents
+        alignContent="center"
+      >
+        {images.map((step, index) => (
+          <div key={step.label}>
+            {Math.abs(activeStep - index) <= 2 ? (
+              <Box
+                component="img"
+                sx={{
+                  height:"400px",
+                  display: 'block',
+                  width: '100%',
+                  overflow: 'hidden',
+                }}
+                src={step.imgPath}
+                alt={step.label}
+              />
+            ) : null}
+          </div>
+        ))}
+      </AutoPlaySwipeableViews>
+      <MobileStepper
+        steps={maxSteps}
+        position="static"
+        activeStep={activeStep}
+        nextButton={
+          <Button
+            size="small"
+            onClick={handleNext}
+            disabled={activeStep === maxSteps - 1}
+          >
+            Next
+            {theme.direction === 'rtl' ? (
+              <KeyboardArrowLeft />
+            ) : (
+              <KeyboardArrowRight />
+            )}
+          </Button>
+        }
+        backButton={
+          <Button size="small" onClick={handleBack} disabled={activeStep === 0}>
+            {theme.direction === 'rtl' ? (
+              <KeyboardArrowRight />
+            ) : (
+              <KeyboardArrowLeft />
+            )}
+            Back
+          </Button>
+        }
+      />
+    </Box>
+  );
 }
+
