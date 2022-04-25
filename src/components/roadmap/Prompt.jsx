@@ -61,6 +61,7 @@ export default function Prompt(props) {
     setType(null);
     setDetails(null);
   }
+
   const editTopic = (event) => {
     setTopic(event.target.value);;
 
@@ -79,7 +80,8 @@ export default function Prompt(props) {
     setDetails(event.target.value);;
 
   };
-  const requiredFieldsEntered=()=>{
+
+  const requiredFieldsEntered = () => {
     if(topic!=null && organization!=null && type!=null){
       return true;
     }else{

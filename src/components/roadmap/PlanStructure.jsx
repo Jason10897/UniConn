@@ -123,13 +123,13 @@ export default function PlanStructure() {
     if(start_value!=null){
       let startDateString="";
       startDateString+=String(start_value).slice(4,10);
-      startDateString+=',';
+      startDateString+=', ';
       startDateString+=String(start_value).slice(11,15);
       if(enable_date==false){
-        str+=startDateString+"-present"
+        str+=startDateString+" - Present"
       }
       else if(end_value!=null){
-        str+=startDateString+'-'+String(end_value).slice(4,10)+','+String(end_value).slice(11,15);
+        str+=startDateString+' - '+String(end_value).slice(4,10)+', '+String(end_value).slice(11,15);
       }
     }
     if(details!=null){
