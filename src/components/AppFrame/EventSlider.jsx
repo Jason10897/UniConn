@@ -52,7 +52,7 @@ export default function EventSlider() {
   };
 
   return (
-    <Box sx={{ width: "50%", flexGrow: 1, marginLeft: "25%" }}>
+    <Box sx={{ width: "60%", flexGrow: 1, marginLeft: "20%" }}>
       <Paper
         square
         elevation={0}

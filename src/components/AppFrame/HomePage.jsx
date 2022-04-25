@@ -15,32 +15,28 @@ export default function HomePage(){
   return (
         <React.Fragment>
         <Typography
-          component="h1"
-          variant="h2"
-          align="left"
+          variant="h3"
+          align="center"
           color="text.primary"
           gutterBottom
         >
           UniConn
         </Typography>
         <Typography
-          component="h2"
-          variant="h4"
-          align="left"
+          variant="h5"
+          align="center"
           color="text.primary"
-          width={800}
           gutterBottom
         >
           Get the world's most loved alumni engagement platform and build a thriving alumni community online to engage your alumni digitally. 
         </Typography>
 
-        <Box textAlign={'left'}>
+        <Box sx={{textAlign: "center", marginTop: 3, marginBottom: 3}}>
         <Button variant="contained" onClick={viewSearchPage} sx={{
           marginBottom:2,
           backgroundColor:"green"
         }}>Search and Connect with Alumni/Students</Button>
         </Box>
-
         <EventSlider/>
         </React.Fragment>
     )
