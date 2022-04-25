@@ -82,10 +82,9 @@ export default function UserProfile() {
 
       {/* Roadmap to only be displayed for students */}
       {
-          (state?.type === userTypes.STUDENT)?<RoadMapLink/>:<></>
+          (state?.isConnected && state?.type === userTypes.STUDENT)?<RoadMapLink/>:<></>
       }
       
-    
     </Box>
   );
 }
