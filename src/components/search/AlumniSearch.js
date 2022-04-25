@@ -76,7 +76,7 @@ export default function Alumnisearch(){
       const data = AlumniUsers
       const filtered = data.filter(user =>{
         return (!filterState.domain.length?true:(filterState.domain.indexOf(user.domain) > -1)) &&
-        (!filterState.company?true:user.company === filterState.company) &&
+        (!filterState.company?true:(user.company === filterState.company && user.type == userTypes.ALUMNI)) &&
         (!filterState.location?true:user.location === filterState.location) &&
         ((filterState.search == '')?true:`${user.firstName} ${user.lastName}`.toLowerCase().startsWith(filterState.search.toLowerCase())) &&
         ((filterState.filter == 'All')?true:(filterState.filter == 'Student' && user.type == userTypes.STUDENT) || (filterState.filter == 'Alumni' && user.type == userTypes.ALUMNI))
