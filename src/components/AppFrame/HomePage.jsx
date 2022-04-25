@@ -31,7 +31,7 @@ export default function HomePage(){
           Get the world's most loved alumni engagement platform and build a thriving alumni community online to engage your alumni digitally. 
         </Typography>
 
-        <Box sx={{textAlign: "center", marginTop: 3, marginBottom: 3}}>
+        <Box sx={{textAlign: "center", marginTop: 3, marginBottom: 2}}>
         <Button variant="contained" onClick={viewSearchPage} sx={{
           marginBottom:2,
           backgroundColor:"green"

@@ -39,7 +39,7 @@ export default function StudentPlan(props) {
   return (
     <Box sx={{ width: "100%", bgcolor: "background.paper" }}>
       <List sx={{ minHeight: 200, maxHeight: 200, overflow: "auto" }}>
-        <h5>Goal</h5>
+        <h3>Goal</h3>
         {props.plan.map((item) => {
           return (
             <ListItem disablePadding key={item.id}>
