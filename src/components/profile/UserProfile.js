@@ -16,6 +16,9 @@ const styleProfileIcon = {
 };
 
 export default function UserProfile() {
+  React.useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
 
   const {id} = useParams()
   const userData = AlumniUsers.find(user => user?.id == id);

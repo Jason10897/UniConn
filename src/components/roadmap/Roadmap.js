@@ -2,7 +2,11 @@ import * as React from 'react';
 import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper } from '@mui/material';
 import PlanStructure from './PlanStructure';
 
-export default function BasicTable() {
+export default function Roadmap() {
+  React.useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
+  
   return (
       <TableContainer component={Paper}>
         <Table sx={{ minWidth: 650 }} aria-label="simple table" border="1px">
