@@ -60,7 +60,7 @@ export const ChipContainer = styled('div')(({theme}) => ({
 
 export default function Alumnisearch(){
 
-    const [filterState, dispatch] = useReducer(FilterReducer,defaultFilterState)
+    const [filterState, dispatch] = useReducer(FilterReducer, defaultFilterState)
 
     const [userData, setUserData] = useState([])
 

@@ -7,7 +7,7 @@ import DialogActions from '@mui/material/DialogActions';
 import DialogContent from '@mui/material/DialogContent';
 import DialogTitle from '@mui/material/DialogTitle';
 import React, { useEffect, useState } from 'react'
-import { AlumniUsers } from '../data/userData';
+import { AlumniUsers, userTypes } from '../data/userData';
 import { Search, SearchIconWrapper, StyledInputBase } from '../search/AlumniSearch';
 import CardGrid from '../search/CardGrid';
 import { useParams } from '@reach/router';
@@ -17,23 +17,24 @@ export default function RecommendButton() {
   const [open, setOpen] = useState(false);
 
   const [snackbarOpen, setSnackbarOpen] = useState(false);
-  const [searchText, setSearchText] = useState('')
+  const [searchText, setSearchText] = useState('');
   
-  const [searchRes, setSearchRes] = useState([])
+  const [searchRes, setSearchRes] = useState([]);
 
-  const {id} = useParams()
+  const {id} = useParams();
   const userData = AlumniUsers.find(user => user?.id == id);
 
-  const [state, setState] = useState(userData)
+  const [state, setState] = useState(userData);
 
   useEffect(() => {
     const filtered = AlumniUsers.filter(user=>{
-      const displayName = `${user.firstName} ${user.lastName}`.toLocaleLowerCase()
+      const displayName = `${user.firstName} ${user.lastName}`.toLocaleLowerCase();
 
       return searchText && 
-      (displayName.startsWith(searchText.toLocaleLowerCase()) ||
+      ((displayName.startsWith(searchText.toLocaleLowerCase()) ||
        user.lastName.toLocaleLowerCase().startsWith(searchText.toLocaleLowerCase())||
-       user.firstName.toLocaleLowerCase().startsWith(searchText.toLocaleLowerCase()))
+       user.firstName.toLocaleLowerCase().startsWith(searchText.toLocaleLowerCase())) &&
+       user.type==userTypes.ALUMNI)
     })
 
     setSearchRes(filtered)
