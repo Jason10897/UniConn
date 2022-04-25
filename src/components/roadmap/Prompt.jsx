@@ -30,25 +30,67 @@ export const theme = createTheme({
 });
 
 export default function Prompt(props) {
+
+  const typeSelection = ["Project", "Job/Internship", "Achievement", "Other"];
+
+  const [topic, setTopic] = React.useState(null);
+
+  const [organization, setOrganization] = React.useState(null);
+
+  const [type, setType] = React.useState(null);
+
   const [start_value, setStartValue] = React.useState(null);
 
   const [end_value, setEndValue] = React.useState(null);
 
   const [enable_date, setEnable] = React.useState(true);
 
+  const [details, setDetails] = React.useState(null);
+
   const handleCheck = () => {
     setEnable(!enable_date);
     setEndValue(null);
   };
 
-  const resetDate = () => {
-      setEnable(true);
-      setEndValue(null);
+  const resetFormValues = () => {
+    setEnable(true);
+    setStartValue(null);
+    setEndValue(null);
+    setTopic(null);
+    setOrganization(null);
+    setType(null);
+    setDetails(null);
   }
+  const editTopic = (event) => {
+    setTopic(event.target.value);;
+
+  };
+  const editOrganization = (event) => {
+    setOrganization(event.target.value);;
+
+  };
+
+  const editType = (event) => {
+    setType(event.target.value);;
+
+  };
+
+  const editDetails = (event) => {
+    setDetails(event.target.value);;
+
+  };
+  const requiredFieldsEntered=()=>{
+    if(topic!=null && organization!=null && type!=null){
+      return true;
+    }else{
+    return false;
+    }
+  };
+
 
   return (
     <Dialog
-      onClose={() => {props.hidePrompts(); resetDate()}}
+      onClose={() => { props.hidePrompts(); resetFormValues() }}
       open={props.openPrompts}
       PaperProps={{ sx: { minWidth: "37%", borderRadius: "15px" } }}
     >
@@ -61,6 +103,7 @@ export default function Prompt(props) {
               id="standard-required"
               label="Topic"
               variant="standard"
+              onChange={editTopic}
               sx={{ width: "100%", marginTop: -3 }}
             />
           </ListItem>
@@ -72,6 +115,7 @@ export default function Prompt(props) {
               variant="standard"
               helperText="If none, then enter 'Self'"
               sx={{ width: "100%" }}
+              onChange={editOrganization}
             />
           </ListItem>
           <ListItem>
@@ -87,6 +131,7 @@ export default function Prompt(props) {
                 labelId="demo-simple-select-required-label"
                 id="demo-simple-select-required"
                 label="Type *"
+                onChange={editType}
               >
                 <MenuItem value={1}>Project</MenuItem>
                 <MenuItem value={2}>Job/Internship</MenuItem>
@@ -151,6 +196,7 @@ export default function Prompt(props) {
               label="Details"
               multiline
               rows={4}
+              onChange={editDetails}
               variant="filled"
               InputProps={{ disableUnderline: true }}
               sx={{ width: "100%", marginTop: 2 }}
@@ -171,7 +217,7 @@ export default function Prompt(props) {
             >
               <Button
                 variant="filled"
-                onClick={() => {props.hidePrompts(); resetDate()}}
+                onClick={() => { props.hidePrompts(); resetFormValues() }}
                 sx={{
                   backgroundColor: "#E5E4E2",
                   borderRadius: "35px",
@@ -184,7 +230,14 @@ export default function Prompt(props) {
               </Button>
               <Button
                 variant="filled"
-                onClick={() => {props.addPrompts(); resetDate()}}
+                onClick={() => {
+                  if (requiredFieldsEntered()) { props.addPrompts(topic, organization, typeSelection[type - 1], start_value, end_value, enable_date, details); 
+                  resetFormValues();}
+                  else{
+                    alert("Enter all the required fields!!!");  
+                  }
+                }}
+
                 sx={{
                   color: "white",
                   backgroundColor: "#7F00FF",

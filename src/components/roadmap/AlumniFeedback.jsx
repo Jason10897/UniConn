@@ -32,7 +32,7 @@ export default function AlumniFeedback(props) {
                     {item.name}
                   </Typography>
                   <Typography
-                    sx={{ maxWidth: 1, textAlign: "justify" }}
+                    sx={{ maxWidth: 1, textAlign: "justify", whiteSpace:"pre-line" }}
                     variant="body2"
                   >
                     {item.feedback}

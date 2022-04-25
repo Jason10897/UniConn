@@ -32,11 +32,11 @@ export default function PlanStructure() {
   const [openPrompts, handlePrompts] = useState(false);
 
   const displayPrompts = () => {
-      handlePrompts(true);
+    handlePrompts(true);
   }
 
   const hidePrompts = () => {
-      handlePrompts(false);
+    handlePrompts(false);
   }
 
   const [feedbackField, handleFeedback] = useState("");
@@ -79,7 +79,7 @@ export default function PlanStructure() {
         ...alumni,
         {
           id: alumni.slice(-1)[0].id + 1,
-          name: "Jason Dsouza",
+          name: "Alumni",
           feedback: feedbackText,
         },
       ]);
@@ -101,16 +101,51 @@ export default function PlanStructure() {
     setStatus(!status);
   }
 
-  const addPrompts = () => {
+  const addPrompts = (topic, organization, type, start_value, end_value, enable_date, details) => {
+    let str = "";
+    switch (type) {
+      case 'Other':
+        str += "New Update";
+        str += "\n";
+        break;
+      default:
+        str += type;
+        str += " Update";
+        str += "\n";
+    }
+
+    str += topic;
+    str += " ";
+
+    str += "(" + organization + ")";
+    str += "\n";
+
+    if(start_value!=null){
+      let startDateString="";
+      startDateString+=String(start_value).slice(4,10);
+      startDateString+=',';
+      startDateString+=String(start_value).slice(11,15);
+      if(enable_date==false){
+        str+=startDateString+"-present"
+      }
+      else if(end_value!=null){
+        str+=startDateString+'-'+String(end_value).slice(4,10)+','+String(end_value).slice(11,15);
+      }
+    }
+    if(details!=null){
+      str+="\n"+details;
+    }
+
+
     setFeedback([
-        ...alumni,
-        {
-          id: alumni.slice(-1)[0].id + 1,
-          name: "Jason Dsouza",
-          feedback: "Prompt!",
-        },
-      ]);
-      hidePrompts();
+      ...alumni,
+      {
+        id: alumni.slice(-1)[0].id + 1,
+        name: "Student",
+        feedback: str,
+      },
+    ]);
+    hidePrompts();
   }
 
   return (
