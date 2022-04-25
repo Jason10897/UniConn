@@ -25,14 +25,14 @@ export default function UserProfile() {
   return (
     <Box sx={{margin: 3}}>
       <Box display="flex" justifyContent="center" alignItems="center">
-        <Avatar sx={{height: "150px", width: "150px"}} src={state?.profilePh}></Avatar> {/* <AccountCircleIcon style={styleProfileIcon} /> */}
+        <Avatar sx={{height: "150px", width: "150px"}} src={state?.profilePh}></Avatar>
       </Box>
       <Typography
         variant="h4"
         gutterBottom
         component="div"
         sx={{
-          marginBottom: -1,
+          marginBottom: 0,
         }}
       >
         {`${state?.firstName} ${state?.lastName}`}

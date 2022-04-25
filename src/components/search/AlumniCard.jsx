@@ -39,7 +39,7 @@ export default function AlumniCard({data, onClick, isSelectable}){
             onClick={()=>onClick(data)}
           />
           <CardContent sx={{display: 'flex', 'flexDirection':'column', padding: '3px !important'}}>
-            <div style={{display:'flex', flexDirection: 'column', flex: 1, alignItems:'left'}}>
+            <div style={{display:'flex', flexDirection: 'column', flex: 1, alignItems:'center'}}>
                 <Typography gutterBottom variant="subtitle1" component="div" sx={{margin:'0'}}>
                 {`${data?.firstName} ${data?.lastName}`}
                 </Typography>
