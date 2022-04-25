@@ -30,13 +30,13 @@ export default function Filters({style, dispatch, filterState}){
 
     return (
         <Box display='flex' flexDirection='column' style={style}>
-            <div style={{textAlign:'left'}}>
+            <div style={{textAlign:'left', marginTop: 10, marginBottom: 20}}>
             <FormLabel component="legend"><b>Domain</b></FormLabel>
             <FormGroup>
                 {
                     domains.map(domain =>(
                         <FormControlLabel
-                            sx={{margin:0}}
+                            sx={{marginLeft:-1}}
                             control={
                             <Checkbox onChange={onDomainChange} 
                             sx={{padding:'5px'}}
@@ -50,7 +50,7 @@ export default function Filters({style, dispatch, filterState}){
                 }                
             </FormGroup>
         </div>
-            <FormControl fullWidth size='small' style={{padding: '5px'}}>
+            <FormControl fullWidth size='small' style={{padding: '5px', marginLeft: -7, marginBottom: 20}}>
                 <InputLabel id="comp-simple-select-label">Company</InputLabel>
                 <Select
                     labelId="comp-simple-select-label"
@@ -63,7 +63,7 @@ export default function Filters({style, dispatch, filterState}){
                     {companies.map((company)=><MenuItem value={company}>{company}</MenuItem>)}
                 </Select>
             </FormControl>
-                <FormControl fullWidth size='small' style={{padding: '5px'}}>
+                <FormControl fullWidth size='small' style={{padding: '5px', marginLeft: -7}}>
                 <InputLabel id="loc-simple-select-label">Location</InputLabel>
                 <Select
                     labelId="loc-simple-select-label"

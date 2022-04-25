@@ -17,7 +17,7 @@ export default function AlumniCard({data, onClick, isSelectable}){
     // const ConnectIcon = (data?.isConnected)?<ChatIcon/>:<AddBoxIcon/>
 
     return (
-        <Card sx={{ width: '22%',margin: '10px', maxHeight: '302px', position:'relative' }}>
+        <Card sx={{ width: '210px', margin: '15px', maxHeight: '330px', position:'relative', borderRadius: 3 }}>
           {
             isSelectable?
             <div style={{position:'absolute'}}>
@@ -25,15 +25,15 @@ export default function AlumniCard({data, onClick, isSelectable}){
             </div>:
             <div style={{position:'absolute'}}>
             {data?.type===userTypes.STUDENT?
-              <Chip variant='outlined' label="Student" color='success' size='small' sx={{borderRadius:0}}/>
-              :<Chip variant='outlined' label="Alumni" color='secondary' size='small' sx={{borderRadius:0}}/>
+              <Chip variant='outlined' label="Student" color='success' size='small' sx={{borderRadius: 3}}/>
+              :<Chip variant='outlined' label="Alumni" color='secondary' size='small' sx={{borderRadius: 3}}/>
             }
           </div>
           }
 
           <CardMedia
             component="img"
-            height="200"
+            height="220px"
             src={data?.profilePh} 
             alt="User icon"
             onClick={()=>onClick(data)}
@@ -50,14 +50,14 @@ export default function AlumniCard({data, onClick, isSelectable}){
             <CardActions sx={{padding:'0px'}}>
             {
               !isSelectable && 
-              <div style={{margin:0, padding:0, display:'flex', width:'100%', flexDirection:'row'}}>
+              <div style={{marginBottom:2, padding:0, display:'flex', width:'100%', flexDirection:'row'}}>
                 {
                   (data?.isConnected)?
-                  <Button size="small" variant='contained' disabled sx={{margin:0, flex:1, borderRadius: 0}}>Connected</Button>
+                  <Button size="small" variant='contained' disabled sx={{marginRight:1, flex:1, fontSize: 12, borderRadius: 2}}>Connected</Button>
                   :
-                  <ConnectButton size="small" variant='contained' startIcon={<AddBoxIcon />} style={{margin:0, flex:1, borderRadius: 0}}/>
+                  <ConnectButton size="small" variant='contained' startIcon={<AddBoxIcon />} style={{marginRight:1, flex:1, fontSize: 12, borderRadius: 2}}/>
                 }
-                <Button size="small" variant='contained' endIcon={<ChatIcon/>} color='secondary' sx={{ margin:0, flex:1, borderRadius: 0}}>Message</Button>
+                <Button size="small" variant='contained' endIcon={<ChatIcon/>} color='secondary' sx={{ margin:0, flex:1, fontSize: 12, borderRadius: 2}}>Message</Button>
               </div>
             }           
             </CardActions>
