@@ -94,7 +94,7 @@ export default function Prompt(props) {
     <Dialog
       onClose={() => { props.hidePrompts(); resetFormValues() }}
       open={props.openPrompts}
-      PaperProps={{ sx: { minWidth: "37%", borderRadius: "15px" } }}
+      PaperProps={{ sx: { minWidth: "40%", borderRadius: "15px" } }}
     >
       <DialogTitle>Tell Your Mentor About</DialogTitle>
       <ThemeProvider theme={theme}>
