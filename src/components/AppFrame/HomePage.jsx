@@ -12,6 +12,10 @@ export default function HomePage(){
     navigate("/search?filter=All")
 }
 
+React.useEffect(() => {
+  window.scrollTo(0, 0)
+}, [])
+
   return (
         <React.Fragment>
         <Typography
