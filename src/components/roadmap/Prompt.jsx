@@ -82,7 +82,7 @@ export default function Prompt(props) {
   };
 
   const requiredFieldsEntered = () => {
-    if(topic!=null && organization!=null && type!=null){
+    if( topic!=null && topic.length!=0 && organization!=null && organization.length!=0 && type!=null){
       return true;
     }else{
     return false;
