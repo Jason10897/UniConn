@@ -22,7 +22,7 @@ export default function AlumniFeedback(props) {
   return (
     <Box sx={{ width: "100%", bgcolor: "background.paper" }}>
       <List sx={{ minHeight: 200, maxHeight: 200, overflow: "auto" }}>
-        {props.alumni.map((item) => {
+        {[...props.alumni].reverse().map((item) => {
           return (
             <Card key={item.id} variant="outlined" sx={{ marginBottom: "5px" }}>
               <CardContent sx={{ display: "flex", flexDirection: "row" }}>
