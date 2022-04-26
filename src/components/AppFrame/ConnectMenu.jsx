@@ -24,6 +24,7 @@ export default function ConnectMenu() {
         aria-expanded={open ? 'true' : undefined}
         color='inherit'
         onClick={handleClick}
+        sx={{marginRight: 5}}
       >
         Connect
       </Button>

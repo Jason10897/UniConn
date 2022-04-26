@@ -12,6 +12,10 @@ export default function HomePage(){
     navigate("/search?filter=All")
 }
 
+React.useEffect(() => {
+  window.scrollTo(0, 0)
+}, [])
+
   return (
         <React.Fragment>
         <Typography
@@ -19,6 +23,7 @@ export default function HomePage(){
           align="center"
           color="text.primary"
           gutterBottom
+          sx={{marginTop: 5}}
         >
           UniConn
         </Typography>

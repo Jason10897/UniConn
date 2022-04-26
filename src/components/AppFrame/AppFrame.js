@@ -1,5 +1,6 @@
 import AppBar from '@mui/material/AppBar';
 import Button from '@mui/material/Button';
+import Avatar from '@mui/material/Avatar';
 import Container from '@mui/material/Container';
 import CssBaseline from '@mui/material/CssBaseline';
 import GlobalStyles from '@mui/material/GlobalStyles';
@@ -24,7 +25,11 @@ export default function AppFrame(props) {
         sx={{ borderBottom: (theme) => `1px solid ${theme.palette.divider}`, zIndex: (theme) => theme.zIndex.drawer + 1  }}
       >
         <Toolbar sx={{ flexWrap: 'wrap' }}>
-          <Typography variant="h6" color='inherit'  noWrap sx={{ flex: 0.5 }} style={{textAlign: 'left'}}>
+        
+        <Link to='/' style={{ textDecoration: 'none', color: 'inherit' }}>
+        <Avatar src={"uniconn_logo.png"}/>
+        </Link>
+          <Typography variant="h6" color='inherit'  noWrap sx={{ flex: 0.5 }} style={{textAlign: 'left', marginLeft: 7}}>
             <Link to='/' style={{ textDecoration: 'none', color: 'inherit' }}>
             UniConn
             </Link>
