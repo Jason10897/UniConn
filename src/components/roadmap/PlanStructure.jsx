@@ -145,6 +145,7 @@ export default function PlanStructure() {
         id: alumni.slice(-1)[0].id + 1,
         name: "Student",
         feedback: str,
+        src:'/images/profilePhoto3.png'
       },
     ]);
     hidePrompts();
