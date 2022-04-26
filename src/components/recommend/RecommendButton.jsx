@@ -49,16 +49,17 @@ export default function RecommendButton() {
   };
 
   const handleRecommend = () => {
-    setSnackbarOpen(true)
-    setOpen(false)
+    setSnackbarOpen(true);
+    setOpen(false);
+    setSearchText('');
   }
 
   const handleSnackClose = () => {
-    setSnackbarOpen(false)
+    setSnackbarOpen(false);
   }
 
   const onSearchChanged = (e) => {
-    setSearchText(e?.target?.value||'')
+    setSearchText(e?.target?.value||'');
   }
 
   return (
