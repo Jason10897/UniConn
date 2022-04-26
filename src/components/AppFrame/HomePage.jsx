@@ -19,6 +19,7 @@ export default function HomePage(){
           align="center"
           color="text.primary"
           gutterBottom
+          sx={{marginTop: 5}}
         >
           UniConn
         </Typography>
