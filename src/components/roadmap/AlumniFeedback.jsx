@@ -26,7 +26,7 @@ export default function AlumniFeedback(props) {
           return (
             <Card key={item.id} variant="outlined" sx={{ marginBottom: "5px" }}>
               <CardContent sx={{ display: "flex", flexDirection: "row" }}>
-                <Avatar></Avatar>
+                <Avatar src={item.src}></Avatar>
                 <Box sx={{ marginLeft: "15px" }}>
                   <Typography sx={{ fontWeight: "bold" }}>
                     {item.name}

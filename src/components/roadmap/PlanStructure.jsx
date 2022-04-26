@@ -24,9 +24,10 @@ export default function PlanStructure() {
       name: "John Doe",
       feedback:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
-    },
-    { id: 2, name: "Claudia Alves", feedback: "Seems like a great idea!" },
-    { id: 3, name: "Jane Rodriguez", feedback: "You could do study this course better by first taking its prerequisite" },
+      src:'/images/profilePhoto1.png'
+      },
+    { id: 2, name: "Claudia Alves", feedback: "Seems like a great idea!", src:'/images/profilePhoto2.png' },
+    { id: 3, name: "Jane Rodriguez", feedback: "You could do study this course better by first taking its prerequisite",src:'/images/profilePhoto5.png' },
   ]);
 
   const [openPrompts, handlePrompts] = useState(false);
@@ -81,6 +82,7 @@ export default function PlanStructure() {
           id: alumni.slice(-1)[0].id + 1,
           name: "Alumni",
           feedback: feedbackText,
+          src:'/images/profilePhoto4.png'
         },
       ]);
       setFeedbackText("");
