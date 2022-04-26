@@ -127,7 +127,7 @@ export default function PlanStructure() {
       startDateString+=String(start_value).slice(4,10);
       startDateString+=', ';
       startDateString+=String(start_value).slice(11,15);
-      if(enable_date==false){
+      if(!enable_date){
         str+=startDateString+" - Present"
       }
       else if(end_value!=null){
