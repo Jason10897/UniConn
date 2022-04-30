@@ -47,7 +47,8 @@ export const AlumniUsers = [
         company: Companies.Google,
         location: Locations.NYC,
         isConnected: false,
-        profilePh: '/images/profilePhoto5.png'
+        profilePh: '/images/profilePhoto5.png',
+        requestSent: false
     },
     {
         id: 2,
@@ -58,7 +59,8 @@ export const AlumniUsers = [
         company: Companies.PayPal,
         location: Locations.NYC,
         isConnected: true,
-        profilePh: '/images/profilePhoto2.png'
+        profilePh: '/images/profilePhoto2.png',
+        requestSent: false
     },
     {
         id: 3,
@@ -69,7 +71,8 @@ export const AlumniUsers = [
         company: Companies.Amazon,
         location: Locations.STL,
         isConnected: false,
-        profilePh: '/images/profilePhoto5.png'
+        profilePh: '/images/profilePhoto5.png',
+        requestSent: false
     },
     {
         id: 4,
@@ -80,7 +83,8 @@ export const AlumniUsers = [
         company: Companies.Microsoft,
         location: Locations.STL,
         isConnected: true,
-        profilePh: '/images/profilePhoto3.png'
+        profilePh: '/images/profilePhoto3.png',
+        requestSent: false
     },
     {
         id: 5,
@@ -91,7 +95,8 @@ export const AlumniUsers = [
         company: Companies.Apple,
         location: Locations.SF,
         isConnected: false,
-        profilePh: '/images/profilePhoto4.png'
+        profilePh: '/images/profilePhoto4.png',
+        requestSent: false
     },
     {
         id: 6,
@@ -102,7 +107,8 @@ export const AlumniUsers = [
         company: Companies.Google,
         location: Locations.SF,
         isConnected: false,
-        profilePh: '/images/profilePhoto1.png'
+        profilePh: '/images/profilePhoto1.png',
+        requestSent: true
     },
     {
         id: 7,
@@ -113,7 +119,8 @@ export const AlumniUsers = [
         company: Companies.PayPal,
         location: Locations.CHI,
         isConnected: false,
-        profilePh: '/images/profilePhoto2.png'
+        profilePh: '/images/profilePhoto2.png',
+        requestSent: false
     },
     {
         id: 8,
@@ -124,7 +131,8 @@ export const AlumniUsers = [
         company: Companies.Apple,
         location: Locations.AUS,
         isConnected: true,
-        profilePh: '/images/profilePhoto5.png'
+        profilePh: '/images/profilePhoto5.png',
+        requestSent: false
     },
     {
         id: 9,
@@ -135,7 +143,8 @@ export const AlumniUsers = [
         company: Companies.Google,
         location: Locations.NYC,
         isConnected: false,
-        profilePh: '/images/profilePhoto3.png'
+        profilePh: '/images/profilePhoto3.png',
+        requestSent: false
     },
     {
         id: 10,
@@ -146,7 +155,8 @@ export const AlumniUsers = [
         company: Companies.Apple,
         location: Locations.SF,
         isConnected: false,
-        profilePh: '/images/profilePhoto5.png'
+        profilePh: '/images/profilePhoto5.png',
+        requestSent: false
     },
     {
         id: 11,
@@ -157,7 +167,8 @@ export const AlumniUsers = [
         company: Companies.Amazon,
         location: Locations.STL,
         isConnected: true,
-        profilePh: '/images/profilePhoto1.png'
+        profilePh: '/images/profilePhoto1.png',
+        requestSent: false
     },
     {
         id: 12,
@@ -168,7 +179,8 @@ export const AlumniUsers = [
         company: Companies.Google,
         location: Locations.NYC,
         isConnected: false,
-        profilePh: '/images/profilePhoto2.png'
+        profilePh: '/images/profilePhoto2.png',
+        requestSent: false
     },
     {
         id: 13,
@@ -179,7 +191,8 @@ export const AlumniUsers = [
         company: Companies.Amazon,
         location: Locations.CHI,
         isConnected: false,
-        profilePh: '/images/profilePhoto5.png'
+        profilePh: '/images/profilePhoto5.png',
+        requestSent: false
     },
     {
         id: 14,
@@ -190,7 +203,8 @@ export const AlumniUsers = [
         company: Companies.Microsoft,
         location: Locations.AUS,
         isConnected: false,
-        profilePh: '/images/profilePhoto3.png'
+        profilePh: '/images/profilePhoto3.png',
+        requestSent: false
     },
     {
         id: 15,
@@ -201,7 +215,8 @@ export const AlumniUsers = [
         company: Companies.Apple,
         location: Locations.SF,
         isConnected: false,
-        profilePh: '/images/profilePhoto4.png'
+        profilePh: '/images/profilePhoto4.png',
+        requestSent: false
     },
     {
         id: 16,
@@ -212,7 +227,8 @@ export const AlumniUsers = [
         company: Companies.Amazon,
         location: Locations.AUS,
         isConnected: false,
-        profilePh: '/images/profilePhoto1.png'
+        profilePh: '/images/profilePhoto1.png',
+        requestSent: false
     },
     {
         id: 17,
@@ -223,7 +239,8 @@ export const AlumniUsers = [
         company: Companies.Google,
         location: Locations.AUS,
         isConnected: false,
-        profilePh: '/images/profilePhoto4.png'
+        profilePh: '/images/profilePhoto4.png',
+        requestSent: false
     },
     {
         id: 18,
@@ -234,7 +251,8 @@ export const AlumniUsers = [
         company: Companies.Microsoft,
         location: Locations.SF,
         isConnected: false,
-        profilePh: '/images/profilePhoto3.png'
+        profilePh: '/images/profilePhoto3.png',
+        requestSent: true
     },
     {
         id: 19,
@@ -245,7 +263,8 @@ export const AlumniUsers = [
         company: Companies.PayPal,
         location: Locations.AUS,
         isConnected: false,
-        profilePh: '/images/profilePhoto2.png'
+        profilePh: '/images/profilePhoto2.png',
+        requestSent: false
     },
     {
         id: 20,
@@ -256,7 +275,8 @@ export const AlumniUsers = [
         company: Companies.Google,
         location: Locations.NYC,
         isConnected: true,
-        profilePh: '/images/profilePhoto5.png'
+        profilePh: '/images/profilePhoto5.png',
+        requestSent: false
     },
     {
         id: 21,
@@ -267,7 +287,8 @@ export const AlumniUsers = [
         company: Companies.Microsoft,
         location: Locations.STL,
         isConnected: false,
-        profilePh: '/images/profilePhoto4.png'
+        profilePh: '/images/profilePhoto4.png',
+        requestSent: false
     },
     {
         id: 22,
@@ -278,7 +299,8 @@ export const AlumniUsers = [
         company: Companies.Apple,
         location: Locations.CHI,
         isConnected: true,
-        profilePh: '/images/profilePhoto3.png'
+        profilePh: '/images/profilePhoto3.png',
+        requestSent: false
     },
     {
         id: 23,
@@ -289,7 +311,8 @@ export const AlumniUsers = [
         company: Companies.PayPal,
         location: Locations.SF,
         isConnected: false,
-        profilePh: '/images/profilePhoto1.png'
+        profilePh: '/images/profilePhoto1.png',
+        requestSent: false
     },
     {
         id: 24,
@@ -300,7 +323,8 @@ export const AlumniUsers = [
         company: Companies.Amazon,
         location: Locations.AUS,
         isConnected: false,
-        profilePh: '/images/profilePhoto3.png'
+        profilePh: '/images/profilePhoto3.png',
+        requestSent: false
     },
     {
         id: 25,
@@ -311,7 +335,8 @@ export const AlumniUsers = [
         company: Companies.Google,
         location: Locations.SF,
         isConnected: true,
-        profilePh: '/images/profilePhoto5.png'
+        profilePh: '/images/profilePhoto5.png',
+        requestSent: true
     },
     {
         id: 26,
@@ -322,7 +347,8 @@ export const AlumniUsers = [
         company: Companies.Microsoft,
         location: Locations.STL,
         isConnected: false,
-        profilePh: '/images/profilePhoto2.png'
+        profilePh: '/images/profilePhoto2.png',
+        requestSent: false
     },
     {
         id: 27,
@@ -333,7 +359,8 @@ export const AlumniUsers = [
         company: Companies.PayPal,
         location: Locations.AUS,
         isConnected: true,
-        profilePh: '/images/profilePhoto4.png'
+        profilePh: '/images/profilePhoto4.png',
+        requestSent: false
     },
     {
         id: 28,
@@ -344,7 +371,8 @@ export const AlumniUsers = [
         company: Companies.Google,
         location: Locations.NYC,
         isConnected: false,
-        profilePh: '/images/profilePhoto3.png'
+        profilePh: '/images/profilePhoto3.png',
+        requestSent: false
     },
     {
         id: 29,
@@ -355,7 +383,8 @@ export const AlumniUsers = [
         company: Companies.Amazon,
         location: Locations.STL,
         isConnected: true,
-        profilePh: '/images/profilePhoto1.png'
+        profilePh: '/images/profilePhoto1.png',
+        requestSent: true
     },
     {
         id: 30,
@@ -366,7 +395,8 @@ export const AlumniUsers = [
         company: Companies.Apple,
         location: Locations.CHI,
         isConnected: false,
-        profilePh: '/images/profilePhoto3.png'
+        profilePh: '/images/profilePhoto3.png',
+        requestSent: false
     },
     {
         id: 31,
@@ -377,7 +407,8 @@ export const AlumniUsers = [
         company: Companies.Microsoft,
         location: Locations.STL,
         isConnected: false,
-        profilePh: '/images/profilePhoto4.png'
+        profilePh: '/images/profilePhoto4.png',
+        requestSent: false
     },
     {
         id: 32,
@@ -388,7 +419,8 @@ export const AlumniUsers = [
         company: Companies.PayPal,
         location: Locations.AUS,
         isConnected: true,
-        profilePh: '/images/profilePhoto1.png'
+        profilePh: '/images/profilePhoto1.png',
+        requestSent: false
     }
     
 

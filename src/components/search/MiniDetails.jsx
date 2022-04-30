@@ -29,8 +29,8 @@ export default function MiniDetails({data}){
             </Typography>
 
             <Box display='flex' flexDirection='column' sx={{padding: '20px'}}>
-                {(data?.isConnected)?
-                <Button variant="contained" sx={{margin:'5px'}} disabled>{'Connected'}</Button>
+                {(data?.isConnected || data?.requestSent)?
+                <Button variant="contained" sx={{margin:'5px'}} disabled>{data?.requestSent?'Request sent':'Connected'}</Button>
                 :<ConnectButton variant="contained" style={{margin:'5px'}}/>
                 }
                 <Button variant="contained" sx={{margin:'5px'}} onClick={viewFullProfile}>View full Profile</Button>
