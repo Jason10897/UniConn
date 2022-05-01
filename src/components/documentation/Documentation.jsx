@@ -177,6 +177,9 @@ export default function Documentation() {
                 <Box display='flex' justifyContent='center' alignItems='center' style={{maxWidth:'40%', padding: '5px'}}>
                     <img style={{maxWidth: '100%'}} src='/images/sketches/ch4/sk2.jpg' alt='no-sketch'/>
                 </Box>
+                <Box display='flex' justifyContent='center' alignItems='center' style={{maxWidth:'40%', padding: '5px'}}>
+                    <img style={{maxWidth: '100%'}} src='/images/sketches/ch4/sk3.jpg' alt='no-sketch'/>
+                </Box>
             </Box> 
           </div>
         </AccordionDetails>
