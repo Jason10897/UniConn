@@ -15,6 +15,23 @@ import {Link} from '@reach/router'
 
 
 export default function AppFrame(props) {
+
+  const [activePage, setActive] = React.useState('')
+
+  const OnActiveChange = ((page)=>{
+    setActive(page)
+  })
+
+  const childrenWithProps = React.Children.map(props.children, child => {
+    // Checking isValidElement is the safe way and avoids a typescript
+    // error too.
+    if (React.isValidElement(child)) {
+      return React.cloneElement(child, { setActive: OnActiveChange });
+    }
+    return child;
+  });
+
+
   return (
     <React.Fragment>
       <GlobalStyles styles={{ ul: { margin: 0, padding: 0, listStyle: 'none' } }} />
@@ -35,13 +52,13 @@ export default function AppFrame(props) {
             </Link>
           </Typography>
           <nav color='inherit' style={{flex: 4, display: 'flex', justifyContent: 'left'}}> 
-            <ConnectMenu/>
+            <ConnectMenu color={activePage === 'connect'?'secondary':'inherit'}/>
             <EventsMenu/>
             <Link to='/documentation' style={{ textDecoration: 'none', color: 'inherit', marginLeft: '30px' }}>
             <Button
               id="basic-button"
               aria-haspopup="true"
-              color='inherit'
+              color={activePage === 'documentation'?'secondary':'inherit'}
             >
               Documentation
             </Button>
@@ -52,7 +69,7 @@ export default function AppFrame(props) {
       </AppBar>
       {/* Hero unit */}
       <Container disableGutters maxWidth="lg" component="main" sx={{ pt: 8, pb: 6, marginTop: 1 }}>
-        {props.children}
+        {childrenWithProps}
       </Container>
       {/* End hero unit */}
 

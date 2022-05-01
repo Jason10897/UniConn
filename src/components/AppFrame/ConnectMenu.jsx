@@ -5,7 +5,7 @@ import MenuItem from '@mui/material/MenuItem';
 import {navigate} from '@reach/router'
 
 
-export default function ConnectMenu() {
+export default function ConnectMenu({color}) {
   const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);
   const handleClick = (event) => {
@@ -22,7 +22,7 @@ export default function ConnectMenu() {
         aria-controls={open ? 'basic-menu' : undefined}
         aria-haspopup="true"
         aria-expanded={open ? 'true' : undefined}
-        color='inherit'
+        color={color}
         onClick={handleClick}
         sx={{marginRight: 5}}
       >

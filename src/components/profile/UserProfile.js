@@ -9,16 +9,11 @@ import ConnectButton from '../search/ConnectButton';
 import Details from './Details';
 import RoadMapLink from './RoadMapLink';
 
-const styleProfileIcon = {
-  width: "96vw",
-  height: "20vh",
-  marginBottom: -12,
-};
-
-export default function UserProfile() {
+export default function UserProfile({setActive}) {
   React.useEffect(() => {
+    setActive('profile')
     window.scrollTo(0, 0)
-  }, [])
+  }, [setActive])
 
   const {id} = useParams()
   const userData = AlumniUsers.find(user => user?.id == id);

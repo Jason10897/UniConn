@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React, {useEffect} from 'react';
 import MuiAccordion from '@mui/material/Accordion';
 import AccordionSummary from '@mui/material/AccordionSummary';
 import AccordionDetails from '@mui/material/AccordionDetails';
@@ -20,7 +20,13 @@ const Accordion = styled((props) => (
     },
   }));
 
-export default function Documentation() {
+export default function Documentation({setActive}) {
+    
+    useEffect(()=>{
+        setActive('documentation')
+    },[setActive])
+
+
   return (
     <div style={{textAlign:'left'}}>
       <Accordion>

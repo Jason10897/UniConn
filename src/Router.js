@@ -19,16 +19,16 @@ function WithBreadCrumb(props){
 }
 
 
-export default function MyRouter(){
+export default function MyRouter({setActive}){
 
     return (
        <Router>
-        <HomePage  path="/"/>
-        <WithBreadCrumb path="/search"><Alumnisearch path="*"/></WithBreadCrumb>
-        <WithBreadCrumb path="/profile/:id"><UserProfile path="*" /></WithBreadCrumb>
-        <WithBreadCrumb path="/roadmap"><RoadMap path="*"/></WithBreadCrumb>
-        <Chatbox path="/chatbox"/>
-        <Documentation path='/documentation'/>
+        <HomePage  path="/" setActive={setActive}/>
+        <WithBreadCrumb path="/search"><Alumnisearch path="*" setActive={setActive}/></WithBreadCrumb>
+        <WithBreadCrumb path="/profile/:id"><UserProfile path="*" setActive={setActive}/></WithBreadCrumb>
+        <WithBreadCrumb path="/roadmap"><RoadMap path="*" setActive={setActive}/></WithBreadCrumb>
+        <Chatbox path="/chatbox" setActive={setActive}/>
+        <Documentation path='/documentation' setActive={setActive}/>
       </Router>
     )
 }

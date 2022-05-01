@@ -58,7 +58,7 @@ export const ChipContainer = styled('div')(({theme}) => ({
       justifyContent: 'center'
   }))
 
-export default function Alumnisearch(){
+export default function Alumnisearch({setActive}){
 
     const [filterState, dispatch] = useReducer(FilterReducer, defaultFilterState)
 
@@ -68,8 +68,9 @@ export default function Alumnisearch(){
     const {filter} = parse(location.search)
 
     useEffect(() => {
+      setActive('connect')
       dispatch({type:'filter',payload: filter})
-    }, [dispatch, filter]);
+    }, [dispatch, filter, setActive]);
 
     useEffect(()=>{
       console.log(filterState)

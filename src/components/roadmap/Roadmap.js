@@ -2,10 +2,11 @@ import * as React from 'react';
 import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper } from '@mui/material';
 import PlanStructure from './PlanStructure';
 
-export default function Roadmap() {
+export default function Roadmap({setActive}) {
   React.useEffect(() => {
+    setActive('roadmap')
     window.scrollTo(0, 0)
-  }, [])
+  }, [setActive])
   
   return (
       <TableContainer component={Paper}>

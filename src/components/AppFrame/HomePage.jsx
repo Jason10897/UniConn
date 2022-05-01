@@ -7,14 +7,15 @@ import { navigate } from '@reach/router';
 
 
 
-export default function HomePage(){
+export default function HomePage({setActive}){
   const viewSearchPage = () =>{
     navigate("/search?filter=All")
-}
+  }
 
 React.useEffect(() => {
   window.scrollTo(0, 0)
-}, [])
+  setActive('homepage')
+}, [setActive])
 
   return (
         <React.Fragment>
