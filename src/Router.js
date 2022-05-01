@@ -3,6 +3,7 @@ import React from 'react';
 import BreadCrumb from './components/AppFrame/Breadcrumb';
 import HomePage from './components/AppFrame/HomePage';
 import Chatbox from './components/chatbox/Chatbox';
+import Documentation from './components/documentation/Documentation';
 import UserProfile from './components/profile/UserProfile';
 import RoadMap from './components/roadmap/Roadmap';
 import Alumnisearch from './components/search/AlumniSearch';
@@ -27,6 +28,7 @@ export default function MyRouter(){
         <WithBreadCrumb path="/profile/:id"><UserProfile path="*" /></WithBreadCrumb>
         <WithBreadCrumb path="/roadmap"><RoadMap path="*"/></WithBreadCrumb>
         <Chatbox path="/chatbox"/>
+        <Documentation path='/documentation'/>
       </Router>
     )
 }

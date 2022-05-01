@@ -37,6 +37,15 @@ export default function AppFrame(props) {
           <nav color='inherit' style={{flex: 4, display: 'flex', justifyContent: 'left'}}> 
             <ConnectMenu/>
             <EventsMenu/>
+            <Link to='/documentation' style={{ textDecoration: 'none', color: 'inherit', marginLeft: '30px' }}>
+            <Button
+              id="basic-button"
+              aria-haspopup="true"
+              color='inherit'
+            >
+              Documentation
+            </Button>
+            </Link>
           </nav>
           <Button color="inherit">Logout</Button>
         </Toolbar>
