@@ -6,6 +6,7 @@ import Typography from '@mui/material/Typography';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import { styled } from '@mui/material/styles';
 import { Box } from '@mui/system';
+import { Link } from '@mui/material';
 
 const Accordion = styled((props) => (
     <MuiAccordion disableGutters elevation={0} square {...props} />
@@ -190,8 +191,9 @@ export default function Documentation() {
         </AccordionSummary>
         <AccordionDetails>
           <Typography>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-            malesuada lacus ex, sit amet blandit leo lobortis eget.
+            <Link target="_blank" href='/prototypes.pdf'>
+                Click here to view the low fidelity prototypes
+            </Link>
           </Typography>
         </AccordionDetails>
       </Accordion>
