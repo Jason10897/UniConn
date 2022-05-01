@@ -20,7 +20,7 @@ const Accordion = styled((props) => (
 
 export default function Documentation() {
   return (
-    <div>
+    <div style={{textAlign:'left'}}>
       <Accordion>
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
@@ -71,7 +71,7 @@ export default function Documentation() {
         </AccordionSummary>
         <AccordionDetails>
         <div>
-            <Typography variant='subtitle2'><b>Students and alumni can connect to each other:</b></Typography>
+            <Typography variant='subtitle1'><b>Students and alumni can connect to each other:</b></Typography>
             <p>
                 <ol>
                 <li>Students must be able to check all existing alumni</li>   
