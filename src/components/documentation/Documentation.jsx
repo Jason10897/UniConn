@@ -5,6 +5,7 @@ import AccordionDetails from '@mui/material/AccordionDetails';
 import Typography from '@mui/material/Typography';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import { styled } from '@mui/material/styles';
+import { Box } from '@mui/system';
 
 const Accordion = styled((props) => (
     <MuiAccordion disableGutters elevation={0} square {...props} />
@@ -31,7 +32,7 @@ export default function Documentation() {
         </AccordionSummary>
         <AccordionDetails>
             <div>
-            <Typography variant='subtitle1'>Ajay Sagar Nandimandalam</Typography>
+            <Typography variant='subtitle1'><b>Ajay Sagar Nandimandalam</b></Typography>
             <p>
                 <ol>
                     <li>Initial project setup.</li>
@@ -42,7 +43,7 @@ export default function Documentation() {
             </p>
             </div>
             <div>
-            <Typography variant='subtitle1'>Jason</Typography>
+            <Typography variant='subtitle1'><b>Jason</b></Typography>
             <p>
                 <ol>
                     <li>Roadmap.</li>
@@ -51,7 +52,7 @@ export default function Documentation() {
             </p>
             </div>
             <div>
-            <Typography variant='subtitle1'>Harsh</Typography>
+            <Typography variant='subtitle1'><b>Harsh</b></Typography>
             <p>
                 <ol>
                     <li>Profile Page</li>
@@ -121,10 +122,62 @@ export default function Documentation() {
           <Typography variant='h6'>Sketches</Typography>
         </AccordionSummary>
         <AccordionDetails>
-          <Typography>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-            malesuada lacus ex, sit amet blandit leo lobortis eget.
-          </Typography>
+          <div>
+          <Typography variant='subtitle1'><b>Challenge 1:</b></Typography>
+            <Box display='flex' flexWrap='wrap'>
+                <Box display='flex' justifyContent='center' alignItems='center' style={{maxWidth:'40%', padding: '5px'}}>
+                    <img style={{maxWidth: '100%'}} src='/images/sketches/ch1/sk1.jpg' alt='no-sketch'/>
+                </Box>
+                <Box display='flex' justifyContent='center' alignItems='center' style={{maxWidth:'40%', padding: '5px'}}>
+                    <img style={{maxWidth: '100%'}} src='/images/sketches/ch1/sk2.jpg' alt='no-sketch'/>
+                </Box>
+                <Box display='flex' justifyContent='center' alignItems='center' style={{maxWidth:'40%', padding: '5px'}}>
+                    <img style={{maxWidth: '100%'}} src='/images/sketches/ch1/sk3.jpg' alt='no-sketch'/>
+                </Box>
+
+            </Box> 
+          </div>
+          <div>
+          <Typography variant='subtitle1'><b>Challenge 2:</b></Typography>
+            <Box display='flex' flexWrap='wrap'>
+                <Box display='flex' justifyContent='center' alignItems='center' style={{maxWidth:'40%', padding: '5px'}}>
+                    <img style={{maxWidth: '100%'}} src='/images/sketches/ch2/sk1.jpg' alt='no-sketch'/>
+                </Box>
+                <Box display='flex' justifyContent='center' alignItems='center' style={{maxWidth:'40%', padding: '5px'}}>
+                    <img style={{maxWidth: '100%'}} src='/images/sketches/ch2/sk2.jpg' alt='no-sketch'/>
+                </Box>
+                <Box display='flex' justifyContent='center' alignItems='center' style={{maxWidth:'40%', padding: '5px'}}>
+                    <img style={{maxWidth: '100%'}} src='/images/sketches/ch2/sk3.jpg' alt='no-sketch'/>
+                </Box>
+
+            </Box> 
+          </div>
+          <div>
+          <Typography variant='subtitle1'><b>Challenge 3:</b></Typography>
+            <Box display='flex' flexWrap='wrap'>
+                <Box display='flex' justifyContent='center' alignItems='center' style={{maxWidth:'40%', padding: '5px'}}>
+                    <img style={{maxWidth: '100%'}} src='/images/sketches/ch3/sk1.jpg' alt='no-sketch'/>
+                </Box>
+                <Box display='flex' justifyContent='center' alignItems='center' style={{maxWidth:'40%', padding: '5px'}}>
+                    <img style={{maxWidth: '100%'}} src='/images/sketches/ch3/sk2.jpg' alt='no-sketch'/>
+                </Box>
+                <Box display='flex' justifyContent='center' alignItems='center' style={{maxWidth:'40%', padding: '5px'}}>
+                    <img style={{maxWidth: '100%'}} src='/images/sketches/ch3/sk3.jpg' alt='no-sketch'/>
+                </Box>
+
+            </Box> 
+          </div>
+          <div>
+          <Typography variant='subtitle1'><b>Challenge 4:</b></Typography>
+            <Box display='flex' flexWrap='wrap'>
+                <Box display='flex' justifyContent='center' alignItems='center' style={{maxWidth:'40%', padding: '5px'}}>
+                    <img style={{maxWidth: '100%'}} src='/images/sketches/ch4/sk1.jpg' alt='no-sketch'/>
+                </Box>
+                <Box display='flex' justifyContent='center' alignItems='center' style={{maxWidth:'40%', padding: '5px'}}>
+                    <img style={{maxWidth: '100%'}} src='/images/sketches/ch4/sk2.jpg' alt='no-sketch'/>
+                </Box>
+            </Box> 
+          </div>
         </AccordionDetails>
       </Accordion>
       <Accordion>
