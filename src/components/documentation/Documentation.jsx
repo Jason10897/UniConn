@@ -33,46 +33,6 @@ export default function Documentation({setActive}) {
       <Accordion>
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
-          aria-controls="panel1a-content"
-          id="panel1a-header"
-        >
-          <Typography variant='h6'>Individual Contributions</Typography>
-        </AccordionSummary>
-        <AccordionDetails>
-            <div>
-            <Typography variant='subtitle1'><b>Ajay Sagar Nandimandalam</b></Typography>
-            <p>
-                <ol>
-                    <li>Initial project setup.</li>
-                    <li>Connect page UI to search for alumni and students.</li>
-                    <li>Search and filtering functionality.</li>
-                    <li>UI to Recommend another alumni to students.</li>
-                </ol>
-            </p>
-            </div>
-            <div>
-            <Typography variant='subtitle1'><b>Jason</b></Typography>
-            <p>
-                <ol>
-                    <li>Roadmap.</li>
-                    
-                </ol>
-            </p>
-            </div>
-            <div>
-            <Typography variant='subtitle1'><b>Harsh</b></Typography>
-            <p>
-                <ol>
-                    <li>Profile Page</li>
-                    <li>Home Page</li>
-                </ol>
-            </p>
-            </div>
-        </AccordionDetails>
-      </Accordion>
-      <Accordion>
-        <AccordionSummary
-          expandIcon={<ExpandMoreIcon />}
           aria-controls="panel2a-content"
           id="panel2a-header"
         >
@@ -205,6 +165,46 @@ export default function Documentation({setActive}) {
                 Click here to view the low fidelity prototypes
             </Link>
           </Typography>
+        </AccordionDetails>
+      </Accordion>
+      <Accordion>
+        <AccordionSummary
+          expandIcon={<ExpandMoreIcon />}
+          aria-controls="panel1a-content"
+          id="panel1a-header"
+        >
+          <Typography variant='h6'>Individual Contributions</Typography>
+        </AccordionSummary>
+        <AccordionDetails>
+            <div>
+            <Typography variant='subtitle1'><b>Ajay Sagar Nandimandalam</b></Typography>
+            <p>
+                <ol>
+                    <li>Initial project setup.</li>
+                    <li>Connect page UI to search for alumni and students.</li>
+                    <li>Search and filtering functionality.</li>
+                    <li>UI to Recommend another alumni to students.</li>
+                </ol>
+            </p>
+            </div>
+            <div>
+            <Typography variant='subtitle1'><b>Jason</b></Typography>
+            <p>
+                <ol>
+                    <li>Roadmap.</li>
+                    
+                </ol>
+            </p>
+            </div>
+            <div>
+            <Typography variant='subtitle1'><b>Harsh</b></Typography>
+            <p>
+                <ol>
+                    <li>Profile Page</li>
+                    <li>Home Page</li>
+                </ol>
+            </p>
+            </div>
         </AccordionDetails>
       </Accordion>
     </div>
