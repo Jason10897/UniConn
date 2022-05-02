@@ -87,64 +87,76 @@ export default function Documentation({setActive}) {
           aria-controls="panel3a-content"
           id="panel3a-header"
         >
-          <Typography variant='h6'>Sketches</Typography>
+          <Typography variant='h6'>Design Sketches</Typography>
         </AccordionSummary>
-        <AccordionDetails>
+        <AccordionDetails style={{marginTop: -15}}>
           <div>
-          <Typography variant='subtitle1'><b>Challenge 1:</b></Typography>
+          <Typography variant='subtitle1'><b>Challenge 1: (Students and alumni) Connect to each other</b></Typography>
+            <Typography sx={{textAlign: "justify"}}>
+              One of the core design challenges of our solution is to facilitate students to easily have access to view all the alumni of the university and be able to connect with them and request advice or mentorship. It should also be easy to find relevant alumni within a specific area of interest or domain.There should be a simple way for alumni to be able to view current students as well as other alumni of the university. Once connected, students and alumni can interact with each other.
+            </Typography>
             <Box display='flex' flexWrap='wrap'>
-                <Box display='flex' justifyContent='center' alignItems='center' style={{maxWidth:'40%', padding: '5px'}}>
+                <Box display='flex' justifyContent='center' alignItems='center' style={{maxWidth:'40%', padding: '10px'}}>
                     <img style={{maxWidth: '100%'}} src='/images/sketches/ch1/sk1.jpg' alt='no-sketch'/>
                 </Box>
-                <Box display='flex' justifyContent='center' alignItems='center' style={{maxWidth:'40%', padding: '5px'}}>
+                <Box display='flex' justifyContent='center' alignItems='center' style={{maxWidth:'40%', padding: '10px'}}>
                     <img style={{maxWidth: '100%'}} src='/images/sketches/ch1/sk2.jpg' alt='no-sketch'/>
                 </Box>
-                <Box display='flex' justifyContent='center' alignItems='center' style={{maxWidth:'40%', padding: '5px'}}>
+                <Box display='flex' justifyContent='center' alignItems='center' style={{maxWidth:'40%', padding: '10px'}}>
                     <img style={{maxWidth: '100%'}} src='/images/sketches/ch1/sk3.jpg' alt='no-sketch'/>
                 </Box>
 
             </Box> 
           </div>
           <div>
-          <Typography variant='subtitle1'><b>Challenge 2:</b></Typography>
+          <Typography variant='subtitle1' style={{marginTop: 10}}><b>Challenge 2: (Alumni) Recommend more relevant alumni to a student</b></Typography>
+            <Typography sx={{textAlign: "justify"}}>
+            Another major challenge is tackling a situation where there is a possibility of connecting to more relevant alumni. To achieve this, an alumni can recommend more relevant alumni to the students. There should be an easy and simplified way for alumni to recommend other alumni in such cases. The recommended alumni should have the freedom of choice to approve or decline to mentor the student. If and when approved, the student should be notified about the new alumni who will mentor him/her.
+            </Typography>
             <Box display='flex' flexWrap='wrap'>
-                <Box display='flex' justifyContent='center' alignItems='center' style={{maxWidth:'40%', padding: '5px'}}>
+                <Box display='flex' justifyContent='center' alignItems='center' style={{maxWidth:'40%', padding: '10px'}}>
                     <img style={{maxWidth: '100%'}} src='/images/sketches/ch2/sk1.jpg' alt='no-sketch'/>
                 </Box>
-                <Box display='flex' justifyContent='center' alignItems='center' style={{maxWidth:'40%', padding: '5px'}}>
+                <Box display='flex' justifyContent='center' alignItems='center' style={{maxWidth:'40%', padding: '10px'}}>
                     <img style={{maxWidth: '100%'}} src='/images/sketches/ch2/sk2.jpg' alt='no-sketch'/>
                 </Box>
-                <Box display='flex' justifyContent='center' alignItems='center' style={{maxWidth:'40%', padding: '5px'}}>
+                <Box display='flex' justifyContent='center' alignItems='center' style={{maxWidth:'40%', padding: '10px'}}>
                     <img style={{maxWidth: '100%'}} src='/images/sketches/ch2/sk3.jpg' alt='no-sketch'/>
                 </Box>
 
             </Box> 
           </div>
           <div>
-          <Typography variant='subtitle1'><b>Challenge 3:</b></Typography>
-            <Box display='flex' flexWrap='wrap'>
-                <Box display='flex' justifyContent='center' alignItems='center' style={{maxWidth:'40%', padding: '5px'}}>
+          <Typography variant='subtitle1' style={{marginTop: 10}}><b>Challenge 3: (Students) Use prompts to notify alumni about their progress</b></Typography>
+          <Typography sx={{textAlign: "justify"}}>
+          The challenge of keeping the conversation between students and alumni frequent and reducing larger gaps in conversations was needed to be tackled. To tackle this challenge, the design will prompt the students to send updates to the alumni regarding their progress and strengthen their bonds and network. This will ensure that the student does not feel awkward or uncomfortable while interacting with a mentor. This will also ensure that the mentor is updated with the student's progress. <b>Note:</b> This challenge was later modified to be a part of the Roadmap page instead of a chat box.
+          </Typography>
+          <Box display='flex' flexWrap='wrap'>
+                <Box display='flex' justifyContent='center' alignItems='center' style={{maxWidth:'40%', padding: '10px'}}>
                     <img style={{maxWidth: '100%'}} src='/images/sketches/ch3/sk1.jpg' alt='no-sketch'/>
                 </Box>
-                <Box display='flex' justifyContent='center' alignItems='center' style={{maxWidth:'40%', padding: '5px'}}>
+                <Box display='flex' justifyContent='center' alignItems='center' style={{maxWidth:'40%', padding: '10px'}}>
                     <img style={{maxWidth: '100%'}} src='/images/sketches/ch3/sk2.jpg' alt='no-sketch'/>
                 </Box>
-                <Box display='flex' justifyContent='center' alignItems='center' style={{maxWidth:'40%', padding: '5px'}}>
+                <Box display='flex' justifyContent='center' alignItems='center' style={{maxWidth:'40%', padding: '10px'}}>
                     <img style={{maxWidth: '100%'}} src='/images/sketches/ch3/sk3.jpg' alt='no-sketch'/>
                 </Box>
 
             </Box> 
           </div>
           <div>
-          <Typography variant='subtitle1'><b>Challenge 4:</b></Typography>
+          <Typography variant='subtitle1' style={{marginTop: 10}}><b>Challenge 4: (Students) Create a career roadmap for alumni feedback</b></Typography>
+            <Typography sx={{textAlign: "justify"}}>
+            An effective design was needed through which a student can clearly express their goals, plans, or future roadmap to mentors and get the reviews for the same. The students can add details of their future goals and their roadmap for achieving those goals in the form of the courses they are planning to take, personal projects they would like to make, internships, etc. The mentors should be able to review each and every part of the plan individually and also provide them with their suggestions. The students should also be able to add details of their past courses, projects or any other details which will help the alumni to get a proper understanding of the student's past progress.
+            </Typography>
             <Box display='flex' flexWrap='wrap'>
-                <Box display='flex' justifyContent='center' alignItems='center' style={{maxWidth:'40%', padding: '5px'}}>
+                <Box display='flex' justifyContent='center' alignItems='center' style={{maxWidth:'40%', padding: '10px'}}>
                     <img style={{maxWidth: '100%'}} src='/images/sketches/ch4/sk1.jpg' alt='no-sketch'/>
                 </Box>
-                <Box display='flex' justifyContent='center' alignItems='center' style={{maxWidth:'40%', padding: '5px'}}>
+                <Box display='flex' justifyContent='center' alignItems='center' style={{maxWidth:'40%', padding: '10px'}}>
                     <img style={{maxWidth: '100%'}} src='/images/sketches/ch4/sk2.jpg' alt='no-sketch'/>
                 </Box>
-                <Box display='flex' justifyContent='center' alignItems='center' style={{maxWidth:'40%', padding: '5px'}}>
+                <Box display='flex' justifyContent='center' alignItems='center' style={{maxWidth:'40%', padding: '10px'}}>
                     <img style={{maxWidth: '100%'}} src='/images/sketches/ch4/sk3.jpg' alt='no-sketch'/>
                 </Box>
             </Box> 
