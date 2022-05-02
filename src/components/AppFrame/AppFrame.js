@@ -10,9 +10,16 @@ import * as React from 'react';
 import Copyright from './Copyright';
 import ConnectMenu from './ConnectMenu';
 import EventsMenu from './EventsMenu';
-import {Link} from '@reach/router'
+import {Link} from '@reach/router';
+import { createTheme, ThemeProvider } from '@mui/material/styles';
 
-
+const theme = createTheme({
+  palette: {
+    secondary: {
+      main: '#000000',
+    },
+  },
+});
 
 export default function AppFrame(props) {
 
@@ -51,6 +58,7 @@ export default function AppFrame(props) {
             UniConn
             </Link>
           </Typography>
+          <ThemeProvider theme={theme}>
           <nav color='inherit' style={{flex: 4, display: 'flex', justifyContent: 'left'}}> 
             <ConnectMenu color={activePage === 'connect'?'secondary':'inherit'}/>
             <EventsMenu/>
@@ -64,6 +72,7 @@ export default function AppFrame(props) {
             </Button>
             </Link>
           </nav>
+          </ThemeProvider>
           <Button color="inherit">Logout</Button>
         </Toolbar>
       </AppBar>
