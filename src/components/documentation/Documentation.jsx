@@ -7,7 +7,6 @@ import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import { styled } from '@mui/material/styles';
 import { Box } from '@mui/system';
 import { Link } from '@mui/material';
-import Prototypes from '../../static/prototypes.pdf'
 
 const Accordion = styled((props) => (
     <MuiAccordion disableGutters elevation={0} square {...props} />
@@ -147,7 +146,7 @@ export default function Documentation({setActive}) {
           <div>
           <Typography variant='subtitle1' style={{marginTop: 10}}><b>Challenge 4: (Students) Create a career roadmap for alumni feedback</b></Typography>
             <Typography sx={{textAlign: "justify"}}>
-            An effective design was needed through which a student can clearly express their goals, plans, or future roadmap to mentors and get the reviews for the same. The students can add details of their future goals and their roadmap for achieving those goals in the form of the courses they are planning to take, personal projects they would like to make, internships, etc. The mentors should be able to review each and every part of the plan individually and also provide them with their suggestions. The students should also be able to add details of their past courses, projects or any other details which will help the alumni to get a proper understanding of the student's past progress.
+            An effective design was needed through which a student can clearly express their goals, plans, or future roadmap to mentors and get the reviews for the same. The students can add details of their future goals and their roadmap for achieving those goals in the form of the courses they are planning to take, personal projects they would like to make, internships, etc. The mentors should be able to review each and every part of the plan individually and also provide them with their suggestions. The students should also be able to add details of their past courses, projects or any other details which will help the alumni to get a proper understanding of the student's past progress. <b>Note:</b> The roadmap section can be accessed only from a <b>connected student's</b> profile page or <Link href='/roadmap'>here</Link>.
             </Typography>
             <Box display='flex' flexWrap='wrap'>
                 <Box display='flex' justifyContent='center' alignItems='center' style={{maxWidth:'40%', padding: '10px'}}>
