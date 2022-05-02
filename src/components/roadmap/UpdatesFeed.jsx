@@ -17,12 +17,13 @@ import Prompt from "./Prompt";
 const PromptButton = styled(Button)(({ theme }) => ({
     minWidth: "10px",
     maxWidth: "400px",
+    height: "30px",
     margin: 5,
   }));
 
 export default function UpdatesFeed(props) {
   return (
-    <Box sx={{ width: "100%", bgcolor: "background.paper" }}>
+    <Box sx={{ width: "100%", bgcolor: "background.paper", display: "flex", flexDirection: "column", justifyContent: "center" }}>
       <List sx={{ minHeight: 200, maxHeight: 200, overflow: "auto" }}>
         {[...props.update].reverse().map((item) => {
           return (
@@ -49,7 +50,7 @@ export default function UpdatesFeed(props) {
                   size="small"
                   variant="contained"
                   onClick={props.displayPrompts}
-                  sx={{ fontSize: "10px", lineHeight: "10px", padding: 1}}
+                  sx={{ fontSize: "10px", lineHeight: "10px", padding: 1, marginTop: 3}}
                 >
                   Post an update
                 </PromptButton>
