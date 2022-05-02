@@ -15,6 +15,7 @@ export default function Roadmap({setActive}) {
             <TableRow>
               <TableCell align="center" sx={{fontWeight: "bold"}}>Student Plan</TableCell>
               <TableCell align="center" sx={{fontWeight: "bold"}}>Alumni Feedback</TableCell>
+              <TableCell align="center" sx={{fontWeight: "bold"}}>Progress Updates</TableCell>
               <TableCell align="center" sx={{fontWeight: "bold"}}>Status</TableCell>
             </TableRow>
           </TableHead>
