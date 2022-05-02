@@ -7,6 +7,7 @@ import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import { styled } from '@mui/material/styles';
 import { Box } from '@mui/system';
 import { Link } from '@mui/material';
+import Prototypes from '../../static/prototypes.pdf'
 
 const Accordion = styled((props) => (
     <MuiAccordion disableGutters elevation={0} square {...props} />
@@ -200,7 +201,7 @@ export default function Documentation({setActive}) {
         </AccordionSummary>
         <AccordionDetails>
           <Typography>
-            <Link target="_blank" href='/prototypes.pdf'>
+            <Link target="_blank" href={Prototypes}>
                 Click here to view the low fidelity prototypes
             </Link>
           </Typography>
