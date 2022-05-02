@@ -157,12 +157,12 @@ export default function Documentation({setActive}) {
           aria-controls="panel4a-content"
           id="panel4a-header"
         >
-          <Typography variant='h6'>Low Fidelity Prototypes</Typography>
+          <Typography variant='h6'>Low Fidelity Prototypes and Formative Evaluation</Typography>
         </AccordionSummary>
         <AccordionDetails>
-          <Typography>
+          <Typography style={{marginTop: -15}}>
             <Link target="_blank" href="https://raw.githubusercontent.com/ajaysagarn/UniConn/main/src/static/prototypes.pdf">
-                Click here to view the low fidelity prototypes
+                Click here to view
             </Link>
           </Typography>
         </AccordionDetails>
@@ -175,33 +175,43 @@ export default function Documentation({setActive}) {
         >
           <Typography variant='h6'>Individual Contributions</Typography>
         </AccordionSummary>
-        <AccordionDetails>
+        <AccordionDetails style={{marginTop: -15}}>
             <div>
             <Typography variant='subtitle1'><b>Ajay Sagar Nandimandalam</b></Typography>
-            <p>
+            <p style={{marginTop: -15}}>
                 <ol>
-                    <li>Initial project setup.</li>
-                    <li>Connect page UI to search for alumni and students.</li>
-                    <li>Search and filtering functionality.</li>
-                    <li>UI to Recommend another alumni to students.</li>
+                    <li>Initial project setup</li>
+                    <li>Connect page UI to search for alumni and students</li>
+                    <li>Search and filtering functionality</li>
+                    <li>UI to Recommend another alumni to students</li>
+                    <li>Mock data generation</li>
+                    <li>Web hosting</li>
                 </ol>
             </p>
             </div>
             <div>
-            <Typography variant='subtitle1'><b>Jason</b></Typography>
-            <p>
+            <Typography variant='subtitle1'><b>Jason James Dsouza</b></Typography>
+            <p style={{marginTop: -15}}>
                 <ol>
-                    <li>Roadmap.</li>
-                    
+                    <li>Homepage - Events Carousel</li>
+                    <li>Roadmap - Student Plan, Alumni Feedback</li>
+                    <li>Prompts - Dialog box with form design</li>
+                    <li>Mock data generation</li>
+                    <li>Testing and debugging</li>
+                    <li>Final styling improvements</li>
                 </ol>
             </p>
             </div>
             <div>
-            <Typography variant='subtitle1'><b>Harsh</b></Typography>
-            <p>
+            <Typography variant='subtitle1'><b>Harsh Jethwani</b></Typography>
+            <p style={{marginTop: -15}}>
                 <ol>
+                    <li>Home Page - Layout</li>
                     <li>Profile Page</li>
-                    <li>Home Page</li>
+                    <li>Roadmap - Progress Updates, Status</li>
+                    <li>Prompts - Data validation and processing</li>
+                    <li>Mock data generation</li>
+                    <li>Testing and debugging</li>
                 </ol>
             </p>
             </div>
