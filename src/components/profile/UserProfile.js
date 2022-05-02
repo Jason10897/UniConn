@@ -1,5 +1,5 @@
 import ChatIcon from '@mui/icons-material/Chat';
-import { Avatar, Box, Button, Divider, Stack } from '@mui/material';
+import { Alert, Avatar, Box, Button, Divider, Snackbar, Stack } from '@mui/material';
 import Typography from '@mui/material/Typography';
 import { useParams } from '@reach/router';
 import React, { useState } from 'react';
@@ -19,6 +19,18 @@ export default function UserProfile({setActive}) {
   const userData = AlumniUsers.find(user => user?.id == id);
 
   const [state, setState] = useState(userData)
+
+  const [requestSent, setRequestSent] = useState(!!userData?.requestSent);
+    const [snackbarOpen, setOpen] = useState(false)
+
+    const handleSnackClose = () =>{
+        setOpen(false)
+    }
+
+    const showsnackBar = () =>{
+        setRequestSent(true)
+        setOpen(true)
+    }
 
   return (
     <Box sx={{margin: 3}}>
@@ -54,8 +66,8 @@ export default function UserProfile({setActive}) {
       >
 
         {
-          (state?.isConnected)?<Button variant="contained" disabled>Connected</Button>:
-          <ConnectButton variant="contained"/>
+          (state?.isConnected || requestSent)?<Button variant="contained" disabled>{(requestSent)?'Request Sent':'Connected'}</Button>:
+          <Button variant="contained" onClick={showsnackBar}>Connect</Button>
         }
 
         
@@ -82,7 +94,12 @@ export default function UserProfile({setActive}) {
       {
           (state?.isConnected && state?.type === userTypes.STUDENT)?<RoadMapLink/>:<></>
       }
-      
+      <Snackbar open={snackbarOpen} anchorOrigin={{ vertical:"bottom", horizontal: "center"}}
+      autoHideDuration={6000} onClose={handleSnackClose}>
+      <Alert onClose={handleSnackClose} variant="filled" severity="success" sx={{ width: '100%' }}>
+          Connection request sent successfully!
+      </Alert>
+      </Snackbar> 
     </Box>
   );
 }
