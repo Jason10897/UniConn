@@ -3,10 +3,12 @@ import { TableRow, TableCell } from "@mui/material";
 import StudentPlan from "./StudentPlan";
 import AlumniFeedback from "./AlumniFeedback";
 import Status from "./Status";
+import UpdatesFeed from "./UpdatesFeed";
 
 export default function PlanStructure() {
   const [stepText, setStepText] = useState('');
   const [feedbackText, setFeedbackText] = useState('');
+  const [updateText, setUpdateText] = useState('');
 
   const [plan, setStep] = useState([
     { id: 1, text: "Step 1" },
@@ -30,6 +32,15 @@ export default function PlanStructure() {
     { id: 3, name: "Jane Rodriguez", feedback: "You could study this course better by first taking its prerequisite",src:'/images/profilePhoto5.png' },
   ]);
 
+  const [updates,setUpdates]=useState([{
+    id: 1,
+    name: "Student",
+    feedback:
+      "Project Update\nUniConn (UIC)\nJan 10, 2022 - Present\nUniConn is an interactive web platform for university students and alumni to be able to easily collaborate, and share thoughts and experiences.",
+    src:'/images/profilePhoto3.png'
+    },
+]);
+
   const [openPrompts, handlePrompts] = useState(false);
 
   const displayPrompts = () => {
@@ -41,6 +52,7 @@ export default function PlanStructure() {
   }
 
   const [feedbackField, handleFeedback] = useState("");
+  const [updateField, handleUpdate] = useState("");
 
   const [anchorEl, setAnchorEl] = useState(null);
 
@@ -68,6 +80,11 @@ export default function PlanStructure() {
   const editFeedbackText = (event) => {
     setFeedbackText(event.target.value);;
     handleFeedback(event.target.value);
+  };
+
+  const editUpdateText = (event) => {
+    setUpdateText(event.target.value);;
+    handleUpdate(event.target.value);
   };
 
   const clearFeedback = () => {
@@ -128,21 +145,21 @@ export default function PlanStructure() {
       startDateString+=', ';
       startDateString+=String(start_value).slice(11,15);
       if(!enable_date){
-        str+=startDateString+" - Present"
+        str+=startDateString+" - Present\n"
       }
       else if(end_value!=null){
-        str+=startDateString+' - '+String(end_value).slice(4,10)+', '+String(end_value).slice(11,15);
+        str+=startDateString+' - '+String(end_value).slice(4,10)+', '+String(end_value).slice(11,15)+'\n';
       }
     }
     if(details!=null){
-      str+="\n"+details;
+      str+=details;
     }
 
 
-    setFeedback([
-      ...alumni,
+    setUpdates([
+      ...updates,
       {
-        id: alumni.slice(-1)[0].id + 1,
+        id: updates.slice(-1)[0].id + 1,
         name: "Student",
         feedback: str,
         src:'/images/profilePhoto3.png'
@@ -160,10 +177,6 @@ export default function PlanStructure() {
             value={stepField}
             edit={editStepText}
             add={addStep}
-            openPrompts={openPrompts}
-            displayPrompts={displayPrompts}
-            hidePrompts={hidePrompts}
-            addPrompts={addPrompts}
           ></StudentPlan>
         </TableCell>
         <TableCell sx={{ maxWidth: 300, verticalAlign: "top" }}>
@@ -173,6 +186,18 @@ export default function PlanStructure() {
             edit={editFeedbackText}
             add={addFeedback}
           ></AlumniFeedback>
+        </TableCell>
+        <TableCell sx={{ maxWidth: 300, verticalAlign: "top" }}>
+          <UpdatesFeed
+            update={updates}
+            // value={updateField}
+            // edit={editUpdateText}
+            add={addFeedback}
+            openPrompts={openPrompts}
+            displayPrompts={displayPrompts}
+            hidePrompts={hidePrompts}
+            addPrompts={addPrompts}
+          ></UpdatesFeed>
         </TableCell>
         <TableCell sx={{ minWidth: 220, maxWidth: 300, textAlign: "center" }}>
           <Status
