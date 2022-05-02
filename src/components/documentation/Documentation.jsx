@@ -201,7 +201,7 @@ export default function Documentation({setActive}) {
         </AccordionSummary>
         <AccordionDetails>
           <Typography>
-            <Link target="_blank" href={Prototypes}>
+            <Link target="_blank" href="https://raw.githubusercontent.com/ajaysagarn/UniConn/main/src/static/prototypes.pdf">
                 Click here to view the low fidelity prototypes
             </Link>
           </Typography>
