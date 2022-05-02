@@ -37,19 +37,18 @@ export default function Documentation({ setActive }) {
         >
           <Typography variant='h6'>About</Typography>
         </AccordionSummary>
-        <AccordionDetails>
+        <AccordionDetails style={{marginTop: -10}}>
           <div>
-            {/* <Typography variant='subtitle1'><b>Students and alumni can connect to each other:</b></Typography> */}
+            <Typography sx={{textAlign: "justify"}}>
             Pursuing a college degree can be a daunting task for any student, especially during pandemic times. Starting from selecting classes every semester to balancing job searches as well as course work certainly puts students through tremendous amounts of uncertainty and stress. Hence, we ask the question - Would it be helpful if there was a way for students to reach out for a mentor who can guide them through the uncertainties they are currently facing? Who better to guide them than former alumni who have been through the same experiences.
-            <br />
+            </Typography>
+            <Typography sx={{textAlign: "justify", marginTop: 1}}>
             From an alumni perspective, once a student graduates from his university, usually they get disconnected from their alma mater and have no way to keep in touch with the current happenings of the university. Many times successful alumni well established in their field are willing to “give back” to their university in any way possible, either by mentoring current students or by providing guidance to navigate the job market. An easy way to interact with their alma mater would certainly be helpful.
-            <br />
-            Hence, we propose “UniConn”, an interactive web platform for university students and alumni to be able to easily collaborate, share thoughts and experiences.
-
+            </Typography>
+            <Typography sx={{textAlign: "justify", marginTop: 1}}>
+            Hence, we propose <b>“UniConn”</b>, an interactive web platform for university students and alumni to be able to easily collaborate, share thoughts and experiences.
+            </Typography>
           </div>
-
-
-
         </AccordionDetails>
       </Accordion>
       <Accordion>
@@ -60,47 +59,47 @@ export default function Documentation({ setActive }) {
         >
           <Typography variant='h6'>Requirement Gathering</Typography>
         </AccordionSummary>
-        <AccordionDetails>
+        <AccordionDetails style={{marginTop: -10}}>
           <div>
-            For requirement gathering, we conducted semi-structured interviews, surveys as well as performed literature reviews. Based on the results, the following requrements were established.
+            For requirement gathering, we conducted semi-structured interviews, surveys as well as performed literature reviews. Based on the results, the following requirements were established:
             <br /> <br />
           </div>
           <div>
-            <Typography variant='subtitle1'><b>A.Functional Requirements</b></Typography>
+            <Typography variant='subtitle1' style={{marginTop: -15}}><b>A. Functional Requirements</b></Typography>
             <p>
-              <ol>
-                <li>Students must be able to check all existing alumni</li>
-                <li>Students must be able to search for alumni in a specific field/domain
+              <ol style={{marginTop: -15}}>
+                <li>Students must be able to check all existing alumni.</li>
+                <li>Students must be able to search for alumni in a specific field/domain.
                 </li>
-                <li>Students must be able to select existing alumni and request to connect with them
+                <li>Students must be able to select existing alumni and request to connect with them.
                 </li>
-                <li>Students must be able to communicate with interested alumni
+                <li>Students must be able to communicate with interested alumni.
                 </li>
                 <li>The solution should provide prompts to students to be forwarded to alumni to mention their current progress.
                 </li>
-                <li>Students should be able to post their current completed courses and future course plan and request mentor's advice
+                <li>Students should be able to post their current completed courses and future course plan and request mentor's advice.
                 </li>
-                <li>Students should be able to view any comments or suggestions made by the alumni on the course plan chosen by the student
+                <li>Students should be able to view any comments or suggestions made by the alumni on the course plan chosen by the student.
                 </li>
-                <li>Alumni must be able to view all the current students of the university</li>
-                <li>Alumni must be able to view all the other alumni of the university
+                <li>Alumni must be able to view all the current students of the university.</li>
+                <li>Alumni must be able to view all the other alumni of the university.
                 </li>
-                <li>Alumni should be able to communicate and interact with other alumni and students of the university
+                <li>Alumni should be able to communicate and interact with other alumni and students of the university.
                 </li>
-                <li>Alumni should be able to decide if they want to be a mentor to a student or not
+                <li>Alumni should be able to decide if they want to be a mentor to a student or not.
                 </li>
-                <li>Alumni if they see fit, should be able to recommend other alumni to any student</li>
-                <li>Alumni should be able to view the completed and current course plan of students they are mentoring
+                <li>Alumni if they see fit, should be able to recommend other alumni to any student.</li>
+                <li>Alumni should be able to view the completed and current course plan of students they are mentoring.
                 </li>
-                <li>Alumni should be able to make comments and suggestions on the course plan of their mentees
+                <li>Alumni should be able to make comments and suggestions on the course plan of their mentees.
                 </li>
               </ol>
             </p>
           </div>
           <div>
-            <Typography variant='subtitle1'><b>B.Non-Functional Requirements</b></Typography>
+            <Typography variant='subtitle1' style={{marginTop: -5}}><b>B. Non-Functional Requirements</b></Typography>
             <p>
-              <ol>
+              <ol style={{marginTop: -15}}>
                 <li>Users' information should be stored securely in a database.
                 </li>
                 <li>The application should be lag free and provide a smooth user experience.
@@ -117,9 +116,9 @@ export default function Documentation({ setActive }) {
             </p>
           </div>
           <div>
-            <Typography variant='subtitle1'><b>C.Usability Requirements</b></Typography>
+            <Typography variant='subtitle1' style={{marginTop: -5}}><b>C. Usability Requirements</b></Typography>
             <p>
-              <ol>
+              <ol style={{marginTop: -15}}>
                 <li>The application should be intuitive and easy to understand for the primary users.</li>
                 <li>The application must serve a specific purpose as outlined in the goals without being too broad in scope or ambiguity.</li>
                 <li>Primary users should be able to create user profiles and supply basic information and their willingness/needs from using the platform.
@@ -224,7 +223,7 @@ export default function Documentation({ setActive }) {
           <Typography variant='h6'>Low Fidelity Prototypes and Formative Evaluation</Typography>
         </AccordionSummary>
         <AccordionDetails>
-          <Typography style={{ marginTop: -15 }}>
+          <Typography style={{ marginTop: -10 }}>
             <Link target="_blank" href="https://raw.githubusercontent.com/ajaysagarn/UniConn/main/src/static/prototypes.pdf">
               Click here to view
             </Link>
@@ -279,6 +278,22 @@ export default function Documentation({ setActive }) {
               </ol>
             </p>
           </div>
+        </AccordionDetails>
+      </Accordion>
+      <Accordion>
+        <AccordionSummary
+          expandIcon={<ExpandMoreIcon />}
+          aria-controls="panel4a-content"
+          id="panel4a-header"
+        >
+          <Typography variant='h6'>Development</Typography>
+        </AccordionSummary>
+        <AccordionDetails>
+          <Typography style={{ marginTop: -10 }}>
+            <Link rel="noopener noreferrer" target="_blank" href="https://github.com/ajaysagarn/UniConn">
+              GitHub Repository
+            </Link>
+          </Typography>
         </AccordionDetails>
       </Accordion>
     </div>
