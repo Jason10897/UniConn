@@ -1,6 +1,20 @@
 # UniConn
 
 ### CS 522 - Human Computer Interaction
+UniConn is an interactive web platform for university students and alumni to be able to easily collaborate, and share thoughts and experiences. This website was designed using ReactJS and Material UI.
+
+Our Vision for UniConn is to enable students and alumni to have an easy way to interact with each other. Our platform targets two types of users:<br>
+1. Student users are typically aged 18-30 and are actively pursuing an undergraduate or a graduate level degree. The motivation for these users is to look for guidance with the current challenges being faced by them. </br>
+2. Alumni users are typically aged 25-40 and are working professionals with an undergraduate or a graduate level degree. The motivation for these users is to help out
+current students of their Alma mater and to give back to their university, “feel good” reasons.
+
+The project focuses on 4 main design challenges:</br>
+1. Students and alumni can connect to each other - Using search and filter</br>
+2. Alumni can recommend more relevant alumni to a student</br>
+3. Students can use system prompts to notify alumni about their progress</br>
+4. Students can create a career roadmap for alumni feedback</br>
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 ## Available Scripts
 
