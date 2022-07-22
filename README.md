@@ -6,7 +6,7 @@ UniConn is an interactive web platform for university students and alumni to be 
 Our Vision for UniConn is to enable students and alumni to have an easy way to interact with each other. Our platform targets two types of users:<br>
 1. Student users are typically aged 18-30 and are actively pursuing an undergraduate or a graduate level degree. The motivation for these users is to look for guidance with the current challenges being faced by them. </br>
 2. Alumni users are typically aged 25-40 and are working professionals with an undergraduate or a graduate level degree. The motivation for these users is to help out
-current students of their Alma mater and to give back to their university, “feel good” reasons.
+current students of their Alma mater and to give back to their university, and “feel good” reasons.
 
 The project focuses on 4 main design challenges:</br>
 1. Students and alumni can connect to each other - Using search and filter</br>
