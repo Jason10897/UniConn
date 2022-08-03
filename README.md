@@ -1,7 +1,7 @@
 # UniConn
 
 ### CS 522 - Human Computer Interaction
-UniConn is an interactive web platform for university students and alumni to be able to easily collaborate, and share thoughts and experiences. This website was designed using ReactJS and Material UI as the front end, Node.js as the backend server, and MongoDB as the database
+UniConn is an interactive web platform for university students and alumni to be able to easily collaborate, and share thoughts and experiences. This website was designed using ReactJS and Material UI as the front end, Node.js and Express.js as the backend server, MongoDB as the database, and Passport.js for user authentication.
 
 Our Vision for UniConn is to enable students and alumni to have an easy way to interact with each other. Our platform targets two types of users:<br>
 1. Student users are typically aged 18-30 and are actively pursuing an undergraduate or a graduate level degree. The motivation for these users is to look for guidance with the current challenges being faced by them. </br>
